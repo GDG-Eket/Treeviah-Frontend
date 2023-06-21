@@ -21,6 +21,10 @@ module.exports = {
         "bg-light": "#D5AAD5",
         "yellow": "#FFD700",
         "brown": "#CD7F32"
+      },
+      fontFamily: {
+        dmSans: "--font-dmsans",
+        poppins: "--font-poppins"
       }
     },
   },
