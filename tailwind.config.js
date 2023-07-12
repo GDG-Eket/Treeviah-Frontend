@@ -22,10 +22,10 @@ module.exports = {
         "yellow": "#FFD700",
         "brown": "#CD7F32"
       },
-      fontFamily: {
-        dmSans: "--font-dmsans",
-        poppins: "--font-poppins"
-      }
+      // fontFamily: {
+      //   dmSans: "--font-dmsans",
+      //   poppins: "--font-poppins"
+      // }
     },
   },
   plugins: [],
