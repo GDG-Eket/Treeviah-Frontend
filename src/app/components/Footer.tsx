@@ -11,7 +11,7 @@ interface FooterMenu {
   path: string;
 }
 
-type SideMenuprops = {
+interface SideMenuprops {
   footer: FooterMenu[];
 };
 
@@ -57,8 +57,8 @@ const FooterList: FooterMenu[] = [
   return (
     <div className='bottom-0 left-0 w-[100%]'>
               <ListFooter>
-                {FooterList.map((footer) => (
-                    <Link key={footer.id} href={footer.path}>
+                {FooterList.map((footer, i) => (
+                    <Link key={i} href={footer.path}>
                         <span className="text-primary text-[20px]">{footer.icon}</span>
                     </Link>
                 ))}

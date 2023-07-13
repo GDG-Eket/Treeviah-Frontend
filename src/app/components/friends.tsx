@@ -19,25 +19,25 @@ const Friends: React.FC = () => {
 
     {
         id: 1,
-        url: '/../../../public/Images/one.jpg',
+        url: '/../public/Images/one.jpg',
         title: 'Professional',
         alt: 'awardImageOne.jpg'
     },
       {
         id: 2,
-        url: '/../../../public/Images/two.jpg',
+        url: '/../public/Images/two.jpg',
         title: 'Professional',
         alt: 'awardImageOne.jpg'
     },
       {
         id: 3,
-        url: '/../../../public/Images/three.jpg',
+        url: '/../public/Images/three.jpg',
         title: 'Professional',
         alt: 'awardImageOne.jpg'
     },
       {
         id: 4,
-        url: '/../../../public/Images/four.jpg',
+        url: '/../public/Images/four.jpg',
         title: 'Professional',
         alt: 'awardImageOne.jpg'
     },
