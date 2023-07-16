@@ -53,7 +53,8 @@ const HomePage: React.FC = () => {
   ];
 
   return (
-    <div className="flex flex-row relative w-full h-screen overflow-hidden">
+    <section className="relative w-full h-[100%]">
+    <div className="flex flex-row relative w-full">
       <div className="w-[50px] hidden md:block">
         <Sidebar list={sideMenuList} />
       </div>
@@ -65,10 +66,11 @@ const HomePage: React.FC = () => {
           <Dashboard />
         </div>
       </div>
-      <div className="absolute bottom-0 left-0">
+    </div>
+      <div className="fixed bottom-0 left-0 md:hidden w-[100%]">
       <FooterBar footer={footerList} />
       </div>
-    </div>
+    </section>
   );
 };
 

@@ -1,5 +1,8 @@
 import React from 'react';
 import Sidebar from '../app/components/sidebar';
+import Navbar from '../app/components/navbar';
+import LibraryGrid from '../app/components/librarygrid';
+import FooterBar from '../app/components/Footer';
 import { MdHome, MdLibraryBooks, MdEqualizer, MdExitToApp, MdAccountCircle, MdLiveHelp } from 'react-icons/md'
 
 const Library: React.FC = () => {
@@ -25,26 +28,50 @@ const Library: React.FC = () => {
       path: '/account'
     }
   ];
+
+  
+  const footerList = [
+   {
+    id: 1,
+    icon: <MdHome />,
+    path: '/'
+  },
+  {
+    id: 1,
+    icon: <MdLibraryBooks />,
+    path: '/library'
+  },
+  {
+    id: 1,
+    icon: <MdEqualizer />,
+    path: '/analysis'
+  },
+  {
+    id: 1,
+    icon: <MdAccountCircle />,
+    path: '/account'
+  }
+  ];
   return (
       <div>
-        <div className="flex flex-row relative w-full h-screen overflow-hidden">
-          <div className=" w-[50px] hidden md:block ">
-            <Sidebar list={sideMenuList} />
-          </div>
-          <section className="flex justify-center align-middle bg-purple-400">
-            <p>
-              hellojvnfjnrijvrjnfirf
-              vrnvuriufirfirnirnvinirnivnrf
-                vrnvonrijnijrijfirjifnrkvr
-            </p>
-             <p>
-              hellojvnfjnrijvrjnfirf
-              vrnvuriufirfirnirnvinirnivnrf
-              vrnvonrijnijrijfirjifnrkvr
-              rfjnrjnfirifjirjv
-            </p>
-          </section>
+        <section className="relative w-full h-[100%]">
+    <div className="flex flex-row relative w-full">
+      <div className="w-[50px] hidden md:block">
+        <Sidebar list={sideMenuList} />
+      </div>
+      <div className="w-[100%] flex flex-col justify-between align-middle h-[100vh]">
+        <div className="flex flex-col w-[100%] pl-0 md:pl-[50px] lg:pl-[10px] xl:pl-[10px]">
+          <Navbar />
         </div>
+        <div className="w-[100%] h-screen p-3 flex flex-col">
+          <LibraryGrid />
+        </div>
+      </div>
+    </div>
+      <div className="fixed bottom-0 left-0 md:hidden w-[100%]">
+      <FooterBar footer={footerList} />
+      </div>
+    </section>
       </div>
   )
 }
