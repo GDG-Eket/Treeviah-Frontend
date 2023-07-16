@@ -8,7 +8,6 @@ import Friends from './friends'
 import Profile from './profile'
 import Quizzes from './quizzes'
 import Notification from './notification'
-import FooterBar from './Footer'
 import '../../styles/dashboard.css'
 
 
@@ -93,9 +92,6 @@ const Dashboard: React.FC = () => {
                     <Notification />
                 </div>
             </section>
-        </div>
-        <div className="md:hidden">
-          <FooterBar />
         </div>
    </div>
   );
