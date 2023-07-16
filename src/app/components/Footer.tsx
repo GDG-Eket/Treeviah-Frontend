@@ -1,9 +1,15 @@
-"use client"
-import React, { useState } from 'react';
-import { MdHome, MdLibraryBooks, MdEqualizer, MdExitToApp, MdAccountCircle, MdLiveHelp } from 'react-icons/md'
-import { styled } from 'styled-components'
-import Link from 'next/link'
-
+"use client";
+import React, { useState } from "react";
+import {
+  MdHome,
+  MdLibraryBooks,
+  MdEqualizer,
+  MdExitToApp,
+  MdAccountCircle,
+  MdLiveHelp,
+} from "react-icons/md";
+import { styled } from "styled-components";
+import Link from "next/link";
 
 interface FooterMenu {
   id: number;
@@ -13,34 +19,31 @@ interface FooterMenu {
 
 interface SideMenuprops {
   footer: FooterMenu[];
-};
-
+}
 
 const FooterBar: React.FC<SideMenuprops> = ({ footer }) => {
- 
-
-const FooterList: FooterMenu[] = [
- {
-    id: 1,
-    icon: <MdHome />,
-    path: '/'
-  },
-  {
-    id: 1,
-    icon: <MdLibraryBooks />,
-    path: '/library'
-  },
-  {
-    id: 1,
-    icon: <MdEqualizer />,
-    path: '/analysis'
-  },
-  {
-    id: 1,
-    icon: <MdAccountCircle />,
-    path: '/account'
-  }
-  ]
+  const FooterList: FooterMenu[] = [
+    {
+      id: 1,
+      icon: <MdHome />,
+      path: "/",
+    },
+    {
+      id: 1,
+      icon: <MdLibraryBooks />,
+      path: "/library",
+    },
+    {
+      id: 1,
+      icon: <MdEqualizer />,
+      path: "/analysis",
+    },
+    {
+      id: 1,
+      icon: <MdAccountCircle />,
+      path: "/account",
+    },
+  ];
 
   const ListFooter = styled.div`
     display: flex;
@@ -52,17 +55,17 @@ const FooterList: FooterMenu[] = [
     list-style: none;
     background-color: white;
     z-index: 10;
-  `
+  `;
 
   return (
-    <div className='bottom-0 left-0 w-[100%]'>
-              <ListFooter>
-                {FooterList.map((footer, i) => (
-                    <Link key={i} href={footer.path}>
-                        <span className="text-primary text-[20px]">{footer.icon}</span>
-                    </Link>
-                ))}
-                </ListFooter>
+    <div className="bottom-0 left-0 w-[100%]">
+      <ListFooter>
+        {FooterList.map((footer, i) => (
+          <Link key={i} href={footer.path}>
+            <span className="text-primary text-[20px]">{footer.icon}</span>
+          </Link>
+        ))}
+      </ListFooter>
     </div>
   );
 };
