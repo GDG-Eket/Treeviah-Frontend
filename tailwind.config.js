@@ -28,13 +28,35 @@ module.exports = {
         gray: "#D2D2D2",
         "gray-light": "#C0C0C0",
         "bg-light": "#D5AAD5",
-        yellow: "#FFD700",
+        yellow1: "#FFEE00",
+        orange1: "#FFA500",
+        rose1: "#FD6088",
         brown: "#CD7F32",
+        teal1: "#009688",
+        electricblue: "#007BFF",
       },
       fontFamily: {
         dmSans: ["DM Sans", "sans-serif"],
         poppins: ["Poppins", "sans-serif"],
       },
+      keyframes: {
+        fadein: {
+          "0%": {
+            transform: "translateX(-100%)",
+          },
+          "100%": {
+            transform: "translateX(0)",
+          },
+        },
+        pulse: {
+          "0%, 100%": {
+            transform: "scale(1)",
+          },
+          "50%": {
+            transform: "scale(1.1)",
+          },
+        },
+      }
     },
   },
   plugins: [],
