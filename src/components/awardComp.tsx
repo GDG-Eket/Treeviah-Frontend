@@ -156,7 +156,7 @@ const AwardComponents: React.FC = () => {
       </div>
       <div className="mt-8">
         <h1 className="font-semibold my-2 text-[1.2em]">Pending Awards</h1>
-        <section className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-4">
+        <section className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-4">
           {AwarArray.map((award, i) => (
             <div
               key={i}
