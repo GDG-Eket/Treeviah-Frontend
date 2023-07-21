@@ -2,8 +2,8 @@
 import React, { useState } from 'react';
 import { MdHome, MdLibraryBooks, MdEqualizer, MdExitToApp, MdAccountCircle, MdLiveHelp } from 'react-icons/md'
 import Image from 'next/image';
-import Logo from '../../../public/Images/logo.png'
-import '../../styles/dashboard.css'
+import Logo from '../../public/Images/logo.png'
+import '../styles/dashboard.css'
 import Link from 'next/link';
 
 interface SideMenu {

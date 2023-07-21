@@ -8,9 +8,9 @@ import {
   MdEqualizer,
   MdAccountCircle,
 } from "react-icons/md";
-import NotificationComponent from "@/components/notificationcomp";
+import ProfileSetting from "@/components/profilesetting";
 
-const Analysis: React.FC = () => {
+const ProfilePage: React.FC = () => {
   const sideMenuList = [
     {
       title: "Home",
@@ -67,8 +67,8 @@ const Analysis: React.FC = () => {
             <div className="flex flex-col w-[100%] pl-0 md:pl-[10px] lg:pl-[10px] xl:pl-[10px]">
               <Navbar />
             </div>
-            <div className="overflow-auto">
-              <NotificationComponent />
+            <div className="overflow-auto p-4">
+             <ProfileSetting />
             </div>
           </div>
         </div>
@@ -80,4 +80,4 @@ const Analysis: React.FC = () => {
   );
 };
 
-export default Analysis;
+export default ProfilePage;

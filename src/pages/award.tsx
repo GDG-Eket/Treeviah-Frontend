@@ -8,9 +8,9 @@ import {
   MdEqualizer,
   MdAccountCircle,
 } from "react-icons/md";
-import NotificationComponent from "@/components/notificationcomp";
+import AwardComponents from "@/components/awardComp";
 
-const Analysis: React.FC = () => {
+const Awards: React.FC = () => {
   const sideMenuList = [
     {
       title: "Home",
@@ -63,12 +63,12 @@ const Analysis: React.FC = () => {
           <div className="w-[50px] hidden md:block">
             <Sidebar list={sideMenuList} />
           </div>
-          <div className="w-[100%] flex flex-col justify-between align-middle h-[100vh]">
+          <div className="w-[100%] h-[100vh] flex flex-col justify-between align-middle">
             <div className="flex flex-col w-[100%] pl-0 md:pl-[10px] lg:pl-[10px] xl:pl-[10px]">
               <Navbar />
             </div>
-            <div className="overflow-auto">
-              <NotificationComponent />
+            <div className="overflow-auto p-4">
+             <AwardComponents />
             </div>
           </div>
         </div>
@@ -80,4 +80,4 @@ const Analysis: React.FC = () => {
   );
 };
 
-export default Analysis;
+export default Awards;

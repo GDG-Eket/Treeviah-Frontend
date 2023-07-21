@@ -45,27 +45,16 @@ const FooterBar: React.FC<SideMenuprops> = ({ footer }) => {
     },
   ];
 
-  const ListFooter = styled.div`
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 10px 5px;
-    box-shadow: 0px -5px 5px whitesmoke;
-    gap: 40px;
-    list-style: none;
-    background-color: white;
-    z-index: 10;
-  `;
 
   return (
     <div className="bottom-0 left-0 w-[100%]">
-      <ListFooter>
+      <div className="flex justify-center align-middle py-[10px] px-[5px] shadow-lg gap-4 list-none bg-white z-10">
         {FooterList.map((footer, i) => (
           <Link key={i} href={footer.path}>
             <span className="text-primary text-[20px]">{footer.icon}</span>
           </Link>
         ))}
-      </ListFooter>
+      </div>
     </div>
   );
 };

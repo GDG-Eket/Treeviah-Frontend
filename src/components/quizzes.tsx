@@ -1,11 +1,11 @@
 import React from 'react'
-import '../../styles/dashboard.css'
-import Line from '../../../public/Images/linne.png'
+import '../styles/dashboard.css'
+import Line from '../../public/Images/linne.png'
 import Image from 'next/image';
-import Circle from '../../../public/Images/circle.png'
-import One from '../../../public/Images/one.jpg'
-import Two from '../../../public/Images/two.jpg'
-import Three from '../../../public/Images/three.jpg'
+import Circle from '../../public/Images/circle.png'
+import One from '../../public/Images/one.jpg'
+import Two from '../../public/Images/two.jpg'
+import Three from '../../public/Images/three.jpg'
 
 const Quizzes: React.FC = () => {
 
