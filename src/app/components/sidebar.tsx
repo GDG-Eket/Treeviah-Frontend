@@ -51,7 +51,7 @@ const Sidebar: React.FC<SideMenuProps> = ({ list }) => {
   ];
 
   return (
-    <div className="relative w-[100%] hidden md:block">
+    <div className="relative w-[] hidden md:block">
       <section
         className={`background h-screen duration-300 ${
           hovered ? 'w-72 rounded-tr-xl rounded-br-xl' : 'w-[50px]'

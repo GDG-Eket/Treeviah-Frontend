@@ -10,7 +10,7 @@ const [open, setOpen] = useState(false);
     <div className="flex flex-col">
       <div>
          <section className="w-full flex justify-around align-middle px-[20px] py-[10px] shadow-md flex-row">
-            <span className="flex flex-row justify-start align-center px-4 py-2 rounded w-[250px]
+            <span className="flex flex-row justify-start align-center px-4 py-2 rounded w-[250px] ml-[85px]
             md:w-[300px] bg-purple-100">
                 <span className="text-[25px] text-gray-400"><MdSearch /></span>
                 <input type="text" placeholder="Search here" className="bg-transparent focus:outline-none text-purple-900 w-[100%]" />
