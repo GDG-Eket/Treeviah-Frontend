@@ -130,7 +130,7 @@ const AwardComponents: React.FC = () => {
           </span>
         </span>
       </div>
-      <h1 className="font-semibold my-2 text-[32px] px-[3%]">Awards</h1>
+      <h1 className="font-semibold my-2 text-[32px] px-[3%]">Awards.</h1>
       <div className="grid grid-cols-1 lg:grid-cols-2 px-[3%]">
         <section className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
           {TopArray.map((toparray, i) => (
