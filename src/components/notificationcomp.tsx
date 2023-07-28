@@ -61,7 +61,7 @@ const NotificationComponent: React.FC = () => {
             </span>
           </div>
           <div className="">
-            <h1 className="font-semibold text-[1.2em] ml-2">Notification</h1>
+            <h1 className="font-semibold text-[32px] ml-2">Notification</h1>
           </div>
           <div className="flex flex-col w-100 p-2">
             <label className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-1 w-[100%] rounded-md gap-10">

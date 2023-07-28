@@ -111,8 +111,8 @@ const TopArray: TopAwards[] = [
 
 const AwardComponents: React.FC = () => {
   return (
-    <div>
-      <div className="w-[100%] flex flex-row justify-between align-middle">
+    <div className="">
+      <div className="w-[100%] flex flex-row justify-between align-middle px-[3%] py-[2%]">
         <span>
           <Link href="/" className="text-primary hover:text-purple-800 pl-2">
             Go Back
@@ -130,8 +130,8 @@ const AwardComponents: React.FC = () => {
           </span>
         </span>
       </div>
-      <h1 className="font-semibold my-2 text-[1.2em]">Awards</h1>
-      <div className="grid grid-cols-1 lg:grid-cols-2">
+      <h1 className="font-semibold my-2 text-[32px] px-[3%]">Awards</h1>
+      <div className="grid grid-cols-1 lg:grid-cols-2 px-[3%]">
         <section className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
           {TopArray.map((toparray, i) => (
             <div
@@ -155,8 +155,8 @@ const AwardComponents: React.FC = () => {
         </section>
       </div>
       <div className="mt-8">
-        <h1 className="font-semibold my-2 text-[1.2em]">Pending Awards</h1>
-        <section className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-4">
+        <h1 className="font-semibold my-2 text-[1.2em] px-[3%]">Pending Awards</h1>
+        <section className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-4 px-[3%]">
           {AwarArray.map((award, i) => (
             <div
               key={i}

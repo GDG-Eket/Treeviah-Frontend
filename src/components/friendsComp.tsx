@@ -181,7 +181,7 @@ const FriendsComponent: React.FC = () => {
             </span>
           </span>
         </div>
-        <h1 className="font-semibold my-2 text-[1.2em]">Friends</h1>
+        <h1 className="font-semibold my-2 text-[32px]">Friends</h1>
         <span className="p-[20px]">
           <label className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-9 gap-[50px] p-2">
             {FriendsArray.map((friends, i) => (

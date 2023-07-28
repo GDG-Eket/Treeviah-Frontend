@@ -1,6 +1,7 @@
 import React from 'react';
 import Image from 'next/image';
 import '../styles/dashboard.css'
+import Link from 'next/link';
 
 
 
@@ -70,16 +71,16 @@ const Awards: React.FC = () => {
         <div>
             <section className="w-[100%] lg:w-[90%] mt-[8%] h-[40vh]">
                 <span className="w-[100%] flex justify-between align-middle p-2">
-                    <h2 className="font-semibold">My Awards</h2>
-                    <button className="text-primary">
+                    <h2 className="font-semibold text-[32px]">My Awards</h2>
+                    <Link href='/award' className="text-primary">
                         See All
-                    </button>
+                    </Link>
                 </span>
                 <span className="p-[20px]">
                     <label className="flex flex-row overflow-x-auto scrollbar-hide gap-[50px] p-2 scrollbar-hide">
                         {
                             AwardArray.map((awardlist) => (
-                               <span key={awardlist.id} className="px-2 py-4 border rounded-md border-purple-3"> 
+                               <span key={awardlist.id} className="px-2 py-4 border rounded-md border-purple-300"> 
                                  <Image src={awardlist.url} alt={awardlist.alt} width={300} height={200} />
                                  <p className="capitalized pt-3">{awardlist.title}</p>
                                </span>
