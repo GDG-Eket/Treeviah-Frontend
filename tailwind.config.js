@@ -23,9 +23,10 @@ module.exports = {
       },
       colors: {
         primary: "#800080",
-        "primary-light": "#952A95",
+        "primary-light": "#952B95",
         white: "#FFFFFF",
-        gray: "#D2D2D2",
+        gray: "#1D1D1D",
+        gray1: "#D2D2D2",
         "gray-light": "#C0C0C0",
         "bg-light": "#D5AAD5",
         yellow1: "#FFEE00",
@@ -34,10 +35,15 @@ module.exports = {
         brown: "#CD7F32",
         teal1: "#009688",
         electricblue: "#007BFF",
+        green1: "#018101",
+        blue1: "#0A5AA4",
+        
       },
       fontFamily: {
         dmSans: ["DM Sans", "sans-serif"],
         poppins: ["Poppins", "sans-serif"],
+        montserrat: ["Montserrat", "sans-serif"],
+
       },
       keyframes: {
         fadein: {

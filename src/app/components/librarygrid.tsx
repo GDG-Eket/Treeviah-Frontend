@@ -13,7 +13,7 @@ const LibraryGrid: React.FC = () => {
                 </div>
                 <div className="flex w-100 p-2">
                     <label className="flex flex-row w-[100%] rounded-md border border-purple-100">
-                        <divs className="libraryGird w-[20%]">
+                        <span className="libraryGird w-[20%]">
                             huyguggs
                         </span>
                         <span className="w-[80%]">
