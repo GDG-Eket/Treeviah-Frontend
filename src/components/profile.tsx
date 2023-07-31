@@ -1,6 +1,6 @@
 import React from 'react'
 import Image from 'next/image'
-import profileImage from '../../../public/Images/one.jpg'
+import profileImage from '../../public/Images/one.jpg'
 
 const Profile: React.FC = () => {
 
