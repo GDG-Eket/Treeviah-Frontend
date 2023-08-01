@@ -19,7 +19,7 @@ const PlayerAnalysisComp: React.FC = () => {
       <div className="w-[100%] flex flex-row justify-between align-middle py-4">
         <span>
           <Link href="/" className="text-primary hover:text-purple-800 pl-2">
-            Go Back
+            Go Backs!
           </Link>
         </span>
       </div>
