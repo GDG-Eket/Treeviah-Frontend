@@ -81,7 +81,7 @@ const LibraryGrid: React.FC = () => {
           </h1>
         </div>
         <div className="flex w-100 p-2">
-          <label className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-1 w-[100%] rounded-md gap-10">
+          <label className="grid libraryGrd w-[100%] rounded-md gap-10">
             {LibraryArray.map((list, i) => (
               <div className="border border-gray rounded-md flex flex-col lg:flex-row w-[100%] lg:h-[100px] h-auto" key={i}>
                 <div className="w-[100%] lg:w-[20%]">

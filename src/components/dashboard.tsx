@@ -25,21 +25,21 @@ const Dashboard: React.FC = () => {
             <Profile />
           </div>
         </div>
-        <div className="w-[100%] md:w-auto h-screen mb-10% md:h-[90vh] grid grid-cols-1 md:grid-cols-2 justify-center align-middle">
-          <section className="w-[100%] md:w-auto py-2 px-[20px]">
+        <div className="mb-10% p-4 dashGrid">
+          <section className="p-4">
             <div className="flex flex-col justify-start align-middle">
-              <div className="rounded-md bg-primary w-[100%] p-2">
-                <span className="flex flex-col justify-start align-middle mb-4">
+              <div className="rounded-md bg-primary p-2">
+                <div className="flex flex-col justify-start align-middle mb-4">
                   <h3 className="text-white text-[1em]">
                     Host a Treeviah Game
                   </h3>
                   <small className="text-white">
                     Get to host a game a lay online.
                   </small>
-                </span>
-                <div className="grid grid-cols-3 gap-4 justify-evenly align-middle">
+                </div>
+                <div className="imageGrd">
                   <label className="flex flex-col justify-center align-middle gap-[10px]">
-                    <div className="p-2 border-2 rounded-full border-dashed flex justify-center align-middle self-center w w-20 h-20 md:w-24 md:h-24 overflow-hidden">
+                    <div className="md:p-2 border-2 rounded-full border-dashed flex justify-center align-middle self-center w w-20 h-20 md:w-24 md:h-24 overflow-hidden">
                       <Image
                         src={ImageOne}
                         alt="one.jpg"
@@ -53,7 +53,7 @@ const Dashboard: React.FC = () => {
                     </button>
                   </label>
                   <label className="flex flex-col justify-center align-middle gap-[10px]">
-                    <div className="p-2 border-2 rounded-full border-dashed flex justify-center align-middle self-center w w-20 h-20 md:w-24 md:h-24 overflow-hidden">
+                    <div className="md:p-2 border-2 rounded-full border-dashed flex justify-center align-middle self-center w w-20 h-20 md:w-24 md:h-24 overflow-hidden">
                       <Image
                         src={ImageTwo}
                         alt="one.jpg"
@@ -67,7 +67,7 @@ const Dashboard: React.FC = () => {
                     </button>
                   </label>
                   <label className="flex flex-col justify-center align-middle gap-[10px]">
-                    <div className="p-2 border-2 rounded-full border-dashed flex justify-center align-middle self-center w w-20 h-20 md:w-24 md:h-24 overflow-hidden">
+                    <div className="md:p-2 border-2 rounded-full border-dashed flex justify-center align-middle self-center w w-20 h-20 md:w-24 md:h-24 overflow-hidden">
                       <Image
                         src={ImageThree}
                         alt="one.jpg"
@@ -90,8 +90,8 @@ const Dashboard: React.FC = () => {
               <Friends />
             </div>
           </section>
-          <section className="px-[20px] w-auto grid grid-col-1 h-auto mb-10%">
-            <div className="">
+          <section className="p-4 grid grid-cols-1 justify-start align-top">
+            <div className="self-start">
               <Quizzes />
             </div>
             <div className="my-2">
