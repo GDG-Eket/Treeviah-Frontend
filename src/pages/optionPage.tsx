@@ -8,9 +8,9 @@ import {
   MdEqualizer,
   MdAccountCircle,
 } from "react-icons/md";
-import AnalysisComponent from "@/components/analysisCom";
+import OneOptionComp from "@/components/oneOption";
 
-const Analysis: React.FC = () => {
+const Option: React.FC = () => {
   const sideMenuList = [
     {
       title: "Home",
@@ -63,12 +63,12 @@ const Analysis: React.FC = () => {
           <div className="hidden md:block">
             <Sidebar list={sideMenuList} />
           </div>
-          <div className="w-[100%] h-[100vh]">
+          <div className="w-[100%] flex flex-col justify-between align-middle h-[100vh]">
             <div className="flex flex-col w-[100%]">
               <Navbar />
             </div>
             <div>
-              <AnalysisComponent />
+              <OneOptionComp />
             </div>
           </div>
         </div>
@@ -80,4 +80,4 @@ const Analysis: React.FC = () => {
   );
 };
 
-export default Analysis;
+export default Option;

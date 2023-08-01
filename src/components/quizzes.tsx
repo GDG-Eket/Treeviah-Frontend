@@ -1,19 +1,19 @@
 import React from 'react'
-import '../../styles/dashboard.css'
-import Line from '../../../public/Images/linne.png'
+import '../styles/dashboard.css'
+import Line from '../../public/Images/linne.png'
 import Image from 'next/image';
-import Circle from '../../../public/Images/circle.png'
-import One from '../../../public/Images/one.jpg'
-import Two from '../../../public/Images/two.jpg'
-import Three from '../../../public/Images/three.jpg'
+import Circle from '../../public/Images/circle.png'
+import One from '../../public/Images/one.jpg'
+import Two from '../../public/Images/two.jpg'
+import Three from '../../public/Images/three.jpg'
 
 const Quizzes: React.FC = () => {
 
     return (
         <div>
-            <div className="flex flex-col justify-start align-middle p-4 md:px-8 md:py-10 rounded-md border border-purple-300 w-[100%] mt-[30px]">
+            <div className="flex flex-col justify-start align-middle p-4 md:px-8 md:py-10 rounded-md border border-purple-300 mt-2">
                 <span>
-                    <h2 className='text-dark text-[1.3em] font-semibold'>My Treeviah</h2>
+                    <h2 className='text-dark text-[32px] font-semibold'>My Treeviah</h2>
                     <line className="w-[100%]">
                         <Image src={Line} alt="line.png" width={300} height={100} className="w-[100%]" />
                     </line>

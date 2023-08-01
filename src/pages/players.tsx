@@ -8,7 +8,7 @@ import {
   MdEqualizer,
   MdAccountCircle,
 } from "react-icons/md";
-import AnalysisComponent from "@/components/analysisCom";
+import VirtulPlayers from "@/components/virtualPlayers";
 
 const Analysis: React.FC = () => {
   const sideMenuList = [
@@ -68,7 +68,7 @@ const Analysis: React.FC = () => {
               <Navbar />
             </div>
             <div>
-              <AnalysisComponent />
+              <VirtulPlayers />
             </div>
           </div>
         </div>

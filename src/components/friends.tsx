@@ -1,8 +1,9 @@
 import React from 'react';
 import Image from 'next/image';
-import '../../styles/dashboard.css'
+import '../styles/dashboard.css'
 import add from '../../../public/Images/one.jpg'
 import { Md1KPlus } from 'react-icons/md'
+import Link from 'next/link';
 
 
 interface FriendsList {
@@ -19,25 +20,25 @@ const Friends: React.FC = () => {
 
     {
         id: 1,
-        url: '/../../../public/Images/one.jpg',
+        url: '/../public/Images/one.jpg',
         title: 'Professional',
         alt: 'awardImageOne.jpg'
     },
       {
         id: 2,
-        url: '/../../../public/Images/two.jpg',
+        url: '/../public/Images/two.jpg',
         title: 'Professional',
         alt: 'awardImageOne.jpg'
     },
       {
         id: 3,
-        url: '/../../../public/Images/three.jpg',
+        url: '/../public/Images/three.jpg',
         title: 'Professional',
         alt: 'awardImageOne.jpg'
     },
       {
         id: 4,
-        url: '/../../../public/Images/four.jpg',
+        url: '/../public/Images/four.jpg',
         title: 'Professional',
         alt: 'awardImageOne.jpg'
     },
@@ -45,18 +46,18 @@ const Friends: React.FC = () => {
 
     return (
         <div>
-            <section className="w-[100%] lg:w-[90%] mt-[5%] h-[40vh]">
-                <span className="w-[100%] flex justify-between align-middle p-2">
-                    <h2 className="font-semibold">My Friends</h2>
-                    <button className="text-primary">
+            <section className="w-auto mt-[5%] h-[40vh]">
+                <span className="flex justify-between align-middle p-2">
+                    <h2 className="font-semibold text-[32px]">My Friends</h2>
+                    <Link className="text-primary" href="/friends">
                         See All(3)
-                    </button>
+                    </Link>
                 </span>
                 <span className="p-[20px]">
                     <label className="flex flex-row overflow-x-auto scrollbar-hide gap-[50px] p-2 scrollbar-hide">
                         {
                             FriendsArray.map((friends) => (
-                               <span key={friends.id} className="px-2 py-4 border rounded-md border-purple-3"> 
+                               <span key={friends.id} className="px-2 py-4 border rounded-md border-purple-300"> 
                                 <span className='p-2 borders rounded-full flex justify-center align-middle self-center w-[90px] h-[90px]'>
                                      <Image
                                         src={friends.url} 
@@ -70,7 +71,7 @@ const Friends: React.FC = () => {
                                </span>
                             ))
                         }
-                        <span className="px-2 py-4 border rounded-md border-purple-3"> 
+                        <span className="px-2 py-4 border rounded-md border-purple-300"> 
                                 <span className='p-2 borders rounded-full flex justify-center align-middle self-center w-[90px] h-[90px]'>
                                      <Md1KPlus className="w-[100%] h-[100%] rounded-full text-gray" />
                                 </span>
