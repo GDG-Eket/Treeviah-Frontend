@@ -1,99 +1,222 @@
-.background{
-    background-color: #800080;
+.background {
+  background-color: #800080;
 }
 
 .color-purple {
-    color: #fff;
+  color: #fff;
 }
 
-.color-purple:hover{
-    color: #800080;
+.color-purple:hover {
+  color: #800080;
 }
 
 .join-team {
-    border: 2px solid #800080;
-    color: #800080;
-    background: #fff;
+  border: 2px solid #800080;
+  color: #800080;
+  background: #fff;
 }
 
 .join-team:hover {
-    color: #fff;
-    background: #800080;
+  color: #fff;
+  background: #800080;
 }
 
 .host-team {
-    border: 2px solid #800080;
-    color: #fff;
-    background: #800080;
+  border: 2px solid #800080;
+  color: #fff;
+  background: #800080;
 }
 
 .host-team:hover {
-    color: #800080;
-    background: #fff;
+  color: #800080;
+  background: #fff;
 }
 
-.search{
-    background: #800080;
+.search {
+  background: #800080;
 }
- .scrollbar-hide::-webkit-scrollbar {
-    width: 0.4em;
-    height: 10px;
+.scrollbar-hide::-webkit-scrollbar {
+  width: 0.4em;
+  height: 10px;
+}
+
+.scrollbar-hide::-webkit-scrollbar-track {
+  background-color: transparent;
+}
+
+.scrollbar-hide::-webkit-scrollbar-thumb {
+  background-color: transparent;
+  border-radius: 9999px;
+}
+
+.scrollbar-dashboard::-webkit-scrollbar {
+  width: 0.8em;
+  height: 10px;
+}
+
+.scrollbar-dashboard::-webkit-scrollbar-track {
+  background-color: transparent;
+}
+
+.scrollbar-dashboard::-webkit-scrollbar-thumb {
+  background-color: #800080;
+  border-radius: 9999px;
+}
+
+.backgroundImage {
+  background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.6)),
+    url(../../public/Images/three.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+
+.bgText {
+  position: relative;
+  top: 35%;
+  left: 20%;
+  transform: translate(-50% -50%);
+}
+
+.libraryGrid {
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(rgba(0, 0, 0.5), rgba(0, 0, 0, 0.7)),
+    url(../../public/Images/four.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.respongrid {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  justify-content: center;
+  align-content: center;
+}
+
+.navgrid {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(50%, 1fr));
+  justify-content: center;
+  align-content: center;
+}
+
+.dashGrid{
+  display: grid;
+  width: 100%;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 3%;
+}
+
+.circleImg{
+  width: 300px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  justify-content: center;
+  align-items: center;
+}
+
+.imageGrd{
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+
+.menuGrid{
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  justify-content: space-between;
+  align-items: center;
+}
+
+.playerAnaGrid{
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  justify-content: center;
+  align-items: center;
+  column-gap: 100px;
+  row-gap: 50px;
+}
+
+@media screen and (max-width: 425px) {
+  .navgrid {
+    grid-template-columns: repeat(2, 1fr);
+    justify-content: space-between;
+    align-items: center;
   }
 
-  .scrollbar-hide::-webkit-scrollbar-track {
-    background-color: transparent;
-  }
-
-  .scrollbar-hide::-webkit-scrollbar-thumb {
-    background-color: transparent;
-    border-radius: 9999px;
-  }
-
-
-   .scrollbar-dashboard::-webkit-scrollbar {
-    width: 0.8em;
-    height: 10px;
-  }
-
-  .scrollbar-dashboard::-webkit-scrollbar-track {
-    background-color: transparent;
-  }
-
-  .scrollbar-dashboard::-webkit-scrollbar-thumb {
-    background-color: #800080;
-    border-radius: 9999px;
-  }
-
-  .backgroundImage{
-    background: linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.6)), url(../../public/Images/three.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
-    position: relative;
-  }
-
-  .bgText{
-      position: relative;
-      top: 35%;
-      left: 20%;
-      transform: translate(-50% -50%);
-  } 
-
-  .libraryGrid {
+  .respongrid {
     width: 100%;
-    height: 100%;
-    background: linear-gradient(rgba(0,0,0.5), rgba(0,0,0,0.7)), url(../../public/Images/four.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+    justify-content: center;
+    align-content: center;
   }
 
-
-  @media only screen and (max-width: 768px) {
-    .scrollbar-hide::-webkit-scrollbar-thumb {
-      background-color: rgba(0, 0, 0, 0.6);
-      border-radius: 9999px;
-   }
+  .dashGrid{
+    display: grid;
+    width: 100%;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 3%;
   }
 
-  .borders {
-    border: 2px dashed #800080;
+  .imageGrd{
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(50px, 1fr));
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
   }
+}
+
+@media screen and (min-width: 425px) {
+  .roundImage {
+    width: 250px;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .scrollbar-hide::-webkit-scrollbar-thumb {
+    background-color: rgba(0, 0, 0, 0.6);
+    border-radius: 9999px;
+  }
+
+  .libraryGrd {
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    justify-content: center;
+    align-items: center;
+  }
+
+  .menuGrid{
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    justify-content: start;
+    align-items: center;
+  }
+
+  .playerAnaGrid{
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    justify-content: space-between;
+    align-items: center;
+    row-gap: 50px;
+  }
+}
+
+.borders {
+  border: 2px dashed #800080;
+}

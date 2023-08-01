@@ -111,7 +111,7 @@ const TopArray: TopAwards[] = [
 
 const AwardComponents: React.FC = () => {
   return (
-    <div className="">
+    <div className="w-[100%] lg:w-[100%] p-4">
       <div className="w-[100%] flex flex-row justify-between align-middle px-[3%] py-[2%]">
         <span>
           <Link href="/" className="text-primary hover:text-purple-800 pl-2">

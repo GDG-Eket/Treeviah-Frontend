@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import Link from "next/link";
 import Table from "./table";
+import '../styles/dashboard.css'
 
 const data = [
   ["Chicken feed", "Multiple", "98% Correct", "2% Incorrect", "0", "9980"],
@@ -32,13 +33,13 @@ const OneOptionComp: React.FC = () => {
             </Link>
           </span>
         </div>
-        <div className="w-[100%] flex flex-col md:flex-row justify-between align-middle md:px-[5%]">
-          <span className="mb-[10%] md:mb-0">
+        <div className="menuGrid md:px-[5%]">
+          <div className="mb-[10%] md:mb-0">
             <h1 className="text-[32px] text-primary font-semibold self-centers">
               Chicken Feed
             </h1>
-          </span>
-          <span className="flex justify-center align-middle">
+          </div>
+          <div className="flex justify-center align-middle">
             <ul className="flex">
               <li className="flex justify-center align-middle gap-5 md:gap-10 flex-row border-b border-b-gray-light">
                 <Link
@@ -61,7 +62,7 @@ const OneOptionComp: React.FC = () => {
                 </Link>
               </li>
             </ul>
-          </span>
+          </div>
         </div>
         <div>
           <div className="mx-[5%] p-4 rounded-md shadow-md mt-[5%] flex flex-col">

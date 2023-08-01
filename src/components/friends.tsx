@@ -46,8 +46,8 @@ const Friends: React.FC = () => {
 
     return (
         <div>
-            <section className="w-[100%] lg:w-[90%] mt-[5%] h-[40vh]">
-                <span className="w-[100%] flex justify-between align-middle p-2">
+            <section className="w-auto mt-[5%] h-[40vh]">
+                <span className="flex justify-between align-middle p-2">
                     <h2 className="font-semibold text-[32px]">My Friends</h2>
                     <Link className="text-primary" href="/friends">
                         See All(3)

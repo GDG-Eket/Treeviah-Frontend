@@ -156,8 +156,8 @@ const FriendsSearchComponent: React.FC = () => {
 
   return (
     <div>
-      <section className="w-[100%] lg:w-[100%] p-4">
-        <div className="w-[100%] flex flex-row justify-between align-middle">
+      <section className="w-auto p-4">
+        <div className="flex flex-row justify-between align-middle">
           <span>
             <Link href="/" className="text-primary hover:text-purple-800 pl-2">
               Go Back
@@ -177,10 +177,10 @@ const FriendsSearchComponent: React.FC = () => {
         </div>
         <h1 className="font-semibold my-2 text-[32px]">Friends</h1>
         <span className="p-[20px]">
-          <label className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-9 gap-[50px] p-2">
+          <label className="respongrid">
             {FriendsArray.map((friends, i) => (
-              <span key={i} className="px-2 py-4 flex flex-col justify-center align-middle text-center self-center">
-                <span className="p-2 borders rounded-full flex justify-center align-middle self-center text-center w-[80px] h-[80px] lg:w-[90px] lg:h-[90px]">
+              <div key={i} className="px-2 py-4 flex flex-col justify-center align-middle text-center self-center">
+                <div className="p-2 borders rounded-full flex justify-center align-middle self-center text-center w-[80px] h-[80px] lg:w-[90px] lg:h-[90px]">
                   <Image
                     src={friends.url}
                     alt={friends.alt}
@@ -188,9 +188,9 @@ const FriendsSearchComponent: React.FC = () => {
                     height={200}
                     className="w-[100%] h-[100%] rounded-full"
                   />
-                </span>
+                </div>
                 <p className="capitalized pt-3">{friends.title}</p>
-              </span>
+              </div>
             ))}
           </label>
         </span>
