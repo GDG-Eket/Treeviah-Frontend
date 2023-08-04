@@ -15,16 +15,16 @@ import Link from "next/link";
 
 const Virtual: React.FC = () => {
   return (
-    <div className="md:px-[5%]">
-      <div className="w-[100%] flex flex-row justify-between align-middle">
-        <span>
+    <div className="overflow-x-hidden overflow-y-auto h-screen pb-4">
+      <div className="w-[100%] flex flex-row justify-between align-middle mt-4 px-[3%]">
+        <div>
           <Link href="/" className="text-primary hover:text-purple-800 pl-2">
             Go Back
           </Link>
-        </span>
+        </div>
       </div>
-      <div className="flex flex-col lg:flex-row w-[100%] gap-[50px] mt-4">
-        <div className="p-2 lg:w-[40%] border border-purple-200 rounded-md">
+      <div className="profileGrid sm:p-4">
+        <div className="p-2 w-[100%] border border-purple-200 rounded-md lg:mr-6 h-[100%] lg:h-auto">
           <div className="h-[300px] w-[100%]">
             <Image
               src={ImageOne}
@@ -35,14 +35,14 @@ const Virtual: React.FC = () => {
             />
           </div>
           <div className="w-[100%] p-2">
-            <span className="flex justify-between align-middle">
+            <div className="flex justify-between align-middle">
               <h1 className="font-bold text-[25px]">Virtual Reality</h1>
               <button className="p-2 border border-primary text-primary rounded-md flex justify-center align-middle hover:text-white hover:bg-primary">
                 <MdMovieEdit size={25} className="" />
                 Edit
               </button>
-            </span>
-            <span>
+            </div>
+            <div>
               <div className="flex flex-col justify-between align-middle mt-4">
                 <span className="p-2 border-b border-b-gray-light w-[100%] flex justify-between align-middle">
                   <h3>Live</h3>
@@ -54,8 +54,8 @@ const Virtual: React.FC = () => {
                   <h3>Hosted by @uidan_trxix</h3>
                 </span>
               </div>
-            </span>
-            <span className="p-2 flex justify-around align-middle bg-primary rounded-lg mt-6">
+            </div>
+            <div className="p-2 flex justify-around align-middle bg-primary rounded-lg mt-6">
               <div className="w-[100px] h-[100px]">
                 <Image
                   src={Trophy}
@@ -73,15 +73,15 @@ const Virtual: React.FC = () => {
                   Share Podium
                 </button>
               </div>
-            </span>
+            </div>
           </div>
         </div>
-        <div className="lg:w-[60%] w-[100%]">
+        <div className="w-[100%] lg:ml-6">
           <div className="p-4 border border-purple-200 rounded-md">
             <div className="grid grid-cols-3 justify-center align-middle gap-10">
               <div className="flex flex-col justify-center align-middle">
-                <div className="p-4 w-[60px] h-[60px] md:w-[150px] md:h-[150px] rounded-full border-[10px] border-l-white border-t-white border-b-green-800 border-r-green-800 flex justify-center align-middle self-center shadow-md">
-                  <p className="text-center self-center text-[1.2] md:text-[2.2em]">
+                <div className="p-4 w-[60px] h-[60px] md:w-[60px] md:h-[60px] lg:w-[150px] lg:h-[150px] rounded-full border-[10px] border-l-white border-t-white border-b-green-800 border-r-green-800 flex justify-center align-middle self-center shadow-md">
+                  <p className="text-center self-center text-[1.2em] md:text-[1.2em] lg:text-[2.2em]">
                     {" "}
                     66%
                   </p>
@@ -89,8 +89,8 @@ const Virtual: React.FC = () => {
                 <div className="self-center text-center flex justify-center align-middle"><MdCircle size={10} className="text-green-800 self-center" />players</div>
               </div>
               <div className="flex flex-col justify-center align-middle">
-                <div className="p-4 w-[60px] h-[60px] md:w-[150px] md:h-[150px] rounded-full border-[10px] border-l-white border-t-blue-800 border-b-blue-800 border-r-blue-800 flex justify-center align-middle self-center shadow-md">
-                  <p className="text-center self-center text-[1.2] md:text-[2.2em]">
+                <div className="p-4 w-[60px] h-[60px] md:w-[60px] md:h-[60px] lg:w-[150px] lg:h-[150px] rounded-full border-[10px] border-l-white border-t-blue-800 border-b-blue-800 border-r-blue-800 flex justify-center align-middle self-center shadow-md">
+                  <p className="text-center self-center text-[1.2em] md:text-[1.2em] lg:text-[2.2em]">
                     {" "}
                     90%
                   </p>
@@ -98,8 +98,8 @@ const Virtual: React.FC = () => {
                 <div className="self-center text-center flex justify-center align-middle"><MdCircle size={10} className="text-blue-800 self-center" />speed</div>
               </div>
               <div className="flex flex-col justify-center align-middle">
-                <div className="p-4 w-[60px] h-[60px] md:w-[150px] md:h-[150px] rounded-full border-[10px] border-l-white border-t-white border-b-white border-r-orange-500 flex justify-center align-middle self-center shadow-md">
-                  <p className="text-center self-center text-[1.2] md:text-[2.2em]">
+                <div className="p-4 w-[60px] h-[60px] md:w-[60px] md:h-[60px] lg:w-[150px] lg:h-[150px] rounded-full border-[10px] border-l-white border-t-white border-b-white border-r-orange-500 flex justify-center align-middle self-center shadow-md">
+                  <p className="text-center self-center text-[1.2em] md:text-[1.2em] lg:text-[2.2em]">
                     {" "}
                     30%
                   </p>

@@ -42,18 +42,18 @@ const ProfileSetting: React.FC = () => {
   ];
 
   return (
-    <div>
-      <div className="w-[100%] flex flex-row justify-between align-middle">
-        <span>
+    <div className="overflow-x-hidden overflow-y-auto h-screen pb-4">
+      <div className="w-[100%] flex flex-row justify-between align-middle mt-4 px-[3%]">
+        <div> 
           <Link href="/" className="text-primary hover:text-purple-800 pl-2">
             Go Back
           </Link>
-        </span>
-        <span className="flex justify-center align-middle">
+        </div>
+        <div className="flex justify-center align-middle">
           <i className="text-[30px] text-primary text-center self-center hidden md:block">
             <MdNotifications />
           </i>
-          <span className="border-2 rounded-full border-dashed flex justify-center align-middle self-center w-[40px] md:w-[30px] lg:w-[40px] h-[40px] md:h-[40px] lg:h-[40px]">
+          <div className="border-2 rounded-full border-dashed flex justify-center align-middle self-center w-[40px] md:w-[30px] lg:w-[40px] h-[40px] md:h-[40px] lg:h-[40px]">
             <Image
               src={ImageOne}
               alt="one.jpg"
@@ -61,12 +61,12 @@ const ProfileSetting: React.FC = () => {
               height={200}
               className="w-[100%] h-[100%] rounded-full"
             />
-          </span>
-        </span>
+          </div>
+        </div>
       </div>
-      <div className="flex flex-col lg:flex-row w-[100%] h-[100%] gap-4 mt-4">
-        <div className="flex justify-center align-middle p-6 lg:w-[40%] border border-gray-light rounded-md">
-          <div className="w-[100%] h-[100%] p-2 flex justify-top align-middle flex-col">
+      <div className="profileGrid sm:p-4">
+        <div className="flex justify-center align-middle p-6 w-[100%] h-[100%] border border-gray-light rounded-md">
+          <div className="w-[100%] h-[100%] p-2 flex justify-top align-middle flex-col lg:mr-6">
             <div className="w-[60%] h-[30%] self-center">
               <Image
                 src={User}
@@ -85,8 +85,8 @@ const ProfileSetting: React.FC = () => {
             </Link>
           </div>
         </div>
-        <div className="lg:w-[60%] w-[100%] grid grid-rows-3 gap-4">
-          <div className="w-[95%] md:w-[100%] flex flex-col justify-start align-middle p-4 border border-gray-light rounded-md h-[100%]">
+        <div className="w-[100%] grid grid-rows-3 gap-4 lg:ml-6">
+          <div className="w-[100%] flex flex-col justify-start align-middle p-4 border border-gray-light rounded-md h-[100%]">
             <h1 className="text-[20px] font-semibold">Bio</h1>
             <p>
               🎓 Lifelong Learner | 🧠 Curious Mind | 🌍 Global Citizen Hey
@@ -96,7 +96,7 @@ const ProfileSetting: React.FC = () => {
               come together to paint a clearer picture of the world.
             </p>
           </div>
-          <div className="flex flex-col justify-start align-middle p-4 border border-gray-light rounded-md w-[95%] md:w-[100%] h-[100%]">
+          <div className="flex flex-col justify-start align-middle p-4 border border-gray-light rounded-md w-[100%] h-[100%]">
             <h1 className="text-[20px] font-semibold">Personnal Information</h1>
             <div className="flex flex-col justify-between align-middle mt-4">
               <span className="p-2 border-b border-b-gray-light w-[100%] flex justify-between align-middle">
