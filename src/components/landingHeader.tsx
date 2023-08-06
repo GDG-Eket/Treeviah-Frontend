@@ -40,11 +40,11 @@ const LandingHeader = () => {
         showLinks ? "h-screen bg-white" : "lg:bg-white"
       } sticky top-0- z-50 w-full bg-white py-4 text-primary shadow lg:h-auto lg:py-3 lg:justify-center lg:items-center`}
     >
-      <div className="mx-auto lg:justify-between px-4 lg:px-[72px] w-[100%] flex h-16 flex-col  justify-between lg:flex-row lg:items-center">
-        <div className="my-4 flex w-full justify-between lg:my-0 lg:w-auto-">
-          <Link href="/landingPage" className="flex" onClick={handleCloseNav}>
+      <div className="mx-auto lg:justify-between px-4 lg:px-[72px] w-[100%] flex h-16 flex-col justify-between lg:flex-row lg:items-center">
+        <div className="my-4 flex w-full justify-between lg:my-0">
+          <Link href="/landingPage" className="flex group" onClick={handleCloseNav}>
             <Image className='group-hover:animate-pulse w-6 md:w-9 lg:w-full'  src={require("@/../public/Images/t-logo.svg")} alt="t-logo" />
-            <div className="left-[33px]- top-0- absolute- text-center text-primary leading-normal md:leading-[56px] lg:leading-[64px] text-[28px] md:text-[48px] lg:text-[56px] font-medium opacity-0- group-hover:opacity-100 bg-gradient-to-r  from-indigo-500 via-purple-500 to-pink-500 bg-clip-text "><span className='group-hover:text-transparent bg-clip-text'>reeviah</span></div>
+            <div className="text-center text-primary leading-normal md:leading-[56px] lg:leading-[64px] text-[28px] md:text-[48px] lg:text-[56px] font-medium opacity-0- group-hover:opacity-100 bg-gradient-to-r  from-indigo-500 via-purple-500 to-pink-500 bg-clip-text "><span className='group-hover:text-transparent bg-clip-text'>reeviah</span></div>
 
           </Link>
           <div
