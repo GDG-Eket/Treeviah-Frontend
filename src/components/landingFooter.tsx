@@ -3,14 +3,14 @@ import Image from 'next/image';
 
 const FooterLandingPage = () => {
   return (
-    <footer className="mt-16 px-3 sm:px-[72px]">
+    <footer className="my-16 px-4 sm:px-[72px]">
       <div className="container">
         <div className="flex flex-col lg:flex-row justify-between items-start">
           <div className="flex items-center gap-[1.48] mb-4">
             <Image alt="t-logo" src={require('../../public/Images/t-logo3.svg')}></Image>
             <p className='text-primary text-[38.485px] font-medium leading-[44px]'>reeviah</p>
           </div>
-          <div className='flex gap-4 lg:gap-12 xl:gap-[72px] flex-wrap justify-center'>
+          <div className='flex gap-3 sm:gap-6 lg:gap-12 xl:gap-[72px] flex-wrap sm:justify-center'>
             <div className='flex flex-col gap-6'>
               <h4 className='text-primary text-base font-bold'>Features</h4>
               <div className='flex flex-col font-medium text-gray font-montserrat text-base sm:text-lg leading-loose'>
@@ -53,13 +53,6 @@ const FooterLandingPage = () => {
           </div>
         </div>
 
-      </div>
-      <div className="container">
-        <div className="row">
-          <div className="col-md-12 text-center">
-            <p className="text-muted">Copyright &copy; 2023</p>
-          </div>
-        </div>
       </div>
     </footer>
   );
