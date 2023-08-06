@@ -101,6 +101,7 @@
   grid-template-columns: repeat(auto-fill, minmax(50%, 1fr));
   justify-content: center;
   align-content: center;
+  overflow-x: hidden;
 }
 
 .dashGrid{
@@ -146,6 +147,20 @@
   column-gap: 80px;
   row-gap: 50px;
 }
+
+.profileGrid{
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  padding: 3% 4%;
+}
+
+.table-responsive {
+  overflow-x: auto;
+}
+
 
 @media screen and (max-width: 425px) {
   .navgrid {
@@ -209,7 +224,7 @@
     width: 100%;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    justify-content: start;
+    justify-content: center;
     align-items: center;
   }
 
@@ -220,6 +235,14 @@
     justify-content: space-between;
     align-items: center;
     row-gap: 50px;
+  }
+
+  .profileGrid{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
   }
 }
 

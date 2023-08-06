@@ -40,7 +40,7 @@ const LandingHeader = () => {
         showLinks ? "h-screen bg-white" : "lg:bg-white"
       } sticky top-0- z-50 w-full bg-white py-4 text-primary shadow lg:h-auto lg:py-3 lg:justify-center lg:items-center`}
     >
-      <div className="mx-auto lg:justify-between px-4  lg:px-[72px] w-[100%] flex h-16 flex-col  justify-between lg:flex-row lg:items-center">
+      <div className="mx-auto lg:justify-between px-4 lg:px-[72px] w-[100%] flex h-16 flex-col  justify-between lg:flex-row lg:items-center">
         <div className="my-4 flex w-full justify-between lg:my-0 lg:w-auto-">
           <a href="/" className="flex" onClick={handleCloseNav}>
             <Image className='group-hover:animate-pulse w-6 md:w-9 lg:w-full'  src={require("@/../public/Images/t-logo.svg")} alt="t-logo" />

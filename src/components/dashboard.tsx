@@ -39,7 +39,7 @@ const Dashboard: React.FC = () => {
                 </div>
                 <div className="imageGrd">
                   <label className="flex flex-col justify-center align-middle gap-[10px]">
-                    <div className="md:p-2 border-2 rounded-full border-dashed flex justify-center align-middle self-center w w-20 h-20 md:w-24 md:h-24 overflow-hidden">
+                    <div className="md:p-2 border-2 rounded-full border-dashed border-white flex justify-center align-middle self-center w w-20 h-20 md:w-24 md:h-24 overflow-hidden">
                       <Image
                         src={ImageOne}
                         alt="one.jpg"
@@ -53,7 +53,7 @@ const Dashboard: React.FC = () => {
                     </button>
                   </label>
                   <label className="flex flex-col justify-center align-middle gap-[10px]">
-                    <div className="md:p-2 border-2 rounded-full border-dashed flex justify-center align-middle self-center w w-20 h-20 md:w-24 md:h-24 overflow-hidden">
+                    <div className="md:p-2 border-2 rounded-full border-dashed border-white flex justify-center align-middle self-center w w-20 h-20 md:w-24 md:h-24 overflow-hidden">
                       <Image
                         src={ImageTwo}
                         alt="one.jpg"
@@ -67,7 +67,7 @@ const Dashboard: React.FC = () => {
                     </button>
                   </label>
                   <label className="flex flex-col justify-center align-middle gap-[10px]">
-                    <div className="md:p-2 border-2 rounded-full border-dashed flex justify-center align-middle self-center w w-20 h-20 md:w-24 md:h-24 overflow-hidden">
+                    <div className="md:p-2 border-2 rounded-full border-dashed border-white flex justify-center align-middle self-center w w-20 h-20 md:w-24 md:h-24 overflow-hidden">
                       <Image
                         src={ImageThree}
                         alt="one.jpg"
