@@ -3,7 +3,11 @@ module.exports = {
     browser: true,
     es2021: true,
   },
-  extends: ["standard-with-typescript", "plugin:react/recommended"],
+  extends: [
+    "standard-with-typescript",
+    "plugin:react/recommended",
+    "eslint:recommended",
+  ],
   overrides: [
     {
       env: {
@@ -24,5 +28,6 @@ module.exports = {
     "no-unused-vars": "error",
     indent: ["error", 2],
     semi: ["error", "always"],
+    quotes: ["error", "double"],
   },
 };
