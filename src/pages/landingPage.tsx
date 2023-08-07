@@ -11,7 +11,7 @@ export default function LandingPage() {
           <LandingHeader/>
           <main>
             {/* hero */}
-            <div className="w-[100%] h-[783px] relative flex bg-primary px-10 xl:px-[72px]">
+            <section className="w-[100%] h-[783px] relative flex bg-primary px-10 xl:px-[72px]">
 
                 <div className="w-[663.89px]- h-[535px]- left-[9.55px] bottom-0 absolute">
                   <Image className="z-0" src={require('@/../public/Images/polygons.svg')} alt="bg-decoration"></Image>
@@ -29,12 +29,12 @@ export default function LandingPage() {
                   <Image src={require("@/../public/Images/hero1.svg")} className="hidden sm:block w-32 sm:w-[348px] xl:max-w-[470px] h-[470px]- md:right-[72px] right-12 bottom-5 sm:bottom-52- lg:bottom-[180px] 2xl:bottom-[280px]  3xl:block lg:absolute" alt="hero-img"/>
                 </div>
                 <Image className="z-10 left-0 bottom-0 absolute w-full" src={require('@/../public/Images/polygon-4.svg')} alt="bg-top-deco"></Image>
-            </div>
+            </section>
             <div className="w-11/12 sm:w-1/2 lg:w-3/5 2xl:w-2/6 h-full mb-4 pl-4 sm:pl-12 pr-[43px] py-6 bg-primary rounded-r-[64px] justify-end items-center flex">
               <div className=" text-sm text-center text-white sm:text-lg font-medium leading">With over 300+ Users Playing  and learning everday</div>
             </div>
             {/* discover section */}
-            <div className="pb-8 px-[72px] w-full flex flex-col items-center">
+            <section className="pb-8 px-[72px] w-full flex flex-col items-center">
               <div className="w-full xl:w-3/5">
                 <h2 className="font-montserrat text-center mb-2 text-2xl sm:text-3xl xl:leading-10 font-bold">Discover our various collections of Games in Treeviah</h2>
                 <p className="text-gray text-center text-lg leading-6 font-dmSans font-medium">Engaging Games and Expand Your Knowledge</p>
@@ -126,9 +126,9 @@ export default function LandingPage() {
               <button  className='border  lg:mt-24 mb-10 border-primary rounded-lg px-6 py-2.5 bg-primary hover:bg-primary-light'>
                 <a href='/sign-up' className='text-white'>Sign Up</a>
               </button>
-            </div>
+            </section>
             {/* template section */}
-            <div className="pt-7 px-6 sm:px-[72px] flex items-center justify-center flex-col">
+            <section className="pt-7 px-6 sm:px-[72px] flex items-center justify-center flex-col">
               <div className="w-4/5 mb-24 ">
                 <h2 className="text-center font-montserrat text-2xl sm:text-[32px] leading-10 font-bold mb-4 wrap">Top notch customizable templates and Themes</h2>
                 <p className="text-center text-gray text-lg leading-6 font-medium">Unleash your Creativity with Customizable Templates</p>
@@ -152,9 +152,9 @@ export default function LandingPage() {
                   <a href='/join-game' className='text-primary  text-2xl font-medium md:font-bold hover:text-primary-light'>Join game</a>
                 </button>
               </div>
-            </div>
+            </section>
             {/* Quiz Types */}
-            <div className="pt-7 xl:px-[72px] flex items-center justify-center flex-col">
+            <section className="pt-7 xl:px-[72px] flex items-center justify-center flex-col">
               <div className="w-4/5 mb-12 ">
                 <h2 className="text-center font-montserrat text-[32px] leading-10 font-bold mb-4">Create Quizzez for every Occasion</h2>
                 <p className="text-center text-gray text-lg leading-6 font-medium">Built in templates to match the occasion</p>
@@ -185,14 +185,14 @@ export default function LandingPage() {
                   <h3 className="text-center font-montserrat text-2xl sm:text-[32px] sm:leading-10 font-medium">School Exams</h3>
                 </div>
               </div>
-            </div>
-            <div className="pt-6 pb-10 flex justify-center">
-              <button  className='border border-primary rounded-lg  px-6 py-2.5  xl:py-5  bg-primary hover:bg-primary-light'>
-                <Link href='#' className='text-white text-2xl py-2.5 font-medium md:font-bold'>Create a Triviah</Link>
-              </button>
-            </div>
+              <div className="pt-6 pb-10 flex justify-center">
+                <button  className='border border-primary rounded-lg  px-6 py-2.5  xl:py-5  bg-primary hover:bg-primary-light'>
+                  <Link href='#' className='text-white text-2xl py-2.5 font-medium md:font-bold'>Create a Triviah</Link>
+                </button>
+              </div>
+            </section>
             {/* join players */}
-            <div className="bg-[#BF80BF] h-full pt-16 pb-20  md:pb-32 px-6 lg:px-[72px] flex items-center justify-center flex-col">
+            <section className="bg-[#BF80BF] h-full pt-16 pb-20  md:pb-32 px-6 lg:px-[72px] flex items-center justify-center flex-col">
               <div className="w-4/5 mb-12 text-white ">
                 <h2 className="text-center font-montserrat text-[32px] leading-10 font-bold mb-4">Join the Fun with 100+ Players</h2>
                 <p className="text-center text-lg leading-6 font-medium">Collaborate, Compete, and Conquer!</p>
@@ -214,9 +214,9 @@ export default function LandingPage() {
                 <Image src={require('@/../public/Images/player4.svg')} className="order-2 sm:order-last w-5/12 sm:w-[28%]" alt="player1-icon"></Image>
               </div>
 
-            </div>
+            </section>
             {/* Testimonials */}
-            <div className="w-full py-28 px-8 lg:px-8 xl:px-[72px]">
+            <section className="w-full py-28 px-8 lg:px-8 xl:px-[72px]">
               <h2 className="font-montserrat text-gray font-bold text-center text-[32px] leading-10 py-2">Testimonials</h2>
               <div className="my-28 w-full flex flex-wrap xl:flex-nowrap gap-8 lg:gap-12 xl:gap-24 justify-center">
                 {/* 1st */}
@@ -307,9 +307,9 @@ export default function LandingPage() {
                   </div>
                 </div>
               </div>
-            </div>
+            </section>
             {/* partner */}
-            <div className=" w-full flex flex-col items-center pb-20">
+            <section className=" w-full flex flex-col items-center pb-20">
               <div className="flex flex-wrap justify-center items-center gap-2 mb-10">
                 <div className="flex items-center gap-0.5">
                   <Image alt="t-reeviah" src={require('@/../../public/Images/t-logo2.svg')}></Image>
@@ -324,9 +324,9 @@ export default function LandingPage() {
                 <Image alt="Africinnovate" src={require('@/../public/Images/africinnovate.svg')}></Image>
               </div>
 
-            </div>
+            </section>
             {/* connect */}
-            <div className="px-8 sm:px-[72px] pt-14 pb-16 bg-gradient-to-l from-[#40196D] from-[16%] via-[#6F077B] via-[57.29%] to-primary to-[99.54%]">
+            <section className="px-8 sm:px-[72px] pt-14 pb-16 bg-gradient-to-l from-[#40196D] from-[16%] via-[#6F077B] via-[57.29%] to-primary to-[99.54%]">
               <div>
                 <h2 className="text-white font-montserrat text-[32px] leading-10 font-bold mb-6">Connect with us on social media</h2>
                 <div className="flex gap-x-9 mb-10">
@@ -350,7 +350,7 @@ export default function LandingPage() {
                 </div>
               </div>
 
-            </div>
+            </section>
             {/* download */}
             <div className='px-[72px] py-7 flex gap-6'>
               <a href="#">
