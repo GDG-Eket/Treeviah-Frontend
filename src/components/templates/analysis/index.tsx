@@ -24,14 +24,14 @@ const AnalysisTemplate: React.FC = () => {
     ["JT", 3, 98, 2, 0, 9980],
   ];
 
-  // const tableItemHeader = [
-  //   "Question",
-  //   "Type",
-  //   "Answered",
-  //   "Correct/incorrect",
-  //   "Time",
-  //   "Total",
-  // ];
+  const tableItemHeader = [
+    "Question",
+    "Type",
+    "Answered",
+    "Correct/incorrect",
+    "Time",
+    "Total",
+  ];
 
   // const tableItemData = [
   //   ["Chicken feed", "Multichoice", true, 2, 0, 9980],
