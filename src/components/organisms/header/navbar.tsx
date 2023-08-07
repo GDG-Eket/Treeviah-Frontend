@@ -1,7 +1,7 @@
 "use client";
 import React, { useState } from "react";
 import { MdSearch, MdMenu, MdNotifications } from "react-icons/md";
-import '../styles/dashboard.css'
+import "../../../styles/dashboard.css";
 
 const Navbar: React.FC = () => {
   const [open, setOpen] = useState(false);

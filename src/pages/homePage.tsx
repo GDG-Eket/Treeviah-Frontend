@@ -1,8 +1,8 @@
 import React from "react";
-import Sidebar from "../components/sidebar";
-import Navbar from "../components/navbar";
+import Sidebar from "../components/organisms/sidebar/sidebar";
+import Navbar from "../components/organisms/header/navbar";
 import Dashboard from "../components/dashboard";
-import FooterBar from "../components/Footer";
+import FooterBar from "../components/organisms/footer/Footer";
 import {
   MdHome,
   MdLibraryBooks,
