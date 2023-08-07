@@ -8,7 +8,7 @@ interface TableProps {
 const RealityTable: React.FC<TableProps> = ({ headers, data }) => {
   return (
     <div className="overflow-x-auto">
-      <table className="w-full table-auto h-[200px]">
+      <table className="w-[100%] table-auto h-[200px]">
         <thead>
           <tr className="border-b border-gray-light">
             {headers.map((header, index) => (
