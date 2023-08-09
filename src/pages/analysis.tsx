@@ -8,11 +8,7 @@ import {
   MdEqualizer,
   MdAccountCircle,
 } from "react-icons/md";
-<<<<<<< HEAD
-import AnalysisComponent from "@/components/analysis/analysisCom";
-=======
 import AnalysisTemplate from "../components/templates/analysis/index";
->>>>>>> f2b57514ab6ed0aced6cf61d1672961e4aa3fd4c
 
 const Analysis: React.FC = () => {
   const sideMenuList = [

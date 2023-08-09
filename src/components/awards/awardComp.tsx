@@ -1,5 +1,5 @@
 import React from "react";
-import ImageOne from "../../public/Images/one.jpg";
+import ImageOne from "../../../public/Images/one.jpg";
 import Link from "next/link";
 import Image from "next/image";
 

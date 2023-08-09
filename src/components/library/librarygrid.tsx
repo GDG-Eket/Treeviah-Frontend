@@ -1,9 +1,9 @@
 import React from "react";
 import { MdMoreVert, MdAccountCircle, MdNotifications } from "react-icons/md";
-import ImageOne from '../../public/Images/one.jpg';
-import "../styles/dashboard.css";
+import ImageOne from '../../../public/Images/one.jpg';
+import "../../styles/dashboard.css";
 import Image from "next/image";
-import LabImg from "../../public/Images/five.jpg";
+import LabImg from "../../../public/Images/five.jpg";
 import Link from "next/link";
 
 interface LibraryInterface {
@@ -83,7 +83,7 @@ const LibraryGrid: React.FC = () => {
         <div className="flex w-100 p-2">
           <label className="grid libraryGrd w-[100%] rounded-md gap-10">
             {LibraryArray.map((list, i) => (
-              <div className="border border-gray rounded-md flex flex-col lg:flex-row w-[100%] lg:h-[100px] h-auto" key={i}>
+              <div className="border border-purple-300 rounded-md flex flex-col lg:flex-row w-[100%] lg:h-[100px] h-auto" key={i}>
                 <div className="w-[100%] lg:w-[20%]">
                   <div className="w-[100%] h-[100%]">
                     <Image

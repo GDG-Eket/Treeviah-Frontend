@@ -1,7 +1,6 @@
 import React from "react";
 import Sidebar from "../components/organisms/sidebar/sidebar";
 import Navbar from "../components/organisms/header/navbar";
-import LibraryGrid from "../components/librarygrid";
 import FooterBar from "../components/organisms/footer/Footer";
 import {
   MdHome,
@@ -11,6 +10,7 @@ import {
   MdAccountCircle,
   MdLiveHelp,
 } from "react-icons/md";
+import LibraryGrid from "@/components/library/librarygrid";
 
 const Library: React.FC = () => {
   const sideMenuList = [
