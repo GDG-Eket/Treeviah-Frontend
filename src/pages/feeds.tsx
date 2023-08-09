@@ -8,9 +8,10 @@ import {
   MdEqualizer,
   MdAccountCircle,
 } from "react-icons/md";
-import TableRender from "@/components/tableRender";
+import UserQuestionAnalysisComponent from "@/components/analysis/userQuestionAnalysis/userquestionanalysis";
+import PlayerAnalysis from "@/components/playerAnalysis";
 
-const VirtualReality: React.FC = () => {
+const UserQuestion: React.FC = () => {
   const sideMenuList = [
     {
       title: "Home",
@@ -68,7 +69,7 @@ const VirtualReality: React.FC = () => {
               <Navbar />
             </div>
             <div>
-              <TableRender />
+              <PlayerAnalysis />
             </div>
           </div>
         </div>
@@ -80,4 +81,4 @@ const VirtualReality: React.FC = () => {
   );
 };
 
-export default VirtualReality;
+export default UserQuestion;

@@ -8,7 +8,7 @@ import {
   MdEqualizer,
   MdAccountCircle,
 } from "react-icons/md";
-import AwardComponents from "@/components/awardComp";
+import AwardComponents from "@/components/awards/awardComp";
 
 const Awards: React.FC = () => {
   const sideMenuList = [

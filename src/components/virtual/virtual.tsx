@@ -1,6 +1,6 @@
 import React from "react";
-import ImageOne from "../../public/Images/vr.png";
-import Trophy from "../../public/Images/achievement.png";
+import ImageOne from "../../../public/Images/vr.png";
+import Trophy from "../../../public/Images/achievement.png";
 import {
   MdMovieEdit,
   MdPeople,
@@ -9,7 +9,7 @@ import {
   MdCircle,
   MdWatch,
 } from "react-icons/md";
-import "../styles/dashboard.css";
+import "../../styles/dashboard.css";
 import Image from "next/image";
 import Link from "next/link";
 

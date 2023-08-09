@@ -8,9 +8,9 @@ import {
   MdEqualizer,
   MdAccountCircle,
 } from "react-icons/md";
-import OneOptionComp from "@/components/oneOption";
+import UserQuestionAnalysisComponent from "@/components/analysis/userQuestionAnalysis/userquestionanalysis";
 
-const Option: React.FC = () => {
+const UserQuestion: React.FC = () => {
   const sideMenuList = [
     {
       title: "Home",
@@ -58,17 +58,17 @@ const Option: React.FC = () => {
   ];
   return (
     <div>
-      <section className="relative w-[100%] overflow-hidden">
+       <section className="relative w-full overflow-hidden">
         <div className="flex flex-row relative w-[100%] mb-[30%] md:mb-0">
           <div className="hidden md:block">
             <Sidebar list={sideMenuList} />
           </div>
-          <div className="w-[100%] flex flex-col justify-between align-middle">
+          <div className="w-[100%] h-[100vh]">
             <div className="flex flex-col w-[100%]">
               <Navbar />
             </div>
             <div>
-              <OneOptionComp />
+              <UserQuestionAnalysisComponent />
             </div>
           </div>
         </div>
@@ -80,4 +80,4 @@ const Option: React.FC = () => {
   );
 };
 
-export default Option;
+export default UserQuestion;

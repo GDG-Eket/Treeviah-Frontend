@@ -1,7 +1,7 @@
 import React from 'react'
 import { MdMoreVert } from 'react-icons/md'
 import Image from 'next/image'
-import Notice from '../../public/Images/noti.png'
+import Notice from '../../../public/Images/noti.png'
 
 
 const Notification: React.FC = () => {

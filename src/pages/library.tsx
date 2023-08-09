@@ -1,7 +1,7 @@
 import React from "react";
 import Sidebar from "../components/sidebar";
 import Navbar from "../components/navbar";
-import LibraryGrid from "../components/librarygrid";
+import LibraryGrid from "../components/library/librarygrid";
 import FooterBar from "../components/Footer";
 import {
   MdHome,

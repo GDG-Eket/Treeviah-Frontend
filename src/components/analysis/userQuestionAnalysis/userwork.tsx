@@ -1,14 +1,15 @@
 import React from "react";
-import Sidebar from "../components/sidebar";
-import Navbar from "../components/navbar";
-import FooterBar from "../components/Footer";
+import Sidebar from "../../sidebar";
+import Navbar from "../../navbar";
+import FooterBar from "../../Footer";
 import {
   MdHome,
   MdLibraryBooks,
   MdEqualizer,
   MdAccountCircle,
 } from "react-icons/md";
-import UndoneComp from "@/components/undonePlayers";
+import UndoneComp from "@/components/analysis/userQuestionAnalysis/userquestionanalysis";
+import UserQuestionAnalysisComponent from "@/components/analysis/userQuestionAnalysis/userquestionanalysis";
 
 const Undone: React.FC = () => {
   const sideMenuList = [
@@ -68,7 +69,7 @@ const Undone: React.FC = () => {
               <Navbar />
             </div>
             <div>
-              <UndoneComp />
+              <UserQuestionAnalysisComponent />
             </div>
           </div>
         </div>

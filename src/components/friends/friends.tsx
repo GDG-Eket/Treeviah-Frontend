@@ -1,6 +1,6 @@
 import React from 'react';
 import Image from 'next/image';
-import '../styles/dashboard.css'
+import '../../styles/dashboard.css'
 import add from '../../../public/Images/one.jpg'
 import { Md1KPlus } from 'react-icons/md'
 import Link from 'next/link';

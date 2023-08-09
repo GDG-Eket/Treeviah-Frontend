@@ -8,7 +8,7 @@ import {
   MdEqualizer,
   MdAccountCircle,
 } from "react-icons/md";
-import VirtulPlayers from "@/components/virtualPlayers";
+import VirtulPlayers from "@/components/virtual/virtualPlayers";
 
 const Analysis: React.FC = () => {
   const sideMenuList = [

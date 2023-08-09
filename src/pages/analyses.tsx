@@ -8,9 +8,9 @@ import {
   MdEqualizer,
   MdAccountCircle,
 } from "react-icons/md";
-import FriendsComponent from "@/components/friends/friendsComp";
+import Virtual from "@/components/virtual/virtual";
 
-const FriendsPage: React.FC = () => {
+const Analyses: React.FC = () => {
   const sideMenuList = [
     {
       title: "Home",
@@ -63,12 +63,12 @@ const FriendsPage: React.FC = () => {
           <div className="hidden md:block">
             <Sidebar list={sideMenuList} />
           </div>
-          <div className="w-[100%] h-[100vh] flex flex-col justify-between align-middle">
+          <div className="w-[100%] h-[100vh]">
             <div className="flex flex-col w-[100%]">
               <Navbar />
             </div>
-            <div className="w-100% h-screen overflow-y-auto mb-[3%]">
-             <FriendsComponent />
+            <div>
+              <Virtual />
             </div>
           </div>
         </div>
@@ -80,4 +80,4 @@ const FriendsPage: React.FC = () => {
   );
 };
 
-export default FriendsPage;
+export default Analyses;

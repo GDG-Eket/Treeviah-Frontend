@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import Link from "next/link";
-import Table from "./table";
-import '../styles/dashboard.css'
+import Table from "../table";
+import '../../styles/dashboard.css'
 
 const data = [
   ["Virtual Reality", "10", "12/03/2023", "12"],

@@ -8,9 +8,9 @@ import {
   MdEqualizer,
   MdAccountCircle,
 } from "react-icons/md";
-import Virtual from "@/components/virtual";
+import TableRender from "@/components/tableRender";
 
-const VirtualReality: React.FC = () => {
+const AnalizedQuestion: React.FC = () => {
   const sideMenuList = [
     {
       title: "Home",
@@ -58,7 +58,7 @@ const VirtualReality: React.FC = () => {
   ];
   return (
     <div>
-      <section className="relative w-full h-[100%] overflow-hidden">
+       <section className="relative w-full overflow-hidden">
         <div className="flex flex-row relative w-[100%] mb-[30%] md:mb-0">
           <div className="hidden md:block">
             <Sidebar list={sideMenuList} />
@@ -68,11 +68,11 @@ const VirtualReality: React.FC = () => {
               <Navbar />
             </div>
             <div>
-              <Virtual />
+              <TableRender />
             </div>
           </div>
         </div>
-        <div className="absolute bottom-0 left-0 md:hidden w-[100%]">
+        <div className="absolute bottom-0 left-0 lg:hidden w-[100%]">
           <FooterBar footer={footerList} />
         </div>
       </section>
@@ -80,4 +80,4 @@ const VirtualReality: React.FC = () => {
   );
 };
 
-export default VirtualReality;
+export default AnalizedQuestion;
