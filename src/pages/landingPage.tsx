@@ -1,5 +1,6 @@
 import React from "react";
 import LandingHeader from "../components/landingHeader";
+import LandingFooter from "../components/landingFooter";
 import Image from "next/image";
 import Link from "next/link";
 import "@/styles/dashboard.css";
@@ -311,8 +312,8 @@ export default function LandingPage() {
             <div className=" w-full flex flex-col items-center pb-20">
               <div className="flex flex-wrap justify-center items-center gap-2 mb-10">
                 <div className="flex items-center gap-0.5">
-                  <Image alt="t-reeviah" src={require('@/../../public/Images/t-logo.svg')}></Image>
-                  <p className="font-bold text-primary font-montserrat text-[45.5px] leading-[52px]">reeviah</p>
+                  <Image alt="t-reeviah" src={require('@/../../public/Images/t-logo2.svg')}></Image>
+                  <p className="font-bold text-primary font-montserrat text-[45.48px] leading-[52px]">reeviah</p>
                 </div>
                 <h2 className="text-center text-gray font-montserrat text-[32px] leading-10 font-bold">is in partnership with</h2>
               </div>
@@ -325,7 +326,7 @@ export default function LandingPage() {
 
             </div>
             {/* connect */}
-            <div className="pl-16 pt-14 pb-16 bg-gradient-to-l from-[#40196D] from-[16%] via-[#6F077B] via-[57.29%] to-primary to-[99.54%]">
+            <div className="px-8 sm:px-[72px] pt-14 pb-16 bg-gradient-to-l from-[#40196D] from-[16%] via-[#6F077B] via-[57.29%] to-primary to-[99.54%]">
               <div>
                 <h2 className="text-white font-montserrat text-[32px] leading-10 font-bold mb-6">Connect with us on social media</h2>
                 <div className="flex gap-x-9 mb-10">
@@ -342,10 +343,24 @@ export default function LandingPage() {
                     <Image className="ease-in-out duration-150" src={require("../../public/Images/whatsapp.svg")} alt="whatsapp-icon"/>
                   </a>
                 </div>
-                <p className="text-base text-white">Subscribe for our newsletter, and get updates on what happens behind the scenes at Treeviah</p>
+                <p className="text-base text-white mb-2.5">Subscribe for our newsletter, and get updates on what happens behind the scenes at Treeviah</p>
+                <div className="block sm:flex gap-4">
+                  <input className="px-6 py-5 w-full sm:w-3/5 rounded-lg text-sm leading-6" type="email" name="email" id="useremail" placeholder="Enter your email address" />
+                  <button className="px-6 py-2.5 shadow text-white bg-primary hover:bg-primary-light rounded-lg font-bold text-2xl mt-2.5 sm:mt-0" type="submit">Subscribe</button>
+                </div>
               </div>
 
             </div>
+            {/* download */}
+            <div className='px-[72px] py-7 flex gap-6'>
+              <a href="#">
+                <Image alt="Get from Google Playstore" src={require('../../public/Images/playstore.svg')}></Image>
+              </a>
+              <a href="#">
+                <Image alt="Get from Appstore" src={require('../../public/Images/appstore.svg')}></Image>
+              </a>
+            </div>
+            <LandingFooter/>
 
           </main>
         </div>

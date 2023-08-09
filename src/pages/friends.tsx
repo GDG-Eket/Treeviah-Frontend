@@ -1,7 +1,7 @@
 import React from "react";
-import Sidebar from "../components/sidebar";
-import Navbar from "../components/navbar";
-import FooterBar from "../components/Footer";
+import Sidebar from "../components/organisms/sidebar/sidebar";
+import Navbar from "../components/organisms/header/navbar";
+import FooterBar from "../components/organisms/footer/Footer";
 import {
   MdHome,
   MdLibraryBooks,
@@ -68,7 +68,7 @@ const FriendsPage: React.FC = () => {
               <Navbar />
             </div>
             <div className="w-100% h-screen overflow-y-auto mb-[3%]">
-             <FriendsComponent />
+              <FriendsComponent />
             </div>
           </div>
         </div>

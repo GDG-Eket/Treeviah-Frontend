@@ -1,5 +1,5 @@
 "use client";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import {
   MdHome,
   MdLibraryBooks,
@@ -9,9 +9,10 @@ import {
   MdLiveHelp,
 } from "react-icons/md";
 import Image from "next/image";
-import Logo from "../../public/Images/logo.png";
-import "../styles/dashboard.css";
+import Logo from "../../../../public/Images/logo.png";
+import "../../../styles/dashboard.css";
 import Link from "next/link";
+import { useRouter, usePathname, useSearchParams } from "next/navigation";
 
 interface SideMenu {
   title: string;
@@ -25,6 +26,19 @@ interface SideMenuProps {
 
 const Sidebar: React.FC<SideMenuProps> = ({ list }) => {
   const [hovered, setHovered] = useState(false);
+  const [active, setActive] = useState(0);
+  const pathname = usePathname();
+
+  useEffect(() => {
+    const activeIndex = list.findIndex((item: any) => item.href === pathname);
+    setActive(activeIndex);
+    console.log(pathname, activeIndex);
+  }, [pathname]);
+
+  const handleItemClick = async (index: number) => {
+    setActive(index);
+    localStorage.setItem("activeIndex", index.toString());
+  };
 
   const handleHover = () => {
     setHovered(true);
@@ -34,28 +48,28 @@ const Sidebar: React.FC<SideMenuProps> = ({ list }) => {
     setHovered(false);
   };
 
-  const SideList: SideMenu[] = [
-    {
-      title: "Home",
-      icon: <MdHome />,
-      path: "/",
-    },
-    {
-      title: "Library",
-      icon: <MdLibraryBooks />,
-      path: "/library",
-    },
-    {
-      title: "Analysis",
-      icon: <MdEqualizer />,
-      path: "/analysis",
-    },
-    {
-      title: "Account",
-      icon: <MdAccountCircle />,
-      path: "/account",
-    },
-  ];
+  // const SideList: SideMenu[] = [
+  //   {
+  //     title: "Home",
+  //     icon: <MdHome />,
+  //     path: "/",
+  //   },
+  //   {
+  //     title: "Library",
+  //     icon: <MdLibraryBooks />,
+  //     path: "/library",
+  //   },
+  //   {
+  //     title: "Analysis",
+  //     icon: <MdEqualizer />,
+  //     path: "/analysis",
+  //   },
+  //   {
+  //     title: "Account",
+  //     icon: <MdAccountCircle />,
+  //     path: "/account",
+  //   },
+  // ];
 
   return (
     <div className="relative w-[100%] hidden lg:block">
@@ -87,11 +101,14 @@ const Sidebar: React.FC<SideMenuProps> = ({ list }) => {
             hovered ? "mt-[40px]" : "mt-[40px]"
           } flex flex-col justify-start align-start gap-[30px]`}
         >
-          {list.map((item, i) => (
-            <li key={i} className="flex justify-start align-middle">
+          {list.map((item, index) => (
+            <li key={index} className="flex justify-start align-middle">
               <span className="py-2 text-[25px] text-white">{item.icon}</span>
               <Link
+                onClick={() => handleItemClick(index)}
                 className={`px-4 py-2 rounded hover:bg-white color-purple w-[80%] ${
+                  active === index ? "bg-white color-purple" : ""
+                } ${
                   hovered ? "scale-100 ml-[5px] cursor-pointer" : "scale-0"
                 } duration-100`}
                 href={item.path}

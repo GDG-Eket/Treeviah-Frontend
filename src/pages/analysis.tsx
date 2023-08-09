@@ -1,14 +1,18 @@
 import React from "react";
-import Sidebar from "../components/sidebar";
-import Navbar from "../components/navbar";
-import FooterBar from "../components/Footer";
+import Sidebar from "../components/organisms/sidebar/sidebar";
+import Navbar from "../components/organisms/header/navbar";
+import FooterBar from "../components/organisms/footer/Footer";
 import {
   MdHome,
   MdLibraryBooks,
   MdEqualizer,
   MdAccountCircle,
 } from "react-icons/md";
+<<<<<<< HEAD
 import AnalysisComponent from "@/components/analysis/analysisCom";
+=======
+import AnalysisTemplate from "../components/templates/analysis/index";
+>>>>>>> f2b57514ab6ed0aced6cf61d1672961e4aa3fd4c
 
 const Analysis: React.FC = () => {
   const sideMenuList = [
@@ -68,7 +72,7 @@ const Analysis: React.FC = () => {
               <Navbar />
             </div>
             <div>
-              <AnalysisComponent />
+              <AnalysisTemplate />
             </div>
           </div>
         </div>

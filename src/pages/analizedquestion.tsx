@@ -1,7 +1,7 @@
 import React from "react";
-import Sidebar from "../components/sidebar";
-import Navbar from "../components/navbar";
-import FooterBar from "../components/Footer";
+import Sidebar from "../components/organisms/sidebar/sidebar";
+import Navbar from "../components/organisms/header/navbar";
+import FooterBar from "../components/organisms/footer/Footer";
 import {
   MdHome,
   MdLibraryBooks,
@@ -67,7 +67,11 @@ const AnalizedQuestion: React.FC = () => {
             <div className="flex flex-col w-[100%]">
               <Navbar />
             </div>
+<<<<<<< HEAD
+            <div className="overflow-auto p-4">
+=======
             <div>
+>>>>>>> b43963797a686cab4d29713d2d1fcd8285b6b6f6
               <TableRender />
             </div>
           </div>
