@@ -1,14 +1,13 @@
 import React from "react";
-import Sidebar from "../../sidebar";
-import Navbar from "../../navbar";
-import FooterBar from "../../Footer";
+import Sidebar from "../../organisms/sidebar/sidebar";
+import Navbar from "../../organisms/header/navbar";
+import FooterBar from "../../organisms/footer/Footer";
 import {
   MdHome,
   MdLibraryBooks,
   MdEqualizer,
   MdAccountCircle,
 } from "react-icons/md";
-import UndoneComp from "@/components/analysis/userQuestionAnalysis/userquestionanalysis";
 import UserQuestionAnalysisComponent from "@/components/analysis/userQuestionAnalysis/userquestionanalysis";
 
 const Undone: React.FC = () => {
