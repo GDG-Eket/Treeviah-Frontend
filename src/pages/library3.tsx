@@ -1,8 +1,8 @@
 import React from "react";
-import Sidebar from "../app/components/sidebar";
-import Navbar from "../app/components/navbar";
-import LibraryPage3 from "../app/components/librabryPage3";
-import FooterBar from "../app/components/Footer";
+import Sidebar from "../components/sidebar";
+import Navbar from "../components/navbar";
+import LibraryPage3 from "../components/librabryPage3";
+import FooterBar from "../components/Footer";
 import {
   MdHome,
   MdLibraryBooks,
@@ -61,19 +61,30 @@ const footerList = [
 const Analysis: React.FC = () => {
   
   return (
-    <>
-      <Navbar />
-      <div className="flex gap-12">
-        <Sidebar list={sideMenuList} />
-       <div className="max-w-[72%] w-full ml-[270px] pt-6">
-       <a href="" className="text-primary-light text-[11px] font-semi-bold">
-        Go back
-      </a>
-      <h3 className="py-2 font-bold text-[18px]">Questions</h3>
-        <LibraryPage3 />
+      <div>
+      <section className="relative w-full h-[100%] overflow-hidden">
+        <div className="flex flex-row relative w-[100%] mb-[30%] md:mb-0">
+          <div className="hidden md:block">
+            <Sidebar list={sideMenuList} />
+          </div>
+          <div className="w-[100%] flex flex-col justify-between align-middle h-[100vh]">
+            <div className="flex flex-col w-[100%]">
+              <Navbar />
+            </div>
+            <div className="md:px-10 mt-2">
+              <div className="pl-2 md:pl-10">
+                <h5 className="text-primary text-[12px] font-light mb-5">Go back</h5>
+                <span className="text-2xl font-bold ">Questions</span>
+              </div>
+              <LibraryPage3 />
+            </div>
+          </div>
         </div>
-      </div>
-    </>
+        <div className="absolute bottom-0 left-0 md:hidden w-[100%]">
+          <FooterBar footer={footerList} />
+        </div>
+      </section>
+    </div>
   );
 };
 

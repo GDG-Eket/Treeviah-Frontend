@@ -1,9 +1,9 @@
-import LibraryPage1 from '@/components/libraryPage1'
+import FooterBar from '@/components/Footer'
+import AccountPage1 from '@/components/accountPage1'
+import { sideMenuList } from './library3';
 import Navbar from '@/components/navbar'
 import Sidebar from '@/components/sidebar'
-import { sideMenuList } from './library3';
 import React from 'react'
-import FooterBar from "../components/Footer";
 import {
   MdHome,
   MdLibraryBooks,
@@ -13,11 +13,7 @@ import {
   MdLiveHelp,
 } from "react-icons/md";
 
-
-
-
-const Library1 : React.FC = () => {
-
+const Account1 : React.FC = () => {
   const footerList = [
     {
       id: 1,
@@ -40,18 +36,20 @@ const Library1 : React.FC = () => {
       path: "/account",
     },
   ];
+
+
   return (
-    <section className="relative w-full h-[100%] overflow-hidden">
-      <div className="flex flex-row relative w-[100%] mb-[30%] md:mb-0">
+    <section className="relative w-full h-[100%]">
+      <div className="flex flex-row relative w-[100%] md:mb-[10%]">
         <div className="hidden md:block">
           <Sidebar list={sideMenuList} />
         </div>
-        <div className="w-[100%] flex flex-col justify-between align-middle h-[100vh]">
+        <div className="w-[100%] flex flex-col justify-between align-middle md:h-[100vh]">
           <div className="flex flex-col w-[100%]">
             <Navbar />
           </div>
-          <div className='p-4 md:p-10 '>
-            <LibraryPage1 />
+          <div className='mb-[50px] md:pt-5 pl-5'>
+            <AccountPage1 />
           </div>
         </div>
       </div>
@@ -62,4 +60,4 @@ const Library1 : React.FC = () => {
   )
 }
 
-export default Library1
+export default Account1

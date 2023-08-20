@@ -1,18 +1,16 @@
 import React from "react";
 import Sidebar from "../components/sidebar";
 import Navbar from "../components/navbar";
-import Dashboard from "../components/dashboard";
 import FooterBar from "../components/Footer";
 import {
   MdHome,
   MdLibraryBooks,
   MdEqualizer,
-  MdExitToApp,
   MdAccountCircle,
-  MdLiveHelp,
 } from "react-icons/md";
+import Virtual from "@/components/virtual";
 
-const HomePage: React.FC = () => {
+const VirtualReality: React.FC = () => {
   const sideMenuList = [
     {
       title: "Home",
@@ -58,27 +56,28 @@ const HomePage: React.FC = () => {
       path: "/account",
     },
   ];
-
   return (
-    <section className="relative w-full h-[100%] overflow-hidden">
-      <div className="flex flex-row relative w-[100%] mb-[30%] md:mb-0">
-        <div className="hidden md:block">
-          <Sidebar list={sideMenuList} />
-        </div>
-        <div className="w-[100%] flex flex-col justify-between align-middle h-[100vh]">
-          <div className="flex flex-col w-[100%]">
-            <Navbar />
+    <div>
+      <section className="relative w-full h-auto overflow-hidden">
+        <div className="flex flex-row w-full mb-[5%] md:mb-0">
+          <div className="w-[50px] hidden md:block">
+            <Sidebar list={sideMenuList} />
           </div>
-          <div>
-            <Dashboard />
+          <div className="w-[100%] flex flex-col justify-between align-middle h-[100vh]">
+            <div className="flex flex-col w-[100%] pl-0 md:pl-[10px] lg:pl-[10px] xl:pl-[10px]">
+              <Navbar />
+            </div>
+            <div className="overflow-auto p-4">
+             <Virtual />
+            </div>
           </div>
         </div>
-      </div>
-      <div className="absolute bottom-0 left-0 md:hidden w-[100%]">
-        <FooterBar footer={footerList} />
-      </div>
-    </section>
+        <div className="absolute bottom-0 left-0 md:hidden w-[100%]">
+          <FooterBar footer={footerList} />
+        </div>
+      </section>
+    </div>
   );
 };
 
-export default HomePage;
+export default VirtualReality;
