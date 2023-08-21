@@ -16,7 +16,7 @@ export default function Header() {
               <a href='/join-game' className='text-primary hover:text-primary-light'>Join game</a>
             </button>
             <button  className='border border-primary rounded-lg px-6 py-2.5 bg-primary hover:bg-primary-light'>
-              <a href='/sign-up' className='text-white'>Sign Up</a>
+              <a href='/signup' className='text-white'>Sign Up</a>
             </button>
           </div>
        
