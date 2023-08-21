@@ -11,7 +11,6 @@ import {
   MdAccountCircle,
   MdLiveHelp,
 } from "react-icons/md";
-import LibraryGrid from "@/components/library/librarygrid";
 
 const Library: React.FC = () => {
   const sideMenuList = [
@@ -60,25 +59,24 @@ const Library: React.FC = () => {
     },
   ];
   return (
-      <section className="relative w-full h-[100%] overflow-hidden">
-        <div className="flex flex-row relative w-[100%] mb-[30%] md:mb-0">
-          <div className="hidden md:block">
-            <Sidebar list={sideMenuList} />
+    <section className="relative w-full h-[100%] overflow-hidden">
+      <div className="flex flex-row relative w-[100%] mb-[30%] md:mb-0">
+        <div className="hidden md:block">
+          <Sidebar list={sideMenuList} />
+        </div>
+        <div className="w-[100%] flex flex-col justify-between align-middle h-[100vh]">
+          <div className="flex flex-col w-[100%]">
+            <Navbar />
           </div>
-          <div className="w-[100%] flex flex-col justify-between align-middle h-[100vh]">
-            <div className="flex flex-col w-[100%]">
-              <Navbar />
-            </div>
-            <div>
-              <LibraryGrid />
-            </div>
+          <div>
+            <LibraryGrid />
           </div>
         </div>
-        <div className="absolute bottom-0 left-0 md:hidden w-[100%]">
-          <FooterBar footer={footerList} />
-        </div>
-      </section>
-   
+      </div>
+      <div className="absolute bottom-0 left-0 md:hidden w-[100%]">
+        <FooterBar footer={footerList} />
+      </div>
+    </section>
   );
 };
 

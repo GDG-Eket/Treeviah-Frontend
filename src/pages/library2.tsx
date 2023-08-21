@@ -1,9 +1,9 @@
-import React from 'react'
-import Navbar from '@/components/navbar';
-import Sidebar from '@/components/sidebar';
-import LibraryPage2 from '../components/libraryPage2';
-import { sideMenuList } from './library3';
-import FooterBar from "../components/Footer";
+import React from "react";
+import Navbar from "@/components/organisms/header/navbar";
+import Sidebar from "@/components/organisms/sidebar/sidebar";
+import LibraryPage2 from "../components/libraryPage2";
+import { sideMenuList } from "./library3";
+import FooterBar from "../components/organisms/footer/Footer";
 import {
   MdHome,
   MdLibraryBooks,
@@ -13,10 +13,7 @@ import {
   MdLiveHelp,
 } from "react-icons/md";
 
-
-
-const Library2 : React.FC = () => {
-
+const Library2: React.FC = () => {
   const footerList = [
     {
       id: 1,
@@ -49,16 +46,16 @@ const Library2 : React.FC = () => {
           <div className="flex flex-col w-[100%]">
             <Navbar />
           </div>
-          <div className='md:p-3 '>
+          <div className="md:p-3 ">
             <LibraryPage2 />
           </div>
         </div>
       </div>
       <div className="absolute bottom-0 left-0 md:hidden w-[100%]">
-          <FooterBar footer={footerList} />
-        </div>
+        <FooterBar footer={footerList} />
+      </div>
     </section>
-  )
-}
+  );
+};
 
-export default Library2
+export default Library2;

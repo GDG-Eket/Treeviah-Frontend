@@ -95,7 +95,9 @@ const Card: React.FC = () => {
       <div className="flex justify-between">
         <h2 className="text-[22px] font-bold">Library</h2>
         <span className="flex">
-        <span className="text-[25px] mr-[20px] text-primary"><IoMdNotificationsOutline/></span>
+          <span className="text-[25px] mr-[20px] text-primary">
+            <IoMdNotificationsOutline />
+          </span>
           <Image
             src={Plate1}
             alt="one.jpg"
@@ -110,7 +112,7 @@ const Card: React.FC = () => {
         of quizzes created by you.
       </span>
 
-      <h2 className="mt-3 font-bold text-[20px] text-primary-light text-primary">
+      <h2 className="mt-3 font-bold text-[20px] text-primary-light">
         Most Played
       </h2>
 
@@ -120,14 +122,14 @@ const Card: React.FC = () => {
             key={Card.id}
             className="w-[100%] md:w-[12rem]  border border-slate-300 rounded-[5px] p-[10px]"
           >
-           <Image
-                src={Card.url}
-                alt={Card.alt}
-                width={300}
-                height={200}
-                className="w-[100%] h-[100%]"
-              />
-         
+            <Image
+              src={Card.url}
+              alt={Card.alt}
+              width={300}
+              height={200}
+              className="w-[100%] h-[100%]"
+            />
+
             <label className="text-[13px]">{Card.title}</label>
             <p className=" pt-[5px] text-[10px]">{Card.text}</p>
 
@@ -164,8 +166,8 @@ const Card: React.FC = () => {
           </div>
         </div>
         <div className="flex flex-col gap-5 md:gap-2 mb-3">
-        <LibraryPage1Tri />
-        <LibraryPage1Tri />
+          <LibraryPage1Tri />
+          <LibraryPage1Tri />
         </div>
       </div>
     </section>

@@ -1,8 +1,8 @@
 import React from "react";
-import Sidebar from "../components/sidebar";
-import Navbar from "../components/navbar";
+import Sidebar from "../components/organisms/sidebar/sidebar";
+import Navbar from "../components/organisms/header/navbar";
 import LibraryPage3 from "../components/librabryPage3";
-import FooterBar from "../components/Footer";
+import FooterBar from "../components/organisms/footer/Footer";
 import {
   MdHome,
   MdLibraryBooks,
@@ -59,9 +59,8 @@ const footerList = [
 ];
 
 const Analysis: React.FC = () => {
-  
   return (
-      <div>
+    <div>
       <section className="relative w-full h-[100%] overflow-hidden">
         <div className="flex flex-row relative w-[100%] mb-[30%] md:mb-0">
           <div className="hidden md:block">
@@ -73,7 +72,9 @@ const Analysis: React.FC = () => {
             </div>
             <div className="md:px-10 mt-2">
               <div className="pl-2 md:pl-10">
-                <h5 className="text-primary text-[12px] font-light mb-5">Go back</h5>
+                <h5 className="text-primary text-[12px] font-light mb-5">
+                  Go back
+                </h5>
                 <span className="text-2xl font-bold ">Questions</span>
               </div>
               <LibraryPage3 />
