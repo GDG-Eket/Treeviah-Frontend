@@ -5,10 +5,11 @@ import Link from "next/link";
 import Image from "next/image";
 import { Md1KPlus } from "react-icons/md";
 import PopupModal from "../modal";
+import Friend1 from "@/../public/Images/one.jpg";
 
 interface FriendsLists {
   title: string;
-  url: string;
+  url: any;
   alt: string;
 }
 const FriendsComponent: React.FC = () => {
@@ -19,7 +20,7 @@ const FriendsComponent: React.FC = () => {
 
   const FriendsArray: FriendsLists[] = [
     {
-      url: "/../public/Images/one.jpg",
+      url: Friend1,
       title: "Professional",
       alt: "awardImageOne.jpg",
     },
