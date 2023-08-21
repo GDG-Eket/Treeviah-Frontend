@@ -72,11 +72,7 @@ const Sidebar: React.FC<SideMenuProps> = ({ list }) => {
   // ];
 
   return (
-<<<<<<< HEAD:src/components/sidebar.tsx
-    <div className="relative w-[] hidden md:block">
-=======
     <div className="relative w-[100%] hidden lg:block">
->>>>>>> 3c9a369b7040c2b84a9ce2bdf7fbb8ca801df0a4:src/components/organisms/sidebar/sidebar.tsx
       <section
         className={`background h-screen duration-300 ${
           hovered ? "w-60 rounded-tr-xl rounded-br-xl" : "w-[50px]"

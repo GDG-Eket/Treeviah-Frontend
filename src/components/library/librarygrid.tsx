@@ -1,6 +1,6 @@
 import React from "react";
 import { MdMoreVert, MdAccountCircle, MdNotifications } from "react-icons/md";
-import ImageOne from '../../../public/Images/one.jpg';
+import ImageOne from "../../../public/Images/one.jpg";
 import "../../styles/dashboard.css";
 import Image from "next/image";
 import LabImg from "../../../public/Images/five.jpg";
@@ -58,7 +58,9 @@ const LibraryGrid: React.FC = () => {
       <div className="flex flex-col h-screen w-[100%] md:w-auto p-[10px] md:px-[40px] md:py-[20px] justify-start align-middle overflow-y-auto md:pb-[10%]">
         <div className="w-[100%] flex flex-row justify-between align-middle">
           <span>
-            <Link href="/" className="text-primary hover:text-purple-800 pl-2">Go Back</Link>
+            <Link href="/" className="text-primary hover:text-purple-800 pl-2">
+              Go Back
+            </Link>
           </span>
           <span className="flex justify-center align-middle">
             <i className="text-[30px] text-primary text-center self-center hidden md:block">
@@ -83,7 +85,10 @@ const LibraryGrid: React.FC = () => {
         <div className="flex w-100 p-2">
           <label className="grid libraryGrd w-[100%] rounded-md gap-10">
             {LibraryArray.map((list, i) => (
-              <div className="border border-purple-300 rounded-md flex flex-col lg:flex-row w-[100%] lg:h-[100px] h-auto" key={i}>
+              <div
+                className="border border-gray rounded-md flex flex-col lg:flex-row w-[100%] lg:h-[100px] h-auto"
+                key={i}
+              >
                 <div className="w-[100%] lg:w-[20%]">
                   <div className="w-[100%] h-[100%]">
                     <Image
@@ -117,7 +122,9 @@ const LibraryGrid: React.FC = () => {
                         {list.quizAmt} Questions
                       </h3>
                       <p className="text-center flex justify-center align-middle self-start lg:self-end lg:px-2 text-[17px]">
-                        <i className="self-center text-primary"><MdAccountCircle /></i>
+                        <i className="self-center text-primary">
+                          <MdAccountCircle />
+                        </i>
                         {list.user}
                       </p>
                     </span>

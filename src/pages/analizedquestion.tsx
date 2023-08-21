@@ -58,7 +58,7 @@ const AnalizedQuestion: React.FC = () => {
   ];
   return (
     <div>
-       <section className="relative w-full overflow-hidden">
+      <section className="relative w-full overflow-hidden">
         <div className="flex flex-row relative w-[100%] mb-[30%] md:mb-0">
           <div className="hidden md:block">
             <Sidebar list={sideMenuList} />
@@ -67,7 +67,8 @@ const AnalizedQuestion: React.FC = () => {
             <div className="flex flex-col w-[100%]">
               <Navbar />
             </div>
-            <div>
+
+            <div className="overflow-auto p-4">
               <TableRender />
             </div>
           </div>
