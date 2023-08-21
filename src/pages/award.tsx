@@ -1,14 +1,14 @@
 import React from "react";
-import Sidebar from "../components/sidebar";
-import Navbar from "../components/navbar";
-import FooterBar from "../components/Footer";
+import Sidebar from "../components/organisms/sidebar/sidebar";
+import Navbar from "../components/organisms/header/navbar";
+import FooterBar from "../components/organisms/footer/Footer";
 import {
   MdHome,
   MdLibraryBooks,
   MdEqualizer,
   MdAccountCircle,
 } from "react-icons/md";
-import AwardComponents from "@/components/awardComp";
+import AwardComponents from "@/components/awards/awardComp";
 
 const Awards: React.FC = () => {
   const sideMenuList = [
