@@ -1,6 +1,5 @@
 import { useState } from "react";
 import AnalysisTable from "../../organisms/analysis/table";
-// import QuestionAnalysis from "../../organisms/analysis/questionAnalysis";
 
 const AnalysisTemplate: React.FC = () => {
   const tabs = ["Summary", "Questions", "Players"];
@@ -32,12 +31,6 @@ const AnalysisTemplate: React.FC = () => {
     "Time",
     "Total",
   ];
-
-  // const tableItemData = [
-  //   ["Chicken feed", "Multichoice", true, 2, 0, 9980],
-  //   ["Chicken feed", "True/false", false, 2, 0, 9980],
-  //   ["Blur", "True/false", false, 2, 0, 9980],
-  // ];
   return (
     <div className="py-4 px-12">
       <button className="font-medium text-[#D5AAD5] mb-2">Go Back</button>
@@ -65,9 +58,6 @@ const AnalysisTemplate: React.FC = () => {
           ))}
         </div>
       </div>
-
-      {/* <QuestionAnalysis /> */}
-
       <div className="rounded-md p-4 bg-white drop-shadow-lg w-full">
         <div className="flex mb-5">
           {list.map((item, index) => (
@@ -93,9 +83,6 @@ const AnalysisTemplate: React.FC = () => {
             tHeader={tHeader}
           />
         </div>
-        {/* <div className="w-full overflow-x-auto h-[50vh]">
-          <AnalysisTable tHeader={tableItemHeader} tData={tableItemData} />
-        </div> */}
       </div>
     </div>
   );

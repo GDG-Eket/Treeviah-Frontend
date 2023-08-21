@@ -67,11 +67,7 @@ const ProfilePage: React.FC = () => {
             <div className="flex flex-col w-[100%]">
               <Navbar />
             </div>
-<<<<<<< HEAD
-            <div className="overflow-auto p-4">
-=======
             <div>
->>>>>>> b43963797a686cab4d29713d2d1fcd8285b6b6f6
               <ProfileSetting />
             </div>
           </div>

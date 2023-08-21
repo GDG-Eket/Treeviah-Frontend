@@ -8,7 +8,7 @@ import {
   MdEqualizer,
   MdAccountCircle,
 } from "react-icons/md";
-// import AnalysisComponent from "@/components/analysis/analysisCom";
+import AnalysisTemplate from "../components/templates/analysis/index";
 
 const Analysis: React.FC = () => {
   const sideMenuList = [
@@ -67,7 +67,9 @@ const Analysis: React.FC = () => {
             <div className="flex flex-col w-[100%]">
               <Navbar />
             </div>
-            <div>{/* <AnalysisComponent /> */}</div>
+            <div>
+              <AnalysisTemplate />
+            </div>
           </div>
         </div>
         <div className="absolute bottom-0 left-0 md:hidden w-[100%]">
