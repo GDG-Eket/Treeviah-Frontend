@@ -15,16 +15,16 @@ import Link from "next/link";
 
 const PlayerAnalysisComp: React.FC = () => {
   return (
-    <div className="md:px-[15%]">
-      <div className="w-[100%] flex flex-row justify-between align-middle">
+    <div className="md:px-[5%] pb-[5%] w-100% overflow-x-hidden overflow-y-auto h-screen">
+      <div className="w-[100%] flex flex-row justify-between align-middle py-4">
         <span>
           <Link href="/" className="text-primary hover:text-purple-800 pl-2">
-            Go Back
+            Go Backs!
           </Link>
         </span>
       </div>
-      <div className="flex flex-col md:flex-row justify-center align-middle gap-[50px] mt-4">
-        <div className="w-[100%] p-2 border border-purple-200 rounded-md">
+      <div className="playerAnaGrid p-4">
+        <div className="p-4 border border-purple-200 rounded-md">
           <div className="h-[300px] w-[100%]">
             <Image
               src={ImageOne}
@@ -34,7 +34,7 @@ const PlayerAnalysisComp: React.FC = () => {
               className="w-[100%] h-[100%]"
             />
           </div>
-          <div className="w-[100%] p-2">
+          <div className="p-2">
             <span className="flex justify-between align-middle mb-4 md:flex-col lg:flex-row">
               <h1 className="font-bold text-[25px]">Question Two</h1>
               <button className="p-2 border border-primary text-primary rounded-md flex justify-center align-middle hover:text-white hover:bg-primary">
@@ -62,7 +62,7 @@ const PlayerAnalysisComp: React.FC = () => {
         </div>
         <div className="w-[100%]">
           <div className="p-2 border border-purple-200 rounded-md">
-            <div className="h-[300px] w-[100%] md:px-[10%]">
+            <div className="h-[300px] w-[100%] md:px-[15%]">
               <Image
                 src={Pie}
                 alt="ImageOne.png"
@@ -79,7 +79,7 @@ const PlayerAnalysisComp: React.FC = () => {
                     <li className="style-none">Home</li>
                 </ul>
             </div>
-            <div className="w-[100%] p-2">
+            <div className="p-2">
               <div>
                 <div className="flex flex-col justify-between align-middle mt-4 mb-6">
                   <span className="p-2 border-b border-b-gray-light w-[100%] flex justify-between align-middle text-[15px] font-semibold">

@@ -1,14 +1,14 @@
 import React from "react";
-import Sidebar from "../components/sidebar";
-import Navbar from "../components/navbar";
-import FooterBar from "../components/Footer";
+import Sidebar from "../components/organisms/sidebar/sidebar";
+import Navbar from "../components/organisms/header/navbar";
+import FooterBar from "../components/organisms/footer/Footer";
 import {
   MdHome,
   MdLibraryBooks,
   MdEqualizer,
   MdAccountCircle,
 } from "react-icons/md";
-import FriendsComponent from "@/components/friendsComp";
+import FriendsComponent from "@/components/friends/friendsComp";
 
 const FriendsPage: React.FC = () => {
   const sideMenuList = [
@@ -59,16 +59,16 @@ const FriendsPage: React.FC = () => {
   return (
     <div>
       <section className="relative w-full h-[100%] overflow-hidden">
-        <div className="flex flex-row w-full mb-[5%] md:mb-0">
-          <div className="w-[50px] hidden md:block">
+        <div className="flex flex-row relative w-[100%] mb-[30%] md:mb-0">
+          <div className="hidden md:block">
             <Sidebar list={sideMenuList} />
           </div>
           <div className="w-[100%] h-[100vh] flex flex-col justify-between align-middle">
-            <div className="flex flex-col w-[100%] pl-0 md:pl-[10px] lg:pl-[10px] xl:pl-[10px]">
+            <div className="flex flex-col w-[100%]">
               <Navbar />
             </div>
-            <div className="overflow-auto p-4">
-             <FriendsComponent />
+            <div className="w-100% h-screen overflow-y-auto mb-[3%]">
+              <FriendsComponent />
             </div>
           </div>
         </div>
