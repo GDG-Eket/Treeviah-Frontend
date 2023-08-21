@@ -4,6 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 
 export default function login() {
+  const [showPassword, setShowPassword] = useState(false);
   return (
     <div>
       <Header />
@@ -44,16 +45,24 @@ export default function login() {
                         Password
                       </label>
                       <input
-                        type="text"
+                        type={showPassword ? "text" : "password"}
                         id="password"
                         placeholder="Password"
                         className="w-full px-4 py-2 flex items-center h-14 text-[#60656F]  focus:outline-none focus:border-0"
                         required
                       />
-                      <button type="button" className="p-2 flex w-fit">
+                      <button
+                        onClick={() => setShowPassword(!showPassword)}
+                        type="button"
+                        className="p-2 flex w-fit"
+                      >
                         <Image
-                          src={require("@/../public/Images/eye-slash.svg")}
-                          alt="password-toggle-icon"
+                          src={
+                            showPassword
+                              ? require("@/../public/Images/eye-slash.svg")
+                              : require("@/../public/Images/eye-slash.svg")
+                          }
+                          alt=""
                         ></Image>
                       </button>
                     </div>
