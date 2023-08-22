@@ -1,17 +1,19 @@
 import React from "react";
 import ImageOne from "../../../public/Images/one.jpg";
 import Link from "next/link";
-import Image from "next/image";
+import Image, { StaticImageData } from "next/image";
+import Trophy from '../../../public/Images/trophy.png';
+import Medal from '../../../public/Images/medal.png';
 
 interface AwardInterface {
   toptext: string;
-  url: string;
+  url: StaticImageData;
   header: string;
   text: string;
 }
 
 interface TopAwards {
-  url: string;
+  url: StaticImageData;
   header: string;
   alt: string;
 }
@@ -19,73 +21,73 @@ interface TopAwards {
 const AwarArray: AwardInterface[] = [
   {
     toptext: "45 / 50",
-    url: "/../public/Images/trophy.png",
+    url: Trophy,
     header: "Cold Killer",
     text: "Win 60 games",
   },
   {
     toptext: "45 / 50",
-    url: "/../public/Images/trophy.png",
+    url: Trophy,
     header: "Cold Killer",
     text: "Win 60 games",
   },
   {
     toptext: "45 / 50",
-    url: "/../public/Images/trophy.png",
+    url: Trophy,
     header: "Cold Killer",
     text: "Win 60 games",
   },
   {
     toptext: "45 / 50",
-    url: "/../public/Images/trophy.png",
+    url: Trophy,
     header: "Cold Killer",
     text: "Win 60 games",
   },
   {
     toptext: "45 / 50",
-    url: "/../public/Images/trophy.png",
+    url: Trophy,
     header: "Cold Killer",
     text: "Win 60 games",
   },
   {
     toptext: "45 / 50",
-    url: "/../public/Images/trophy.png",
+    url: Trophy,
     header: "Cold Killer",
     text: "Win 60 games",
   },
   {
     toptext: "45 / 50",
-    url: "/../public/Images/trophy.png",
+    url: Trophy,
     header: "Cold Killer",
     text: "Win 60 games",
   },
   {
     toptext: "45 / 50",
-    url: "/../public/Images/trophy.png",
+    url: Trophy,
     header: "Cold Killer",
     text: "Win 60 games",
   },
   {
     toptext: "45 / 50",
-    url: "/../public/Images/trophy.png",
+    url: Trophy,
     header: "Cold Killer",
     text: "Win 60 games",
   },
   {
     toptext: "45 / 50",
-    url: "/../public/Images/trophy.png",
+    url: Trophy,
     header: "Cold Killer",
     text: "Win 60 games",
   },
   {
     toptext: "45 / 50",
-    url: "/../public/Images/trophy.png",
+    url: Trophy,
     header: "Cold Killer",
     text: "Win 60 games",
   },
   {
     toptext: "45 / 50",
-    url: "/../public/Images/trophy.png",
+    url: Trophy,
     header: "Cold Killer",
     text: "Win 60 games",
   },
@@ -93,17 +95,17 @@ const AwarArray: AwardInterface[] = [
 
 const TopArray: TopAwards[] = [
   {
-    url: "/../public/Images/medal.png",
+    url: Medal,
     alt: "Image.jpg",
     header: "Top Player",
   },
   {
-    url: "/../public/Images/trophy.png",
+    url: Trophy,
     alt: "Image.jpg",
     header: "Top Player",
   },
   {
-    url: "/../public/Images/medal.png",
+    url: Medal,
     alt: "Image.jpg",
     header: "Top Player",
   },
