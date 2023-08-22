@@ -32,7 +32,7 @@ const AnalysisTemplate: React.FC = () => {
     "Total",
   ];
   return (
-    <div className="py-4 px-12">
+    <div className="py-4 px-4 md:px-12">
       <button className="font-medium text-[#D5AAD5] mb-2">Go Back</button>
 
       <div className="flex items-center justify-between mb-6">

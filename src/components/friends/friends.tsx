@@ -1,39 +1,37 @@
 import React from "react";
-import Image from "next/image";
+import Image, { StaticImageData } from "next/image";
 import "../../styles/dashboard.css";
-import add from "../../../public/Images/one.jpg";
+import ImgOne from "../../../public/Images/one.jpg";
+import ImgTwo from "../../../public/Images/two.jpg";
+import ImgThree from "../../../public/Images/three.jpg";
+import ImgFour from "../../../public/Images/four.jpg";
 import { Md1KPlus } from "react-icons/md";
 import Link from "next/link";
 
 interface FriendsList {
-  id: number;
   title: string;
-  url: string;
+  url: StaticImageData;
   alt: string;
 }
 const Friends: React.FC = () => {
   const FriendsArray: FriendsList[] = [
     {
-      id: 1,
-      url: "/../public/Images/one.jpg",
+      url: ImgOne,
       title: "Professional",
       alt: "awardImageOne.jpg",
     },
     {
-      id: 2,
-      url: "/../public/Images/two.jpg",
+      url: ImgTwo,
       title: "Professional",
       alt: "awardImageOne.jpg",
     },
     {
-      id: 3,
-      url: "/../public/Images/three.jpg",
+      url: ImgThree,
       title: "Professional",
       alt: "awardImageOne.jpg",
     },
     {
-      id: 4,
-      url: "/../public/Images/four.jpg",
+      url: ImgFour,
       title: "Professional",
       alt: "awardImageOne.jpg",
     },
@@ -50,9 +48,9 @@ const Friends: React.FC = () => {
         </span>
         <span className="p-[20px]">
           <label className="flex flex-row overflow-x-auto scrollbar-hide gap-[50px] p-2 scrollbar-hide">
-            {FriendsArray.map((friends) => (
+            {FriendsArray.map((friends, i) => (
               <span
-                key={friends.id}
+                key={i}
                 className="px-2 py-4 border rounded-md border-purple-300"
               >
                 <span className="p-2 borders rounded-full flex justify-center align-middle self-center w-[90px] h-[90px]">
