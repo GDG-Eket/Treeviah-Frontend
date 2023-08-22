@@ -1,16 +1,16 @@
 import React from "react";
-import Sidebar from "../components/sidebar";
-import Navbar from "../components/navbar";
-import FooterBar from "../components/Footer";
+import Sidebar from "../components/organisms/sidebar/sidebar";
+import Navbar from "../components/organisms/header/navbar";
+import FooterBar from "../components/organisms/footer/Footer";
 import {
   MdHome,
   MdLibraryBooks,
   MdEqualizer,
   MdAccountCircle,
 } from "react-icons/md";
-import TableRender from "@/components/tableRender";
+import UserQuestionAnalysisComponent from "@/components/analysis/userQuestionAnalysis/userquestionanalysis";
 
-const VirtualReality: React.FC = () => {
+const UserQuestion: React.FC = () => {
   const sideMenuList = [
     {
       title: "Home",
@@ -68,7 +68,7 @@ const VirtualReality: React.FC = () => {
               <Navbar />
             </div>
             <div>
-              <TableRender />
+              <UserQuestionAnalysisComponent />
             </div>
           </div>
         </div>
@@ -80,4 +80,4 @@ const VirtualReality: React.FC = () => {
   );
 };
 
-export default VirtualReality;
+export default UserQuestion;

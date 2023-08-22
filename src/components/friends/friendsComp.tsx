@@ -1,10 +1,10 @@
 import React, { useState } from "react";
-import "../styles/dashboard.css";
-import ImageOne from "../../public/Images/one.jpg";
+import "../../styles/dashboard.css";
+import ImageOne from "../../../public/Images/one.jpg";
 import Link from "next/link";
 import Image from "next/image";
 import { Md1KPlus } from "react-icons/md";
-import PopupModal from "./modal";
+import PopupModal from "../modal";
 
 interface FriendsLists {
   title: string;

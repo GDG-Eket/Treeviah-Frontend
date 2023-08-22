@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import Link from "next/link";
-import Table from "./table";
+import UserResult from "./userResult";
 
 const data = [
   ["Box", "2", "95% Correct", "5% Incorrect", "0", "9990"],
@@ -18,7 +18,7 @@ const headers = [
   "Total",
 ];
 
-const UndoneComp: React.FC = () => {
+const UserQuestionAnalysisComponent: React.FC = () => {
   return (
     <div>
       <section className="pt-5 w-[100%] pb-[20%] overflow-y-auto h-[100vh]">
@@ -82,7 +82,7 @@ const UndoneComp: React.FC = () => {
                 </ul>
               </div>
             </div>
-            <Table headers={headers} data={data} />
+            <UserResult />
           </div>
         </div>
       </section>
@@ -90,4 +90,4 @@ const UndoneComp: React.FC = () => {
   );
 };
 
-export default UndoneComp;
+export default UserQuestionAnalysisComponent;

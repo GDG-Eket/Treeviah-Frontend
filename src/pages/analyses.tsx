@@ -1,16 +1,16 @@
 import React from "react";
-import Sidebar from "../components/sidebar";
-import Navbar from "../components/navbar";
-import FooterBar from "../components/Footer";
+import Sidebar from "../components/organisms/sidebar/sidebar";
+import Navbar from "../components/organisms/header/navbar";
+import FooterBar from "../components/organisms/footer/Footer";
 import {
   MdHome,
   MdLibraryBooks,
   MdEqualizer,
   MdAccountCircle,
 } from "react-icons/md";
-import OneOptionComp from "@/components/oneOption";
+import Virtual from "@/components/virtual/virtual";
 
-const Option: React.FC = () => {
+const Analyses: React.FC = () => {
   const sideMenuList = [
     {
       title: "Home",
@@ -58,21 +58,21 @@ const Option: React.FC = () => {
   ];
   return (
     <div>
-      <section className="relative w-[100%] overflow-hidden">
+      <section className="relative w-full h-[100%] overflow-hidden">
         <div className="flex flex-row relative w-[100%] mb-[30%] md:mb-0">
           <div className="hidden md:block">
             <Sidebar list={sideMenuList} />
           </div>
-          <div className="w-[100%] flex flex-col justify-between align-middle">
+          <div className="w-[100%] h-[100vh]">
             <div className="flex flex-col w-[100%]">
               <Navbar />
             </div>
             <div>
-              <OneOptionComp />
+              <Virtual />
             </div>
           </div>
         </div>
-        <div className="absolute bottom-0 left-0 lg:hidden w-[100%]">
+        <div className="absolute bottom-0 left-0 md:hidden w-[100%]">
           <FooterBar footer={footerList} />
         </div>
       </section>
@@ -80,4 +80,4 @@ const Option: React.FC = () => {
   );
 };
 
-export default Option;
+export default Analyses;

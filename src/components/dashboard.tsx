@@ -3,11 +3,11 @@ import Image from "next/image";
 import ImageOne from "../../public/Images/one.jpg";
 import ImageTwo from "../../public/Images/two.jpg";
 import ImageThree from "../../public/Images/three.jpg";
-import Awards from "./awards";
-import Friends from "./friends";
+import Awards from "./awards/awards";
+import Friends from "./friends/friends";
 import Profile from "./profile";
 import Quizzes from "./quizzes";
-import Notification from "./notification";
+import Notification from "./notifications/notification";
 import "../styles/dashboard.css";
 
 const Dashboard: React.FC = () => {

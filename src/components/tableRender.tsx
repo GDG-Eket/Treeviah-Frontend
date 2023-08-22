@@ -1,58 +1,81 @@
 import React, { useState, useEffect } from "react";
 import Link from "next/link";
-import Table from "./realityTable";
-// import Red from '../../public/Images/red.png'
-// import Green from '../../public/Images/green.png'
+import Table from "./virtual/realityTable";
+import Tryout from "./analysis/question";
+const GreenImage = require("../../public/Images/green.png");
+const RedImage = require("../../public/Images/red.png");
 
 const data = [
   [
     "Which technology is commonly used in virtual reality headsets?",
     "Multiple Choice",
+    "/../public/Images/green.png",
     "100% Correct",
   ],
   [
     "Which technology is commonly used in virtual reality headsets?",
     "Multiple Choice",
+    "/../public/Images/green.png",
     "100% Correct",
   ],
   [
     "Which technology is commonly used in virtual reality headsets?",
     "Multiple Choice",
+    "/../public/Images/green.png",
     "100% Correct",
   ],
   [
     "Which technology is commonly used in virtual reality headsets?",
     "Multiple Choice",
+    "/../public/Images/green.png",
     "100% Correct",
   ],
   [
     "Which technology is commonly used in virtual reality headsets?",
     "Multiple Choice",
+    "/../public/Images/green.png",
     "100% Correct",
   ],
   [
     "Which technology is commonly used in virtual reality headsets?",
     "Multiple Choice",
+    "/../public/Images/green.png",
     "100% Correct",
   ],
   [
     "Which technology is commonly used in virtual reality headsets?",
     "Multiple Choice",
+    "/../public/Images/green.png",
     "100% Correct",
   ],
   [
     "Which technology is commonly used in virtual reality headsets?",
     "Multiple Choice",
+    "/../public/Images/green.png",
     "100% Correct",
   ],
   [
     "Which technology is commonly used in virtual reality headsets?",
     "Multiple Choice",
+    "/../public/Images/green.png",
     "100% Correct",
   ],
   [
     "Which technology is commonly used in virtual reality headsets?",
     "Multiple Choice",
+    "/../public/Images/green.png",
+    "100% Correct",
+  ],
+  [
+    "Which technology is commonly used in virtual reality headsets?",
+    "Multiple Choice",
+    "/../public/Images/red.png",
+    "100% Correct",
+  ],
+  [
+    "Which technology is commonly used in virtual reality headsets?",
+    "Multiple Choice",
+    "/../public/Images/red.png",
     "100% Correct",
   ],
 ];
@@ -102,8 +125,26 @@ const TableRender: React.FC = () => {
           </div>
         </div>
         <div>
-          <div className="md:mx-[5%] p-4 rounded-md shadow-md mt-[5%]">
-            <Table headers={headers} data={data} />
+          <div className="md:mx-[5%] p-4 rounded-md shadow-md mt-[5%] flex flex-col">
+            <div className="float-left flex justify-start w-[100%] border-b-gray-light">
+                <ul className="flex">
+                  <li className="flex justify-center align-middle gap-5 md:gap-10 flex-row border-b border-b-gray-light">
+                    <Link
+                      href="/players"
+                      className="self-end text-end border-b-4 border-b-transparent hover:border-b-primary"
+                    >
+                      All(5)
+                    </Link>
+                    <Link
+                      href="undone"
+                      className="self-end text-end border-b-4 border-b-transparent hover:border-b-purple-300 border-b-primary"
+                    >
+                      Didn't Finish
+                    </Link>
+                  </li>
+                </ul>
+            </div>
+            <Tryout />
           </div>
         </div>
       </section>
