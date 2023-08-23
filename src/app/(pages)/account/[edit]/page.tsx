@@ -12,7 +12,7 @@ import {
   MdLiveHelp,
 } from "react-icons/md";
 
-const Account2: React.FC = () => {
+const EditAccount: React.FC = () => {
   const sideMenuList = [
     {
       title: "Home",
@@ -83,4 +83,4 @@ const Account2: React.FC = () => {
   );
 };
 
-export default Account2;
+export default EditAccount;

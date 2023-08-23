@@ -1,6 +1,6 @@
 import FooterBar from "@/components/organisms/footer/Footer";
 import AccountPage1 from "@/components/accountPage1";
-import { sideMenuList } from "./library3";
+import { sideMenuList } from "../../../pages/library3";
 import Navbar from "@/components/organisms/header/navbar";
 import Sidebar from "@/components/organisms/sidebar/sidebar";
 import React from "react";
@@ -13,7 +13,7 @@ import {
   MdLiveHelp,
 } from "react-icons/md";
 
-const Account1: React.FC = () => {
+const Account: React.FC = () => {
   const footerList = [
     {
       id: 1,
@@ -59,4 +59,4 @@ const Account1: React.FC = () => {
   );
 };
 
-export default Account1;
+export default Account;

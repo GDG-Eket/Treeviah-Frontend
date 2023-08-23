@@ -1,10 +1,18 @@
+"use client";
+
 import React, { useState } from "react";
-import Header from "../components/Header";
+import Header from "@/components/Header";
 import Image from "next/image";
 import Link from "next/link";
+import EyeSlash from "@/../public/Images/eye-slash.svg";
+import AppleIcon from "@/../public/Images/apple-icon.svg";
+import GoogleIcon from "@/../public/Images/google-icon.svg";
+import FacebookIcon from "@/../public/Images/facebook-icon.svg";
+import Frame4 from "@/../public/Images/Frame 4.svg";
 
 export default function login() {
   const [showPassword, setShowPassword] = useState(false);
+  const [isRegistered, setIsRegistered] = useState(false);
   return (
     <div>
       <Header />
@@ -13,7 +21,7 @@ export default function login() {
           <div className="min-h-fit bg-white rounded-3xl lg:rounded-r-none w-full sm:w-[664px] lg:w-[664px] flex flex-col md:py-16 p-8 lg:pl-14 justify-start items-start">
             <div className="w-full h-full first-letter:lg:w-11/12">
               <h1 className="text-primary w-full text-center text-[32px] leading-normal md:text-[40px] md:leading-[48px] font-medium font-dmSans">
-                Sign In
+                Sign {isRegistered ? "In" : "Up"}
               </h1>
               <div className="w-full space-y-8">
                 <form
@@ -36,6 +44,23 @@ export default function login() {
                       required
                     />
                   </div>
+                  {isRegistered ? null : (
+                    <div className="relative font-poppins">
+                      <label
+                        className="absolute top-[-8px] px-1 w-fit ms-3 bg-white text-[#6E6E6E] text-xs font-normal leading-[18px]-"
+                        htmlFor="name"
+                      >
+                        Email
+                      </label>
+                      <input
+                        type="text"
+                        id="name"
+                        placeholder="treeviah@gmail.com"
+                        className="w-full px-4 py-2 block items-center h-14 text-[#60656F] rounded shadow-sm border-[#888B93]- border-[#929292] border-[1.5px] placeholder-[#60656F]- focus:outline-none hover:border-primary focus:border-primary focus:ring-1 focus:ring-primary disabled:bg-slate-50 disabled:text-slate-500 disabled:border-slate-200 disabled:shadow-none invalid:text-[#C21010] -invalid:border-[#C21010]  focus:invalid:border-[#C21010] focus:invalid:ring-[#C21010] valid:border-primary"
+                        required
+                      />
+                    </div>
+                  )}
                   <div className="w-full relative font-poppins">
                     <div className="inline-flex w-[100%] items-center rounded shadow-sm  border-[#888B93]- border-[#929292] border-2 focus:outline-none hover:border-primary focus:border-primary focus:ring-1 focus:ring-primary disabled:bg-slate-50 disabled:text-slate-500 disabled:border-slate-200 disabled:shadow-none invalid:text-[#C21010] -invalid:border-[#C21010]  focus:invalid:border-[#C21010] focus:invalid:ring-[#C21010] valid:border-primary">
                       <label
@@ -57,11 +82,7 @@ export default function login() {
                         className="p-2 flex w-fit"
                       >
                         <Image
-                          src={
-                            showPassword
-                              ? require("@/../public/Images/eye-slash.svg")
-                              : require("@/../public/Images/eye-slash.svg")
-                          }
+                          src={showPassword ? EyeSlash : EyeSlash}
                           alt=""
                         ></Image>
                       </button>
@@ -71,7 +92,7 @@ export default function login() {
                     type="submit"
                     className="bg-primary text-center w-full text-white px-6 py-2.5 rounded hover:bg-primary-light -hover:bg-[#6a0c6a]"
                   >
-                    Sign In
+                    Sign {isRegistered ? "In" : "Up"}
                   </button>
                 </form>
                 {/* divider */}
@@ -88,7 +109,7 @@ export default function login() {
                   >
                     <Image
                       className=" hover:bg-primary-light ease-in-out duration-150"
-                      src={require("../../public/Images/apple-icon.svg")}
+                      src={AppleIcon}
                       alt="apple-icon"
                     />
                   </a>
@@ -98,7 +119,7 @@ export default function login() {
                   >
                     <Image
                       className=" hover:bg-primary-light ease-in-out duration-150"
-                      src={require("../../public/Images/google-icon.svg")}
+                      src={GoogleIcon}
                       alt="google-icon"
                     />
                   </a>
@@ -108,30 +129,30 @@ export default function login() {
                   >
                     <Image
                       className="hover:bg-primary-light ease-in-out duration-150"
-                      src={require("../../public/Images/facebook-icon.svg")}
+                      src={FacebookIcon}
                       alt="facebook-icon"
                     />
                   </a>
                 </div>
                 <p className=" w-full justify-center text-center">
                   <span className="text-[#1D1D1D]">
-                    {" "}
-                    Don&apos;t have an account?{" "}
+                    {isRegistered
+                      ? `Don't have an account?`
+                      : "Already have an account?"}{" "}
                   </span>
-                  <Link
-                    href={"/signup"}
+                  <button
+                    onClick={() => setIsRegistered(!isRegistered)}
                     className="text-primary hover:text-primary-light hover:font-semibold  hover:underline hover:underline-offset-2"
                   >
-                    {" "}
-                    Sign Up{" "}
-                  </Link>
+                    Sign {isRegistered ? "Up" : "In"}
+                  </button>
                 </p>
               </div>
             </div>
           </div>
           <Image
             className="hidden h-full lg:flex lg:max-w-[480px] bg-primary rounded-r-3xl"
-            src={require("../../public/images/Frame 4.svg")}
+            src={Frame4}
             alt="hero-img"
           />
         </div>
