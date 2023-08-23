@@ -1,5 +1,7 @@
+"use client"
+
 import React, { useEffect, useState } from "react";
-import { useRouter } from "next/router";
+// import { useRouter } from "next/router";
 import Link from "next/link";
 import Image from "next/image";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -13,22 +15,22 @@ const links = [
 ];
 
 const LandingHeader = () => {
-  const router = useRouter();
-  const currentPath = router.pathname;
+  // const router = useRouter();
+  // const currentPath = router.pathname;
   const [showLinks, setShowLinks] = useState(false);
   const [activeLink, setActiveLink] = useState<string>("");
 
-  useEffect(() => {
-    const activeLinkFromStorage = localStorage.getItem("activeLink");
-    if (activeLinkFromStorage) {
-      setActiveLink(activeLinkFromStorage);
-    }
-  }, []);
+  // useEffect(() => {
+  //   const activeLinkFromStorage = localStorage.getItem("activeLink");
+  //   if (activeLinkFromStorage) {
+  //     setActiveLink(activeLinkFromStorage);
+  //   }
+  // }, []);
 
-  useEffect(() => {
-    localStorage.setItem("activeLink", currentPath);
-    setActiveLink(currentPath);
-  }, [currentPath]);
+  // useEffect(() => {
+  //   localStorage.setItem("activeLink", currentPath);
+  //   setActiveLink(currentPath);
+  // }, [currentPath]);
 
   const handleCloseNav = () => {
     setShowLinks(false);
