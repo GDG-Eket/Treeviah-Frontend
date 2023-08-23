@@ -14,6 +14,13 @@ import Polygons from "@/../public/Images/polygons.svg";
 import Hero1 from "@/../public/Images/hero1.svg";
 import Polygon4 from "@/../public/Images/polygon-4.svg";
 import Theme1 from "@/../public/Images/theme1.svg";
+import Theme2 from "@/../public/Images/theme2.svg";
+import Theme3 from "@/../public/Images/theme3.svg";
+import Theme4 from "@/../public/Images/theme4.svg";
+import Theme5 from "@/../public/Images/theme5.svg";
+import Theme6 from "@/../public/Images/theme6.svg";
+import Theme7 from "@/../public/Images/theme7.svg";
+import Theme8 from "@/../public/Images/theme8.svg";
 
 export default function LandingPage() {
   const games = [
@@ -171,37 +178,37 @@ export default function LandingPage() {
             <Image
               alt="2nd-theme"
               className="bg-yellow1 w-[348px] rounded-3xl"
-              src={require("@/../public/Images/theme2.svg")}
+              src={Theme2}
             ></Image>
             <Image
               alt="3rd-theme"
               className="bg-yellow1 w-[348px] rounded-3xl"
-              src={require("@/../public/Images/theme3.svg")}
+              src={Theme3}
             ></Image>
             <Image
               alt="4th-theme"
               className="bg-yellow1 w-[348px] rounded-3xl"
-              src={require("@/../public/Images/theme4.svg")}
+              src={Theme4}
             ></Image>
             <Image
               alt="5th-theme"
               className="bg-yellow1 w-[348px] rounded-3xl"
-              src={require("@/../public/Images/theme5.svg")}
+              src={Theme5}
             ></Image>
             <Image
               alt="6th-theme"
               className="bg-yellow1 w-[348px] rounded-3xl"
-              src={require("@/../public/Images/theme6.svg")}
+              src={Theme6}
             ></Image>
             <Image
               alt="7th-theme"
               className="bg-yellow1 w-[348px] rounded-3xl"
-              src={require("@/../public/Images/theme7.svg")}
+              src={Theme7}
             ></Image>
             <Image
               alt="8th-theme"
               className="bg-yellow1 w-[348px] rounded-3xl"
-              src={require("@/../public/Images/theme8.svg")}
+              src={Theme8}
             ></Image>
           </div>
           <div className="flex flex-wrap gap-6 my-9 md:my-28 justify-center items-center">
