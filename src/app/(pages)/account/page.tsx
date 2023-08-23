@@ -1,3 +1,5 @@
+"use client";
+
 import FooterBar from "@/components/organisms/footer/Footer";
 import AccountPage1 from "@/components/accountPage1";
 import { sideMenuList } from "../../../pages/library3";

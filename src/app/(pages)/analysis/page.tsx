@@ -1,16 +1,18 @@
+"use client";
+
 import React from "react";
-import Sidebar from "../components/organisms/sidebar/sidebar";
-import Navbar from "../components/organisms/header/navbar";
-import FooterBar from "../components/organisms/footer/Footer";
+import Sidebar from "@/components/organisms/sidebar/sidebar";
+import Navbar from "@/components/organisms/header/navbar";
+import FooterBar from "@/components/organisms/footer/Footer";
 import {
   MdHome,
   MdLibraryBooks,
   MdEqualizer,
   MdAccountCircle,
 } from "react-icons/md";
-import ProfileSetting from "@/components/profilesetting";
+import AnalysisTemplate from "@/components/templates/analysis/index";
 
-const ProfilePage: React.FC = () => {
+const Analysis: React.FC = () => {
   const sideMenuList = [
     {
       title: "Home",
@@ -68,7 +70,7 @@ const ProfilePage: React.FC = () => {
               <Navbar />
             </div>
             <div>
-              <ProfileSetting />
+              <AnalysisTemplate />
             </div>
           </div>
         </div>
@@ -80,4 +82,4 @@ const ProfilePage: React.FC = () => {
   );
 };
 
-export default ProfilePage;
+export default Analysis;
