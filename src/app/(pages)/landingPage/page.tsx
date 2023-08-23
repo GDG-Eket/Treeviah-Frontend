@@ -10,6 +10,10 @@ import Member2 from "@/../public/Images/ellipse-8.svg";
 import Member3 from "@/../public/Images/ellipse-9.svg";
 import Member4 from "@/../public/Images/ellipse-11.svg";
 import Member5 from "@/../public/Images/ellipse-12.svg";
+import Polygons from "@/../public/Images/polygons.svg";
+import Hero1 from "@/../public/Images/hero1.svg";
+import Polygon4 from "@/../public/Images/polygon-4.svg";
+import Theme1 from "@/../public/Images/theme1.svg";
 
 export default function LandingPage() {
   const games = [
@@ -56,11 +60,7 @@ export default function LandingPage() {
         {/* hero */}
         <section className="w-[100%] h-[783px] relative flex bg-primary px-10 xl:px-[72px]">
           <div className="w-[663.89px]- h-[535px]- left-[9.55px] bottom-0 absolute">
-            <Image
-              className="z-0"
-              src={require("@/../public/Images/polygons.svg")}
-              alt="bg-decoration"
-            ></Image>
+            <Image className="z-0" src={Polygons} alt="bg-decoration"></Image>
           </div>
           <div className="flex justify-center items-center">
             <div className="left-[72px]- top-[216px]- absolute- z-20 flex-col justify-center items-start space-y-6 inline-flex">
@@ -83,14 +83,14 @@ export default function LandingPage() {
               </button>
             </div>
             <Image
-              src={require("@/../public/Images/hero1.svg")}
+              src={Hero1}
               className="hidden sm:block w-32 sm:w-[348px] xl:max-w-[470px] h-[470px]- md:right-[72px] right-12 bottom-5 sm:bottom-52- lg:bottom-[180px] 2xl:bottom-[280px]  3xl:block lg:absolute"
               alt="hero-img"
             />
           </div>
           <Image
             className="z-10 left-0 bottom-0 absolute w-full"
-            src={require("@/../public/Images/polygon-4.svg")}
+            src={Polygon4}
             alt="bg-top-deco"
           ></Image>
         </section>
@@ -166,7 +166,7 @@ export default function LandingPage() {
             <Image
               alt="1st-theme"
               className="bg-yellow1 w- rounded-3xl"
-              src={require("@/../public/Images/theme1.svg")}
+              src={Theme1}
             ></Image>
             <Image
               alt="2nd-theme"
