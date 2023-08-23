@@ -13,7 +13,6 @@ import {
   MdAccountCircle,
   MdLiveHelp,
 } from "react-icons/md";
-"use client";"use client";
 const Support: React.FC = () => {
   const sideMenuList = [
     {
