@@ -5,6 +5,7 @@ import Header from "@/components/Header";
 import Image from "next/image";
 import Link from "next/link";
 import EyeSlash from "@/../public/Images/eye-slash.svg";
+import Eye from "@/../public/Images/eye.svg";
 import AppleIcon from "@/../public/Images/apple-icon.svg";
 import GoogleIcon from "@/../public/Images/google-icon.svg";
 import FacebookIcon from "@/../public/Images/facebook-icon.svg";
@@ -82,7 +83,7 @@ export default function login() {
                         className="p-2 flex w-fit"
                       >
                         <Image
-                          src={showPassword ? EyeSlash : EyeSlash}
+                          src={showPassword ? EyeSlash : Eye}
                           alt=""
                         ></Image>
                       </button>
