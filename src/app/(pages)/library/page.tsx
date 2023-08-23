@@ -1,7 +1,8 @@
-import React from "react";
-import Sidebar from "@/components/organisms/sidebar/sidebar";
+import LibraryPage1 from "@/components/libraryPage1";
 import Navbar from "@/components/organisms/header/navbar";
-import LibraryGrid from "@/components/library/librarygrid";
+import Sidebar from "@/components/organisms/sidebar/sidebar";
+import { sideMenuList } from "@/pages/library3";
+import React from "react";
 import FooterBar from "@/components/organisms/footer/Footer";
 import {
   MdHome,
@@ -13,29 +14,6 @@ import {
 } from "react-icons/md";
 
 const Library: React.FC = () => {
-  const sideMenuList = [
-    {
-      title: "Home",
-      icon: <MdHome />,
-      path: "/",
-    },
-    {
-      title: "Library",
-      icon: <MdLibraryBooks />,
-      path: "/library",
-    },
-    {
-      title: "Analysis",
-      icon: <MdEqualizer />,
-      path: "/analysis",
-    },
-    {
-      title: "Account",
-      icon: <MdAccountCircle />,
-      path: "/account",
-    },
-  ];
-
   const footerList = [
     {
       id: 1,
@@ -68,8 +46,8 @@ const Library: React.FC = () => {
           <div className="flex flex-col w-[100%]">
             <Navbar />
           </div>
-          <div>
-            <LibraryGrid />
+          <div className="p-4 md:p-10 ">
+            <LibraryPage1 />
           </div>
         </div>
       </div>
