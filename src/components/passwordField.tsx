@@ -1,7 +1,11 @@
 import React, { useState } from "react";
-import { Eye, EyeSlash } from "@material-ui/icons";
+// import { Eye, EyeSlash } from "@material-ui/icons";
 
-const PasswordField = ({ value, onChange }) => {
+interface PasswordFieldProps {
+  value: any;
+  onChange: (value: any) => void;
+}
+const PasswordField: React.FC<PasswordFieldProps> = ({ value, onChange }) => {
   const [showPassword, setShowPassword] = useState(false);
 
   const handleClick = () => {
@@ -20,7 +24,7 @@ const PasswordField = ({ value, onChange }) => {
         onClick={handleClick}
         aria-label="Show or hide password"
       >
-        {showPassword ? <EyeSlash /> : <Eye />}
+        {/* {showPassword ? <EyeSlash /> : <Eye />} */}
       </button>
     </div>
   );

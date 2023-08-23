@@ -2,6 +2,7 @@
 import React, { useState } from "react";
 import { MdSearch, MdMenu, MdNotifications } from "react-icons/md";
 import "../../../styles/dashboard.css";
+import Link from "next/link";
 
 const Navbar: React.FC = () => {
   const [open, setOpen] = useState(false);
@@ -26,16 +27,16 @@ const Navbar: React.FC = () => {
           <div
             className={`lg:flex justify-end align-center gap-[20px] flex-row hidden buttonBox`}
           >
-            <button className="px-4 py-2 rounded join-team w-[130px]">
+            <button type="submit" className="px-4 py-2 rounded join-team w-[130px]">
               Join Game
             </button>
-            <button className="px-4 py-2 rounded host-team w-[150px]">
+            <button type="submit" className="px-4 py-2 rounded host-team w-[150px]">
               Host
             </button>
           </div>
-          <button className="text-[25px] text-primary block lg:hidden ml-[1%] notification w-[100%]">
+          <Link href='/notificaions' className="text-[25px] text-primary block lg:hidden ml-[1%] notification w-[100%]">
             <MdNotifications className="text-right float-right" />
-          </button>
+          </Link>
         </section>
       </div>
     </div>

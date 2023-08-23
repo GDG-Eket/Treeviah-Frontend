@@ -1,7 +1,8 @@
 import FooterBar from "@/components/organisms/footer/Footer";
+import AccountPage1 from "@/components/accountPage1";
+import { sideMenuList } from "../../../pages/library3";
 import Navbar from "@/components/organisms/header/navbar";
 import Sidebar from "@/components/organisms/sidebar/sidebar";
-import SupportPage2 from "@/components/supportPage2";
 import React from "react";
 import {
   MdHome,
@@ -12,30 +13,7 @@ import {
   MdLiveHelp,
 } from "react-icons/md";
 
-const Support2: React.FC = () => {
-  const sideMenuList = [
-    {
-      title: "Home",
-      icon: <MdHome />,
-      path: "/",
-    },
-    {
-      title: "Library",
-      icon: <MdLibraryBooks />,
-      path: "/library",
-    },
-    {
-      title: "Analysis",
-      icon: <MdEqualizer />,
-      path: "/analysis",
-    },
-    {
-      title: "Account",
-      icon: <MdAccountCircle />,
-      path: "/account",
-    },
-  ];
-
+const Account: React.FC = () => {
   const footerList = [
     {
       id: 1,
@@ -58,19 +36,19 @@ const Support2: React.FC = () => {
       path: "/account",
     },
   ];
+
   return (
-    <section className="relative w-full h-[100%] overflow-hidden">
-      <div className="flex flex-row relative w-[100%] mb-[3%] md:mb-0">
+    <section className="relative w-full h-[100%]">
+      <div className="flex flex-row relative w-[100%] md:mb-[10%]">
         <div className="hidden md:block">
           <Sidebar list={sideMenuList} />
         </div>
-        <div className="w-[100%] flex flex-col justify-between align-middle h-[100vh]">
+        <div className="w-[100%] flex flex-col justify-between align-middle md:h-[100vh]">
           <div className="flex flex-col w-[100%]">
             <Navbar />
           </div>
-
-          <div className="p-3">
-            <SupportPage2 />
+          <div className="mb-[50px] md:pt-5 pl-5">
+            <AccountPage1 />
           </div>
         </div>
       </div>
@@ -81,4 +59,4 @@ const Support2: React.FC = () => {
   );
 };
 
-export default Support2;
+export default Account;

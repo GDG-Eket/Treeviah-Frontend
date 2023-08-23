@@ -1,6 +1,6 @@
 import React from "react";
-import LandingHeader from "../components/landingHeader";
-import LandingFooter from "../components/landingFooter";
+import LandingHeader from "../../../components/landingHeader";
+import LandingFooter from "../../../components/landingFooter";
 import Image from "next/image";
 import Link from "next/link";
 import "@/styles/dashboard.css";

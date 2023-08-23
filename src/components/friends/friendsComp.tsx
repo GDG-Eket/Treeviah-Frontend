@@ -1,8 +1,11 @@
 import React, { useState } from "react";
 import "../../styles/dashboard.css";
 import ImageOne from "../../../public/Images/one.jpg";
+import ImageTwo from "../../../public/Images/two.jpg";
+import ImageThree from "../../../public/Images/three.jpg";
+import ImageFour from "../../../public/Images/four.jpg";
 import Link from "next/link";
-import Image from "next/image";
+import Image, { StaticImageData } from "next/image";
 import { Md1KPlus } from "react-icons/md";
 import PopupModal from "../modal";
 import Friend1 from "@/../public/Images/one.jpg";
@@ -25,137 +28,137 @@ const FriendsComponent: React.FC = () => {
       alt: "awardImageOne.jpg",
     },
     {
-      url: "/../public/Images/two.jpg",
+      url: ImageTwo,
       title: "Professional",
       alt: "awardImageOne.jpg",
     },
     {
-      url: "/../public/Images/three.jpg",
+      url: ImageThree,
       title: "Professional",
       alt: "awardImageOne.jpg",
     },
     {
-      url: "/../public/Images/four.jpg",
+      url: ImageFour,
       title: "Professional",
       alt: "awardImageOne.jpg",
     },
     {
-      url: "/../public/Images/one.jpg",
+      url: ImageOne,
       title: "Professional",
       alt: "awardImageOne.jpg",
     },
     {
-      url: "/../public/Images/two.jpg",
+      url: ImageTwo,
       title: "Professional",
       alt: "awardImageOne.jpg",
     },
     {
-      url: "/../public/Images/three.jpg",
+      url: ImageThree,
       title: "Professional",
       alt: "awardImageOne.jpg",
     },
     {
-      url: "/../public/Images/four.jpg",
+      url: ImageFour,
       title: "Professional",
       alt: "awardImageOne.jpg",
     },
     {
-      url: "/../public/Images/one.jpg",
+      url: ImageOne,
       title: "Professional",
       alt: "awardImageOne.jpg",
     },
     {
-      url: "/../public/Images/two.jpg",
+      url: ImageTwo,
       title: "Professional",
       alt: "awardImageOne.jpg",
     },
     {
-      url: "/../public/Images/three.jpg",
+      url: ImageThree,
       title: "Professional",
       alt: "awardImageOne.jpg",
     },
     {
-      url: "/../public/Images/four.jpg",
+      url: ImageFour,
       title: "Professional",
       alt: "awardImageOne.jpg",
     },
     {
-      url: "/../public/Images/one.jpg",
+      url: ImageOne,
       title: "Professional",
       alt: "awardImageOne.jpg",
     },
     {
-      url: "/../public/Images/two.jpg",
+      url: ImageTwo,
       title: "Professional",
       alt: "awardImageOne.jpg",
     },
     {
-      url: "/../public/Images/three.jpg",
+      url: ImageThree,
       title: "Professional",
       alt: "awardImageOne.jpg",
     },
     {
-      url: "/../public/Images/four.jpg",
+      url: ImageFour,
       title: "Professional",
       alt: "awardImageOne.jpg",
     },
     {
-      url: "/../public/Images/one.jpg",
+      url: ImageOne,
       title: "Professional",
       alt: "awardImageOne.jpg",
     },
     {
-      url: "/../public/Images/two.jpg",
+      url: ImageTwo,
       title: "Professional",
       alt: "awardImageOne.jpg",
     },
     {
-      url: "/../public/Images/three.jpg",
+      url: ImageThree,
       title: "Professional",
       alt: "awardImageOne.jpg",
     },
     {
-      url: "/../public/Images/four.jpg",
+      url: ImageFour,
       title: "Professional",
       alt: "awardImageOne.jpg",
     },
     {
-      url: "/../public/Images/one.jpg",
+      url: ImageOne,
       title: "Professional",
       alt: "awardImageOne.jpg",
     },
     {
-      url: "/../public/Images/two.jpg",
+      url: ImageTwo,
       title: "Professional",
       alt: "awardImageOne.jpg",
     },
     {
-      url: "/../public/Images/three.jpg",
+      url: ImageThree,
       title: "Professional",
       alt: "awardImageOne.jpg",
     },
     {
-      url: "/../public/Images/four.jpg",
+      url: ImageFour,
       title: "Professional",
       alt: "awardImageOne.jpg",
     },
     {
-      url: "/../public/Images/one.jpg",
+      url: ImageOne,
       title: "Professional",
       alt: "awardImageOne.jpg",
     },
     {
-      url: "/../public/Images/two.jpg",
+      url: ImageTwo,
       title: "Professional",
       alt: "awardImageOne.jpg",
     },
     {
-      url: "/../public/Images/three.jpg",
+      url: ImageThree,
       title: "Professional",
       alt: "awardImageOne.jpg",
     },
     {
-      url: "/../public/Images/four.jpg",
+      url: ImageFour,
       title: "Professional",
       alt: "awardImageOne.jpg",
     },
@@ -202,18 +205,18 @@ const FriendsComponent: React.FC = () => {
                 <p className="capitalize pt-3">{friends.title}</p>
               </div>
             ))}
-            <div className="px-2 py-4">
+            <Link href='' className="px-2 py-4">
               <div className="p-2 border rounded-full flex justify-center items-center w-20 h-20 lg:w-24 lg:h-24">
                 <Md1KPlus className="w-full h-full rounded-full text-gray-500" />
               </div>
-              <button
+              <div
                 className="capitalize pt-3 hover:cursor-pointer"
                 onClick={openModal}
               >
                 Add friends
-              </button>
+              </div>
               <PopupModal isOpen={isModalOpen} onClose={closeModal} />
-            </div>
+            </Link>
           </label>
         </div>
       </section>
