@@ -1,8 +1,9 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 
 export default function Header() {
+    const [isRegistered, setIsRegistered] = useState(false);
   return (
     <div>
       <main>
@@ -15,8 +16,8 @@ export default function Header() {
             <button className='border border-primary rounded-lg px-6 py-2.5  hover:bg-[#D5AAD5]'>
               <a href='/join-game' className='text-primary hover:text-primary-light'>Join game</a>
             </button>
-            <button  className='border border-primary rounded-lg px-6 py-2.5 bg-primary hover:bg-primary-light'>
-              <a href='/signup' className='text-white'>Sign Up</a>
+            <button onClick={() => setIsRegistered(!isRegistered)} className='border text-white border-primary rounded-lg px-6 py-2.5 bg-primary hover:bg-primary-light'>
+              Sign {isRegistered ? "Up" : "In"}
             </button>
           </div>
        

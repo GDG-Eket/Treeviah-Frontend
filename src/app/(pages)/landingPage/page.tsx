@@ -1,3 +1,5 @@
+"use client";
+
 import React from "react";
 import LandingHeader from "../../../components/landingHeader";
 import LandingFooter from "../../../components/landingFooter";
@@ -10,6 +12,44 @@ import Member2 from "@/../public/Images/ellipse-8.svg";
 import Member3 from "@/../public/Images/ellipse-9.svg";
 import Member4 from "@/../public/Images/ellipse-11.svg";
 import Member5 from "@/../public/Images/ellipse-12.svg";
+import Polygons from "@/../public/Images/polygons.svg";
+import Hero1 from "@/../public/Images/hero1.svg";
+import Polygon4 from "@/../public/Images/polygon-4.svg";
+import Theme1 from "@/../public/Images/theme1.svg";
+import Theme2 from "@/../public/Images/theme2.svg";
+import Theme3 from "@/../public/Images/theme3.svg";
+import Theme4 from "@/../public/Images/theme4.svg";
+import Theme5 from "@/../public/Images/theme5.svg";
+import Theme6 from "@/../public/Images/theme6.svg";
+import Theme7 from "@/../public/Images/theme7.svg";
+import Theme8 from "@/../public/Images/theme8.svg";
+import Book from "@/../public/Images/book.svg";
+import Player1 from "@/../public/Images/player1.svg";
+import Player2 from "@/../public/Images/player2.svg";
+import Player3 from "@/../public/Images/player3.svg";
+import Player4 from "@/../public/Images/player4.svg";
+import Player5 from "@/../public/Images/player5.svg";
+import Player6 from "@/../public/Images/player6.svg";
+import Player7 from "@/../public/Images/player7.svg";
+import Ranking from "@/../public/Images/ranking.svg";
+import TaskSquare from "@/../public/Images/task-square.svg";
+import MenuBoard from "@/../public/Images/menu-board.svg";
+import FileNotebook from "@/../public/Images/file-notebook.svg";
+import BookSaved from "@/../public/Images/book-saved.svg";
+import ProfilePic from "@/../public/Images/profilepic.svg";
+import Star from "@/../public/Images/star.svg";
+import Tlogo2 from "@/../public/Images/t-logo2.svg";
+import Flutter from "@/../public/Images/flutter.svg";
+import WTM from "@/../public/Images/wtm.svg";
+import GDG from "@/../public/Images/gdg.svg";
+import Africinnovate from "@/../public/Images/africinnovate.svg";
+import Playstore from "@/../public/Images/playstore.svg";
+import Appstore from "@/../public/Images/appstore.svg";
+import Facebook from "@/../public/Images/fb.svg";
+import Twitter from "@/../public/Images/twitter.svg";
+import Instagram from "@/../public/Images/instagram.svg";
+import Whatsapp from "@/../public/Images/whatsapp.svg";
+
 
 export default function LandingPage() {
   const games = [
@@ -56,11 +96,7 @@ export default function LandingPage() {
         {/* hero */}
         <section className="w-[100%] h-[783px] relative flex bg-primary px-10 xl:px-[72px]">
           <div className="w-[663.89px]- h-[535px]- left-[9.55px] bottom-0 absolute">
-            <Image
-              className="z-0"
-              src={require("@/../public/Images/polygons.svg")}
-              alt="bg-decoration"
-            ></Image>
+            <Image className="z-0" src={Polygons} alt="bg-decoration"></Image>
           </div>
           <div className="flex justify-center items-center">
             <div className="left-[72px]- top-[216px]- absolute- z-20 flex-col justify-center items-start space-y-6 inline-flex">
@@ -83,14 +119,14 @@ export default function LandingPage() {
               </button>
             </div>
             <Image
-              src={require("@/../public/Images/hero1.svg")}
+              src={Hero1}
               className="hidden sm:block w-32 sm:w-[348px] xl:max-w-[470px] h-[470px]- md:right-[72px] right-12 bottom-5 sm:bottom-52- lg:bottom-[180px] 2xl:bottom-[280px]  3xl:block lg:absolute"
               alt="hero-img"
             />
           </div>
           <Image
             className="z-10 left-0 bottom-0 absolute w-full"
-            src={require("@/../public/Images/polygon-4.svg")}
+            src={Polygon4}
             alt="bg-top-deco"
           ></Image>
         </section>
@@ -166,42 +202,42 @@ export default function LandingPage() {
             <Image
               alt="1st-theme"
               className="bg-yellow1 w- rounded-3xl"
-              src={require("@/../public/Images/theme1.svg")}
+              src={Theme1}
             ></Image>
             <Image
               alt="2nd-theme"
               className="bg-yellow1 w-[348px] rounded-3xl"
-              src={require("@/../public/Images/theme2.svg")}
+              src={Theme2}
             ></Image>
             <Image
               alt="3rd-theme"
               className="bg-yellow1 w-[348px] rounded-3xl"
-              src={require("@/../public/Images/theme3.svg")}
+              src={Theme3}
             ></Image>
             <Image
               alt="4th-theme"
               className="bg-yellow1 w-[348px] rounded-3xl"
-              src={require("@/../public/Images/theme4.svg")}
+              src={Theme4}
             ></Image>
             <Image
               alt="5th-theme"
               className="bg-yellow1 w-[348px] rounded-3xl"
-              src={require("@/../public/Images/theme5.svg")}
+              src={Theme5}
             ></Image>
             <Image
               alt="6th-theme"
               className="bg-yellow1 w-[348px] rounded-3xl"
-              src={require("@/../public/Images/theme6.svg")}
+              src={Theme6}
             ></Image>
             <Image
               alt="7th-theme"
               className="bg-yellow1 w-[348px] rounded-3xl"
-              src={require("@/../public/Images/theme7.svg")}
+              src={Theme7}
             ></Image>
             <Image
               alt="8th-theme"
               className="bg-yellow1 w-[348px] rounded-3xl"
-              src={require("@/../public/Images/theme8.svg")}
+              src={Theme8}
             ></Image>
           </div>
           <div className="flex flex-wrap gap-6 my-9 md:my-28 justify-center items-center">
@@ -237,7 +273,7 @@ export default function LandingPage() {
             <div className="bg-[#E6CCE6] rounded-lg px-8 py-12 sm:px-[52px] sm:pb-11 lg:pt-[124px] flex flex-col items-center justify-end gap-x-5 sm:gap-y-10">
               <Image
                 className="w-16 xl:w-[112px]"
-                src={require("@/../public/Images/book.svg")}
+                src={Book}
                 alt="book-icon"
               ></Image>
               <h3 className="text-center font-montserrat text-2xl sm:text-[32px] sm:leading-10 font-medium">
@@ -247,7 +283,7 @@ export default function LandingPage() {
             <div className="bg-[#E6CCE6] rounded-lg px-8 py-12 sm:px-[52px] sm:pb-11 lg:pt-[124px] flex flex-col items-center justify-end gap-5 sm:gap-y-10">
               <Image
                 className="w-16 xl:w-[112px]"
-                src={require("@/../public/Images/ranking.svg")}
+                src={Ranking}
                 alt="quiz-competition-icon"
               ></Image>
               <h3 className="text-center font-montserrat text-2xl sm:text-[32px] sm:leading-10 font-medium">
@@ -257,7 +293,7 @@ export default function LandingPage() {
             <div className="bg-[#E6CCE6] rounded-lg px-8 py-12 sm:px-[52px] sm:pb-11 lg:pt-[124px] flex flex-col items-center justify-end gap-5 sm:gap-y-10">
               <Image
                 className="w-16 xl:w-[112px]"
-                src={require("@/../public/Images/task-square.svg")}
+                src={TaskSquare}
                 alt="employees-test-icon"
               ></Image>
               <h3 className="text-center font-montserrat text-2xl sm:text-[32px] sm:leading-10 font-medium">
@@ -267,7 +303,7 @@ export default function LandingPage() {
             <div className="bg-[#E6CCE6] rounded-lg px-8 py-12 sm:px-[52px] sm:pb-11 lg:pt-[124px] flex flex-col items-center justify-end gap-5 sm:gap-y-10">
               <Image
                 className="w-16 xl:w-[112px]"
-                src={require("@/../public/Images/menu-board.svg")}
+                src={MenuBoard}
                 alt="compliance-quiz-icon"
               ></Image>
               <h3 className="text-center font-montserrat text-2xl sm:text-[32px] sm:leading-10 font-medium">
@@ -277,7 +313,7 @@ export default function LandingPage() {
             <div className="bg-[#E6CCE6] rounded-lg px-8 py-12 sm:px-[52px] sm:pb-11 lg:pt-[124px] flex flex-col items-center justify-end gap-5 sm:gap-y-10">
               <Image
                 className="w-16 xl:w-[112px]"
-                src={require("@/../public/Images/file-notebook.svg")}
+                src={FileNotebook}
                 alt="club-tests-icon"
               ></Image>
               <h3 className="text-center font-montserrat text-2xl sm:text-[32px] sm:leading-10 font-medium">
@@ -287,7 +323,7 @@ export default function LandingPage() {
             <div className="bg-[#E6CCE6] rounded-lg px-8 py-12 sm:px-[52px] sm:pb-11 lg:pt-[124px] flex flex-col items-center justify-end gap-5 sm:gap-y-10">
               <Image
                 className="w-16 xl:w-[112px]"
-                src={require("@/../public/Images/book-saved.svg")}
+                src={BookSaved}
                 alt="school-exams-icon"
               ></Image>
               <h3 className="text-center font-montserrat text-2xl sm:text-[32px] sm:leading-10 font-medium">
@@ -318,43 +354,43 @@ export default function LandingPage() {
           </div>
           <div className="flex flex-wrap sm:flex-nowrap sm:flex-row h-full gap-4 sm:gap-2 w-full relative justify-center">
             <Image
-              src={require("../../public/Images/player1.svg")}
+              src={Player1}
               className="order-first w-5/12 sm:w-[28%]"
               alt="player1-icon"
             ></Image>
             <div className="order-last sm:order-2 flex flex-col justify-end gap-2 w-full sm:w-[44%]">
               <div className="flex gap-2 w-full">
                 <Image
-                  src={require("@/../public/Images/player2.svg")}
+                  src={Player2}
                   className="w-[49%]"
                   alt="player1-icon"
                 ></Image>
                 <Image
-                  src={require("@/../public/Images/player3.svg")}
+                  src={Player3}
                   className="w-[49%]"
                   alt="player1-icon"
                 ></Image>
               </div>
               <div className="flex gap-2 w-full">
                 <Image
-                  src={require("@/../public/Images/player5.svg")}
+                  src={Player5}
                   className="w-[31.25%]"
                   alt="player1-icon"
                 ></Image>
                 <Image
-                  src={require("@/../public/Images/player6.svg")}
+                  src={Player6}
                   className="w-[31.785%]"
                   alt="player1-icon"
                 ></Image>
                 <Image
-                  src={require("@/../public/Images/player7.svg")}
+                  src={Player7}
                   className="w-[31.25%]"
                   alt="player1-icon"
                 ></Image>
               </div>
             </div>
             <Image
-              src={require("@/../public/Images/player4.svg")}
+              src={Player4}
               className="order-2 sm:order-last w-5/12 sm:w-[28%]"
               alt="player1-icon"
             ></Image>
@@ -380,7 +416,7 @@ export default function LandingPage() {
                 <Image
                   alt="profile-photo"
                   className="w-12 h-12 rounded-full border-2 border-primary"
-                  src={require("@/../public/Images/profilepic.svg")}
+                  src={ProfilePic}
                 />
                 <div className="flex-col justify-center items-center gap-1 flex">
                   <h4 className="text-primary font-montserrat text-2xl font-medium text-center">
@@ -394,31 +430,31 @@ export default function LandingPage() {
                   <div className="w-6 h-6 justify-center items-center flex">
                     <Image
                       alt="star-rating"
-                      src={require("@/../public/Images/star.svg")}
+                      src={Star}
                     ></Image>
                   </div>
                   <div className="w-6 h-6 justify-center items-center flex">
                     <Image
                       alt="star-rating"
-                      src={require("@/../public/Images/star.svg")}
+                      src={Star}
                     ></Image>
                   </div>
                   <div className="w-6 h-6 justify-center items-center flex">
                     <Image
                       alt="star-rating"
-                      src={require("@/../public/Images/star.svg")}
+                      src={Star}
                     ></Image>
                   </div>
                   <div className="w-6 h-6 justify-center items-center flex">
                     <Image
                       alt="star-rating"
-                      src={require("@/../public/Images/star.svg")}
+                      src={Star}
                     ></Image>
                   </div>
                   <div className="w-6 h-6 justify-center items-center flex">
                     <Image
                       alt="star-rating"
-                      src={require("@/../public/Images/star.svg")}
+                      src={Star}
                     ></Image>
                   </div>
                 </div>
@@ -438,7 +474,7 @@ export default function LandingPage() {
                 <Image
                   alt="profile-photo"
                   className="w-12 h-12 rounded-full border-2 border-primary"
-                  src={require("@/../public/Images/profilepic.svg")}
+                  src={ProfilePic}
                 />
                 <div className="flex-col justify-center items-center gap-1 flex">
                   <h4 className="text-primary font-montserrat text-2xl font-medium text-center">
@@ -452,31 +488,31 @@ export default function LandingPage() {
                   <div className="w-6 h-6 justify-center items-center flex">
                     <Image
                       alt="star-rating"
-                      src={require("@/../public/Images/star.svg")}
+                      src={Star}
                     ></Image>
                   </div>
                   <div className="w-6 h-6 justify-center items-center flex">
                     <Image
                       alt="star-rating"
-                      src={require("@/../public/Images/star.svg")}
+                      src={Star}
                     ></Image>
                   </div>
                   <div className="w-6 h-6 justify-center items-center flex">
                     <Image
                       alt="star-rating"
-                      src={require("@/../public/Images/star.svg")}
+                      src={Star}
                     ></Image>
                   </div>
                   <div className="w-6 h-6 justify-center items-center flex">
                     <Image
                       alt="star-rating"
-                      src={require("@/../public/Images/star.svg")}
+                      src={Star}
                     ></Image>
                   </div>
                   <div className="w-6 h-6 justify-center items-center flex">
                     <Image
                       alt="star-rating"
-                      src={require("@/../public/Images/star.svg")}
+                      src={Star}
                     ></Image>
                   </div>
                 </div>
@@ -496,7 +532,7 @@ export default function LandingPage() {
                 <Image
                   alt="profile-photo"
                   className="w-12 h-12 rounded-full border-2 border-primary"
-                  src={require("@/../public/Images/profilepic.svg")}
+                  src={ProfilePic}
                 />
                 <div className="flex-col justify-center items-center gap-1 flex">
                   <h4 className="text-primary font-montserrat text-2xl font-medium text-center">
@@ -510,31 +546,31 @@ export default function LandingPage() {
                   <div className="w-6 h-6 justify-center items-center flex">
                     <Image
                       alt="star-rating"
-                      src={require("@/../public/Images/star.svg")}
+                      src={Star}
                     ></Image>
                   </div>
                   <div className="w-6 h-6 justify-center items-center flex">
                     <Image
                       alt="star-rating"
-                      src={require("@/../public/Images/star.svg")}
+                      src={Star}
                     ></Image>
                   </div>
                   <div className="w-6 h-6 justify-center items-center flex">
                     <Image
                       alt="star-rating"
-                      src={require("@/../public/Images/star.svg")}
+                      src={Star}
                     ></Image>
                   </div>
                   <div className="w-6 h-6 justify-center items-center flex">
                     <Image
                       alt="star-rating"
-                      src={require("@/../public/Images/star.svg")}
+                      src={Star}
                     ></Image>
                   </div>
                   <div className="w-6 h-6 justify-center items-center flex">
                     <Image
                       alt="star-rating"
-                      src={require("@/../public/Images/star.svg")}
+                      src={Star}
                     ></Image>
                   </div>
                 </div>
@@ -548,7 +584,7 @@ export default function LandingPage() {
             <div className="flex items-center gap-0.5">
               <Image
                 alt="t-reeviah"
-                src={require("@/../../public/Images/t-logo2.svg")}
+                src={Tlogo2}
               ></Image>
               <p className="font-bold text-primary font-montserrat text-[45.48px] leading-[52px]">
                 reeviah
@@ -561,19 +597,19 @@ export default function LandingPage() {
           <div className=" w-11/12 flex flex-wrap gap-6 justify-center lg:justify-center items-center  lg:gap-x-[120px]">
             <Image
               alt="Flutter-Festivals-Eket"
-              src={require("@/../public/Images/flutter.svg")}
+              src={Flutter}
             ></Image>
             <Image
               alt="Women-Tech-Makers"
-              src={require("@/../public/Images/wtm.svg")}
+              src={WTM}
             ></Image>
             <Image
               alt="Google Developers-Group"
-              src={require("@/../public/Images/gdg.svg")}
+              src={GDG}
             ></Image>
             <Image
               alt="Africinnovate"
-              src={require("@/../public/Images/africinnovate.svg")}
+              src={Africinnovate}
             ></Image>
           </div>
         </section>
@@ -590,7 +626,7 @@ export default function LandingPage() {
               >
                 <Image
                   className="ease-in-out duration-150"
-                  src={require("../../public/Images/fb.svg")}
+                  src={Facebook}
                   alt="facebook-icon"
                 />
               </a>
@@ -600,7 +636,7 @@ export default function LandingPage() {
               >
                 <Image
                   className="ease-in-out duration-150"
-                  src={require("../../public/Images/twitter.svg")}
+                  src={Twitter}
                   alt="twitter-icon"
                 />
               </a>
@@ -610,7 +646,7 @@ export default function LandingPage() {
               >
                 <Image
                   className="ease-in-out duration-150"
-                  src={require("../../public/Images/instagram.svg")}
+                  src={Instagram}
                   alt="instagram-icon"
                 />
               </a>
@@ -620,7 +656,7 @@ export default function LandingPage() {
               >
                 <Image
                   className="ease-in-out duration-150"
-                  src={require("../../public/Images/whatsapp.svg")}
+                  src={Whatsapp}
                   alt="whatsapp-icon"
                 />
               </a>
@@ -651,13 +687,13 @@ export default function LandingPage() {
           <a href="#">
             <Image
               alt="Get from Google Playstore"
-              src={require("../../public/Images/playstore.svg")}
+              src={Playstore}
             ></Image>
           </a>
           <a href="#">
             <Image
               alt="Get from Appstore"
-              src={require("../../public/Images/appstore.svg")}
+              src={Appstore}
             ></Image>
           </a>
         </div>
