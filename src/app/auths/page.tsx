@@ -95,6 +95,13 @@ export default function login() {
                   >
                     Sign {isRegistered ? "In" : "Up"}
                   </button>
+
+                  <Link
+                    href="/home"
+                    className="bg-primary text-center w-full text-white px-6 py-2.5 rounded hover:bg-primary-light -hover:bg-[#6a0c6a]"
+                  >
+                    Go Home
+                  </Link>
                 </form>
                 {/* divider */}
                 <div className="flex text-[#1D1D1D]  w-full space-x-4 items-center justify-center">
