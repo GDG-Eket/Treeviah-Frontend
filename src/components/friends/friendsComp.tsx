@@ -205,18 +205,15 @@ const FriendsComponent: React.FC = () => {
                 <p className="capitalize pt-3">{friends.title}</p>
               </div>
             ))}
-            <Link href='' className="px-2 py-4">
-              <div className="p-2 border rounded-full flex justify-center items-center w-20 h-20 lg:w-24 lg:h-24">
-                <Md1KPlus className="w-full h-full rounded-full text-gray-500" />
-              </div>
-              <div
-                className="capitalize pt-3 hover:cursor-pointer"
-                onClick={openModal}
-              >
-                Add friends
+              <div onClick={openModal} className="px-2 py-4">
+                <div className="p-2 border rounded-full flex justify-center items-center w-20 h-20 lg:w-24 lg:h-24">
+                  <Md1KPlus className="w-full h-full rounded-full text-gray-500" />
+                </div>
+                <div className="capitalize pt-3 hover:cursor-pointer">
+                  Add friends
+                </div>
               </div>
               <PopupModal isOpen={isModalOpen} onClose={closeModal} />
-            </Link>
           </label>
         </div>
       </section>

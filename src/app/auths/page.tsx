@@ -1,5 +1,4 @@
 "use client";
-
 import React, { useState } from "react";
 import Header from "@/components/Header";
 import Image from "next/image";
@@ -104,7 +103,7 @@ export default function login() {
                 </div>
                 {/* other signin options */}
                 <div className="w-full inline-flex justify-center items-center gap-6">
-                  <a
+                  <Link
                     href="#"
                     className="bg-white hover:scale-110 hover:bg-primary-light ease-in-out duration-150 flex justify-center items-center w-10  shadow rounded-full p-2"
                   >
@@ -113,8 +112,8 @@ export default function login() {
                       src={AppleIcon}
                       alt="apple-icon"
                     />
-                  </a>
-                  <a
+                  </Link>
+                  <Link
                     href="#"
                     className="bg-white hover:scale-110 hover:bg-primary-light ease-in-out duration-150 flex justify-center items-center w-10 shadow rounded-full p-2"
                   >
@@ -123,8 +122,8 @@ export default function login() {
                       src={GoogleIcon}
                       alt="google-icon"
                     />
-                  </a>
-                  <a
+                  </Link>
+                  <Link
                     href="#"
                     className="bg-white hover:scale-110 hover:bg-primary-light ease-in-out duration-150 flex justify-center items-center w-10 shadow rounded-full p-2"
                   >
@@ -133,13 +132,13 @@ export default function login() {
                       src={FacebookIcon}
                       alt="facebook-icon"
                     />
-                  </a>
+                  </Link>
                 </div>
                 <p className=" w-full justify-center text-center">
                   <span className="text-[#1D1D1D]">
                     {isRegistered
                       ? `Don't have an account?`
-                      : "Already have an account?"}{" "}
+                      : "Already have an account?"}
                   </span>
                   <button
                     onClick={() => setIsRegistered(!isRegistered)}
