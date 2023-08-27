@@ -88,7 +88,7 @@ const TableRender: React.FC = () => {
       <section className="w-[100%] pt-5 pb-[20%] overflow-x-hidden overflow-y-auto h-[100vh]">
         <div className="w-[100%] flex flex-row justify-between align-middle mt-4 px-[3%]">
           <div>
-            <Link href="/" className="text-primary hover:text-purple-800 pl-2">
+            <Link href="/home" className="text-primary hover:text-purple-800 pl-2">
               Go Back
             </Link>
           </div>

@@ -1,7 +1,7 @@
 import React from "react";
-import Sidebar from "../components/organisms/sidebar/sidebar";
-import Navbar from "../components/organisms/header/navbar";
-import FooterBar from "../components/organisms/footer/Footer";
+import Sidebar from "../../../components/organisms/sidebar/sidebar";
+import Navbar from "../../../components/organisms/header/navbar";
+import FooterBar from "../../../components/organisms/footer/Footer";
 import {
   MdHome,
   MdLibraryBooks,
@@ -30,7 +30,7 @@ const Awards: React.FC = () => {
     {
       title: "Account",
       icon: <MdAccountCircle />,
-      path: "/account",
+      path: "/profile",
     },
   ];
 
@@ -53,7 +53,7 @@ const Awards: React.FC = () => {
     {
       id: 1,
       icon: <MdAccountCircle />,
-      path: "/account",
+      path: "/profile",
     },
   ];
   return (

@@ -116,7 +116,7 @@ const AwardComponents: React.FC = () => {
     <div className="w-[100%] lg:w-[100%] p-4">
       <div className="w-[100%] flex flex-row justify-between align-middle px-[3%] py-[2%]">
         <span>
-          <Link href="/" className="text-primary hover:text-purple-800 pl-2">
+          <Link href="/home" className="text-primary hover:text-purple-800 pl-2">
             Go Back
           </Link>
         </span>

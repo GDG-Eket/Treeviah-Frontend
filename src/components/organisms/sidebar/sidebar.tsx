@@ -48,28 +48,28 @@ const Sidebar: React.FC<SideMenuProps> = ({ list }) => {
     setHovered(false);
   };
 
-  // const SideList: SideMenu[] = [
-  //   {
-  //     title: "Home",
-  //     icon: <MdHome />,
-  //     path: "/",
-  //   },
-  //   {
-  //     title: "Library",
-  //     icon: <MdLibraryBooks />,
-  //     path: "/library",
-  //   },
-  //   {
-  //     title: "Analysis",
-  //     icon: <MdEqualizer />,
-  //     path: "/analysis",
-  //   },
-  //   {
-  //     title: "Account",
-  //     icon: <MdAccountCircle />,
-  //     path: "/account",
-  //   },
-  // ];
+  const SideList: SideMenu[] = [
+    {
+      title: "Home",
+      icon: <MdHome />,
+      path: "/",
+    },
+    {
+      title: "Library",
+      icon: <MdLibraryBooks />,
+      path: "/library",
+    },
+    {
+      title: "Analysis",
+      icon: <MdEqualizer />,
+      path: "/analysis",
+    },
+    {
+      title: "Account",
+      icon: <MdAccountCircle />,
+      path: "/profile",
+    },
+  ];
 
   return (
     <div className="relative w-[100%] hidden lg:block">
@@ -101,7 +101,7 @@ const Sidebar: React.FC<SideMenuProps> = ({ list }) => {
             hovered ? "mt-[40px]" : "mt-[40px]"
           } flex flex-col justify-start align-start gap-[30px]`}
         >
-          {list.map((item, index) => (
+          {SideList.map((item, index) => (
             <li key={index} className="flex justify-start align-middle">
               <span className="py-2 text-[25px] text-white">{item.icon}</span>
               <Link

@@ -13,14 +13,13 @@ export default function Header() {
             <div className="left-[33px]- top-0- absolute- text-center text-primary leading-normal md:leading-[56px] lg:leading-[64px] text-[28px] md:text-[48px] lg:text-[56px] font-medium opacity-0- group-hover:opacity-100 bg-gradient-to-r  from-indigo-500 via-purple-500 to-pink-500 bg-clip-text "><span className='group-hover:text-transparent bg-clip-text'>reeviah</span></div>
           </Link>
           <div className='hidden sm:flex space-x-6 font-poppins text-sm leading-6 text-center'>
-            <button className='border border-primary rounded-lg px-6 py-2.5  hover:bg-[#D5AAD5]'>
-              <a href='/join-game' className='text-primary hover:text-primary-light'>Join game</a>
+            <button type='button' className='border border-primary rounded-lg px-6 py-2.5 hover:bg-[#D5AAD5]'>
+              <Link href='/join-game' className='text-primary hover:text-primary-light'>Join game</Link>
             </button>
-            <button onClick={() => setIsRegistered(!isRegistered)} className='border text-white border-primary rounded-lg px-6 py-2.5 bg-primary hover:bg-primary-light'>
+            <button type='button' onClick={() => setIsRegistered(!isRegistered)} className='border text-white border-primary rounded-lg px-6 py-2.5 bg-primary hover:bg-primary-light'>
               Sign {isRegistered ? "Up" : "In"}
             </button>
           </div>
-       
         </div>
       </main>
     </div>

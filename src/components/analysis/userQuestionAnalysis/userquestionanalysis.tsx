@@ -24,7 +24,7 @@ const UserQuestionAnalysisComponent: React.FC = () => {
       <section className="pt-5 w-[100%] pb-[20%] overflow-y-auto h-[100vh]">
         <div className="w-[100%] flex flex-row justify-between align-middle md:px-[5%]">
           <div>
-            <Link href="/" className="text-primary hover:text-purple-800 pl-2">
+            <Link href="/home" className="text-primary hover:text-purple-800 pl-2">
               Go Back
             </Link>
           </div>

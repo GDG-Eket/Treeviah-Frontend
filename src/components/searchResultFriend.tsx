@@ -159,7 +159,7 @@ const FriendsSearchComponent: React.FC = () => {
       <section className="w-auto p-4">
         <div className="flex flex-row justify-between align-middle">
           <span>
-            <Link href="/" className="text-primary hover:text-purple-800 pl-2">
+            <Link href="/friends" className="text-primary hover:text-purple-800 pl-2">
               Go Back
             </Link>
           </span>

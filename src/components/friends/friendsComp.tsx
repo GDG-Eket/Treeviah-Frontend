@@ -7,7 +7,7 @@ import ImageFour from "../../../public/Images/four.jpg";
 import Link from "next/link";
 import Image, { StaticImageData } from "next/image";
 import { Md1KPlus } from "react-icons/md";
-import PopupModal from "../modal";
+import PopupModal from "../organisms/modal/modal";
 import Friend1 from "@/../public/Images/one.jpg";
 
 interface FriendsLists {
@@ -18,8 +18,8 @@ interface FriendsLists {
 const FriendsComponent: React.FC = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
 
-  const openModal = () => setIsModalOpen(true);
-  const closeModal = () => setIsModalOpen(false);
+  const openModal = () => setIsModalOpen(!isModalOpen);
+  const closeModal = () => setIsModalOpen(isModalOpen);
 
   const FriendsArray: FriendsLists[] = [
     {
@@ -169,7 +169,7 @@ const FriendsComponent: React.FC = () => {
       <section className="w-full lg:w-full p-4">
         <div className="w-full flex flex-row justify-between items-center px-10 py-2">
           <span>
-            <Link href="/" className="text-primary hover:text-purple-800 pl-2">
+            <Link href="/home" className="text-primary hover:text-purple-800 pl-2">
               Go Back
             </Link>
           </span>
@@ -205,15 +205,15 @@ const FriendsComponent: React.FC = () => {
                 <p className="capitalize pt-3">{friends.title}</p>
               </div>
             ))}
-              <div onClick={openModal} className="px-2 py-4">
+              <button type="button" onClick={openModal} className="px-2 py-4 cursor-pointer flex flex-col justify-center items-center">
                 <div className="p-2 border rounded-full flex justify-center items-center w-20 h-20 lg:w-24 lg:h-24">
                   <Md1KPlus className="w-full h-full rounded-full text-gray-500" />
                 </div>
                 <div className="capitalize pt-3 hover:cursor-pointer">
                   Add friends
                 </div>
-              </div>
-              <PopupModal isOpen={isModalOpen} onClose={closeModal} />
+              </button>
+              {/* <PopupModal isOpen={isModalOpen} onClose={closeModal} /> */}
           </label>
         </div>
       </section>

@@ -99,7 +99,7 @@ const VirtulPlayers: React.FC = () => {
       <section className="overflow-x-hidden overflow-y-auto h-[100vh] w-[100%] pt-5 pb-[10%]">
         <div className="w-[100%] flex flex-row justify-between align-middle md:px-[5%] py-4">
           <div>
-            <Link href="/" className="text-primary hover:text-purple-800 pl-2">
+            <Link href="/home" className="text-primary hover:text-purple-800 pl-2">
               Go Back
             </Link>
           </div>

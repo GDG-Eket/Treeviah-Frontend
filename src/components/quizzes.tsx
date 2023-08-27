@@ -6,6 +6,7 @@ import Circle from '../../public/Images/circle.png'
 import One from '../../public/Images/one.jpg'
 import Two from '../../public/Images/two.jpg'
 import Three from '../../public/Images/three.jpg'
+import Link from 'next/link';
 
 const Quizzes: React.FC = () => {
 
@@ -20,9 +21,9 @@ const Quizzes: React.FC = () => {
                 </span>
                 <span>
                     <div className="flex flex-col mt-4">
-                        <button className="text-primary float-right mt-4 flex justify-end align-end">
+                        <Link href='/library' className="text-primary float-right mt-4 flex justify-end align-end">
                             See All(3)
-                        </button>
+                        </Link>
                         <label className="mt-4 w-[100%]">
                             <div className="w-[100%] flex flex-col md:flex-row justify-start align-middle border rounded-md">
                                 <div className="backgroundImage w-[100%] p-[40px] md:p-0 md:w-[30%] rounded-md">

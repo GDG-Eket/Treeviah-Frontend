@@ -58,7 +58,7 @@ const LibraryGrid: React.FC = () => {
       <div className="flex flex-col h-screen w-[100%] md:w-auto p-[10px] md:px-[40px] md:py-[20px] justify-start align-middle overflow-y-auto md:pb-[10%]">
         <div className="w-[100%] flex flex-row justify-between align-middle">
           <span>
-            <Link href="/" className="text-primary hover:text-purple-800 pl-2">
+            <Link href="/home" className="text-primary hover:text-purple-800 pl-2">
               Go Back
             </Link>
           </span>
