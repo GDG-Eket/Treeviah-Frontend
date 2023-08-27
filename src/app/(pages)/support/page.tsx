@@ -33,7 +33,7 @@ const Support: React.FC = () => {
     {
       title: "Account",
       icon: <MdAccountCircle />,
-      path: "/account",
+      path: "/profile",
     },
   ];
 
@@ -56,7 +56,7 @@ const Support: React.FC = () => {
     {
       id: 1,
       icon: <MdAccountCircle />,
-      path: "/account",
+      path: "/profile",
     },
   ];
   return (

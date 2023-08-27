@@ -42,7 +42,7 @@ const NotificationComponent: React.FC = () => {
           <div className="w-[100%] flex flex-row justify-between align-middle">
             <span>
               <Link
-                href="/"
+                href="/home"
                 className="text-primary hover:text-purple-800 pl-2"
               >
                 Go Back

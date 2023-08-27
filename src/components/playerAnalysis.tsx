@@ -105,7 +105,7 @@ const PlayerAnalysis: React.FC = () => {
     <div className="pt-5 w-[100%] pb-[20%] overflow-y-auto h-[100vh]">
       <span className="w-[100%] flex flex-row justify-between align-middle mt-4 px-[3%]">
         <span>
-          <Link href="/" className="text-primary hover:text-purple-800 pl-2">
+          <Link href="/home" className="text-primary hover:text-purple-800 pl-2">
             Go Back
           </Link>
         </span>

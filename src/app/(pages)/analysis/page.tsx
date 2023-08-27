@@ -32,7 +32,7 @@ const Analysis: React.FC = () => {
     {
       title: "Account",
       icon: <MdAccountCircle />,
-      path: "/account",
+      path: "/profile",
     },
   ];
 
@@ -55,7 +55,7 @@ const Analysis: React.FC = () => {
     {
       id: 1,
       icon: <MdAccountCircle />,
-      path: "/account",
+      path: "/profile",
     },
   ];
   return (
