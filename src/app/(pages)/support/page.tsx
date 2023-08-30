@@ -60,7 +60,7 @@ const Support: React.FC = () => {
     },
   ];
   return (
-    <section className="relative w-full h-[100%] overflow-hidden">
+    <section className="relative w-full h-[100%]">
       <div className="flex flex-row relative w-[100%] mb-[20%] md:mb-0">
         <div className="hidden md:block">
           <Sidebar list={sideMenuList} />
