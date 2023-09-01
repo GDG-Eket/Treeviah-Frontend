@@ -93,7 +93,7 @@ const TableRender: React.FC = () => {
             </Link>
           </div>
         </div>
-        <div className="menuGrid md:px-[5%]">
+        <div className="flex w-[100%] md:flex-row flex-col justify-start items-center md:px-[5%]">
           <div className="mb-[10%] md:mb-0">
             <h1 className="text-[32px] text-primary font-semibold self-centers">
               Virtual Reality

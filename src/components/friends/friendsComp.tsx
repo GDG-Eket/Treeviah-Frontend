@@ -21,7 +21,7 @@ const FriendsComponent: React.FC = () => {
   const openModal = () => setIsModalOpen(!isModalOpen);
   const closeModal = () => setIsModalOpen(isModalOpen);
 
-  const FriendsArray: FriendsLists[] = [
+  const FriendsArray: FriendsLists  [] = [
     {
       url: Friend1,
       title: "Professional",
@@ -213,7 +213,7 @@ const FriendsComponent: React.FC = () => {
                   Add friends
                 </div>
               </button>
-              {/* <PopupModal isOpen={isModalOpen} onClose={closeModal} /> */}
+              <PopupModal isOpen={isModalOpen} onClose={closeModal} />
           </label>
         </div>
       </section>

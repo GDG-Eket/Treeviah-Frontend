@@ -61,7 +61,7 @@ const Ellipse: React.FC = () => {
   const column1 = EllipseArray.slice(0, 3);
   const column2 = EllipseArray.slice(3, 6);
   return (
-    <div className="flex flex-col h-screen w-[100%] md:px-[20px] md:py-[10px] justify-start align-middle overflow-y-auto md:pb-[10%]">
+    <div className="flex flex-col h-auto md:h-screen w-[100%] md:px-[20px] md:py-[10px] justify-start align-middle overflow-y-auto md:pb-[10%]">
       <a href="" className="text-primary text-[14px] font-semi-bold ml-[10px]">
         Go back
       </a>

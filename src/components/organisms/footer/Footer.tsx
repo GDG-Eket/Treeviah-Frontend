@@ -47,8 +47,8 @@ const FooterBar: React.FC<SideMenuprops> = ({ footer }) => {
 
 
   return (
-    <div className="bottom-0 left-0 w-[100%]">
-      <div className="flex justify-center align-middle py-[10px] px-[5px] shadow-lg gap-4 list-none bg-white z-10">
+    <div className="w-[100%]">
+      <div className="flex justify-center align-middle py-[10px] px-[5px] gap-20 list-none bg-white z-10 shadow-inner">
         {FooterList.map((footer, i) => (
           <Link key={i} href={footer.path}>
             <span className="text-primary text-[20px]">{footer.icon}</span>

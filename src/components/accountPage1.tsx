@@ -53,7 +53,7 @@ const Photo: React.FC = () => {
   //   const row2 = PhotoArray.slice(3, 6);
 
   return (
-    <div className="flex flex-col md:flex-row gap-5 md:gap-5 md:w-full md:h-screen md:px-4 mb-[15%] md:pb-[6.5%] ">
+    <div className="flex flex-col md:flex-row gap-5 w-[100%] md:px-4 mb-[15%] md:pb-[6.5%] overflow-y-auto">
       <div className="flex-1 md:w-[29%] md:border border-zinc-300 flex flex-col justify-center items-center px-3 ">
         <div className="py-[20px] md:px-5 md:top-[75px] flex flex-row md:flex-col justify-center md:items-center md:py-20">
           <div className="w-[90px] md:h-[150px] md:w-[150px]">

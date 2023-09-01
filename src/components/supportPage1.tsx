@@ -4,7 +4,7 @@ import Prof from "../../public/Images/prof.png"
 
 const SupportPage1 = () => {
   return (
-    <section className='pt-8 md:p-10 relative h-screen '>
+    <section className='pt-8 md:p-10 relative h-auto md:h-screen'>
         <div className='ml-12 md:ml-0 md:absolute w-[200px] top-[40px] right-[30px]'>
         <div className='relative'>
   <div className=' relative '>

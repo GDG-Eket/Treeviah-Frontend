@@ -91,7 +91,7 @@ const Card: React.FC = () => {
   ];
 
   return (
-    <section className="max-w-[100%] w-full md:w-auto mt-2 overflow-y-auto h-screen md:px-[40px] md:py-[20px] justify-start align-middle md:pb-[10%] pb-[25px]">
+    <section className="w-[100%] mt-2 h-screen overflow-y-auto md:py-[20px] md:px-16 px-4">
       <div className="flex justify-between">
         <h2 className="text-[22px] font-bold">Library</h2>
         <span className="flex">
@@ -107,7 +107,7 @@ const Card: React.FC = () => {
           />
         </span>
       </div>
-      <span className="text-[11px] py-[5px]">
+      <span className="text-[15px] py-[5px]">
         Library "Welcome to your Quiz Library!, your library is a treasure trove
         of quizzes created by you.
       </span>

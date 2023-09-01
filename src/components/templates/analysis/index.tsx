@@ -33,16 +33,17 @@ const AnalysisTemplate: React.FC = () => {
   ];
   return (
     <div className="py-4 px-4 md:px-12">
-      <button className="font-medium text-[#D5AAD5] mb-2">Go Back</button>
-
-      <div className="flex items-center justify-between mb-6">
+      <button type="button" className="font-medium text-[#D5AAD5] mb-2">
+        Go Back
+      </button>
+      <div className="flex flex-col md:flex-row items-center justify-between mb-6">
         <h3 className="text-[32px] text-[#1D1D1D] font-bold">
           Virtual Reality
         </h3>
-
         <div className="flex justify-between">
           {tabs.map((item, index) => (
             <button
+              type="button"
               className={`border-b  ${
                 activeTab === index
                   ? " border-[#800080] border-b-4 text-[#800080] font-bold"
@@ -62,6 +63,7 @@ const AnalysisTemplate: React.FC = () => {
         <div className="flex mb-5">
           {list.map((item, index) => (
             <button
+              type="button"
               className={`border-b  ${
                 activeList === index
                   ? " border-[#800080] border-b-4 text-[#800080] font-bold"

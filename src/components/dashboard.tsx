@@ -13,7 +13,7 @@ import "../styles/dashboard.css";
 const Dashboard: React.FC = () => {
   return (
     <div>
-      <div className="w-[100%] md:w-auto h-screen overflow-y-auto pb-[2%] scrollbar-dashboard md:px-[3%]">
+      <div className="w-[100%] md:w-auto h-auto overflow-y-auto pb-[2%] scrollbar-dashboard md:px-[3%]">
         <div className="flex flex-row justify-between align-middle w-[100%] mb-4 px-[24px] md:px-[1.5%]">
           <div className="flex flex-col justify-start align-middle">
             <h2 className="capitalized font-medium text-[1.4em]">
