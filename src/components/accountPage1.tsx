@@ -1,6 +1,7 @@
 import React from "react";
 import Image from "next/image";
 import prof from "../../public/Images/prof.png";
+import {BsArrowLeft} from "react-icons/bs"
 
 interface PhotoList {
   id: number;
@@ -49,32 +50,34 @@ const Photo: React.FC = () => {
     },
   ];
 
-  //   const row1 = PhotoArray.slice(0, 3);
-  //   const row2 = PhotoArray.slice(3, 6);
+
 
   return (
-    <div className="flex flex-col md:flex-row gap-5 w-[100%] md:px-4 mb-[15%] md:pb-[6.5%] overflow-y-auto">
-      <div className="flex-1 md:w-[29%] md:border border-zinc-300 flex flex-col justify-center items-center px-3 ">
-        <div className="py-[20px] md:px-5 md:top-[75px] flex flex-row md:flex-col justify-center md:items-center md:py-20">
-          <div className="w-[90px] md:h-[150px] md:w-[150px]">
+    <div className="flex flex-col md:flex-row gap-5 md:gap-5 md:w-full md:h-screen md:px-4 mb-[15%] md:pb-[6.5%] ">
+      <div className="text-[18px] mt-[20px] block md:hidden">< BsArrowLeft/></div>
+      <div className="flex-1 md:w-[29%] md:border border-zinc-300 flex flex-col justify-center items-center px-3 md:pb-[50px]">
+        <div className="py-[20px] md:px-5 mr-12 md:mr-0 mt-6 md:mt:0 flex flex-row md:flex-col justify-center md:items-center">
+          <div className="w-[100px] md:h-[150px] md:w-[150px]">
             <Image src={prof} alt="" width={400} height={300} className="" />
           </div>
-          <div className="flex flex-col ml-2 items-center">
+          <div className="flex flex-col mt-4 ml-2 items-center">
             <span className="text-primary text-[20px] font-bold">UI Dani</span>
             <span className="text-[12px] text-zinc-300 font-semibold md:py-3">
               @UIDani_trivisity
             </span>
-            <button className="bg-primary md:p-2 text-white md:w-[310px] w-[120px] h-[37px] pb-[3px] md:h-[40px] rounded-[4px] md:text-[14px] text-[13px] ">
+            <button className="block md:hidden bg-primary p-2 mt-[10px] text-white w-[120px] h-[30px] rounded-[4px] text-[13px]">Add friend</button>
+            </div>
+            <button className="hidden md:block bg-primary md:p-2 text-white md:w-[300px] w-[120px] h-[37px] pb-[3px] md:h-[40px] rounded-[4px] md:text-[14px] text-[13px] ">
               personal information
             </button>
-          </div>
-          <button className="mt-4 bg-primary p-2 text-white hidden md:flex md:w-[310px] md:h-[40px] rounded-[2px] text-[14px]">
+         
+          <button className="hidden md:block bg-primary md:p-2 text-white md:w-[300px] w-[120px] h-[37px] pb-[3px] md:h-[40px] rounded-[4px] md:text-[14px] text-[13px] mt-4 ml-1 ">
             change password
           </button>
         </div>
       </div>
       <div className="md:w-[65%] flex flex-col md:flex-2 gap-[3px] ">
-        <div className="border border-zinc-300 p-5 rounded-[5px]">
+        <div className="border border-zinc-300 p-5 md:p-3 rounded-[5px]">
           <h2 className="font-bold text-[20px]">Bio</h2>
           <span className="text-[14px]">
             🎓 Lifelong Learner | 🧠 Curious Mind | 🌍 Global Citizen Hey there!
@@ -89,14 +92,14 @@ const Photo: React.FC = () => {
             the world.
           </span>
         </div>
-        <div className="flex flex-col border border-zinc-300 p-6 mt-[10px] pb-10 rounded-[5px]">
-          <div className="flex justify-between py-4">
+        <div className="flex flex-col border border-zinc-300 p-2 mt-[20px] pb-8 rounded-[5px] ">
+          <div className="flex justify-between py-5">
             <span className="text-[18px] font-bold">Personal Information</span>
             <button className="text-[12px] border border-primarylight h-[30px] w-[60px] rounded-[5px] text-primary">
               Edit
             </button>
           </div>
-          <div className="flex flex-col gap-3 text-[14px]">
+          <div className="flex flex-col gap-6 md:gap-3 text-[14px]">
             <div className="flex justify-between border-b border-zinc-300">
               <span className="">Name</span>
               <span className="">Daniel Nssien</span>
@@ -115,11 +118,11 @@ const Photo: React.FC = () => {
             </div>
           </div>
         </div>
-        <div className="hidden md:flex justify-between mt-2">
-          <span className="text-[18px] font-bold">My Friend</span>
-          <span className="text-[16px] text-primary">see all (3)</span>
+        <div className="hidden md:flex justify-between mt-[10px]">
+          <span className="text-[16px] font-bold">My Friend</span>
+          <span className="text-[15px] text-primary">see all (3)</span>
         </div>
-        <div className="hidden grid-cols-3 md:flex md:flex-row gap-3">
+        <div className="hidden grid-cols-3 md:flex md:flex-row gap-2">
           {PhotoArray.map((Photo, index) => (
             <span
               key={Photo.id}
@@ -128,7 +131,7 @@ const Photo: React.FC = () => {
               <div
                 className={`p-[5px] ${
                   index !== PhotoArray.length - 1
-                    ? "border-2 rounded-full border-dashed border-primary"
+                    ? "border-2 rounded-full borders border-primary"
                     : "border border-slate-300"
                 }`}
               >
@@ -140,7 +143,7 @@ const Photo: React.FC = () => {
                   className=""
                 />
               </div>
-              <span className="font-semibold">{Photo.text}</span>
+              <span className="font-semibold text-[16px]">{Photo.text}</span>
             </span>
           ))}
         </div>
