@@ -13,7 +13,7 @@ import Logo from "../../../../public/Images/logo.png";
 import "../../../styles/dashboard.css";
 import Link from "next/link";
 import { useRouter, usePathname, useSearchParams } from "next/navigation";
-
+import { signOut } from "next-auth/react";
 interface SideMenu {
   title: string;
   icon: JSX.Element;
@@ -32,7 +32,6 @@ const Sidebar: React.FC<SideMenuProps> = ({ list }) => {
   useEffect(() => {
     const activeIndex = list.findIndex((item: any) => item.href === pathname);
     setActive(activeIndex);
-    console.log(pathname, activeIndex);
   }, [pathname]);
 
   const handleItemClick = async (index: number) => {
@@ -118,7 +117,7 @@ const Sidebar: React.FC<SideMenuProps> = ({ list }) => {
             </li>
           ))}
         </ul>
-        <div>
+        <button onClick={() => signOut()}>
           <span className="flex justify-start align-middle mt-[180px] mb-[20px]">
             <span className="py-2 text-[25px] text-white">
               <MdExitToApp />
@@ -131,7 +130,7 @@ const Sidebar: React.FC<SideMenuProps> = ({ list }) => {
               Logout
             </h3>
           </span>
-        </div>
+        </button>
       </section>
     </div>
   );
