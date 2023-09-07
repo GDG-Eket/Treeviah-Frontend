@@ -9,19 +9,26 @@ import Image, { StaticImageData } from "next/image";
 import { Md1KPlus } from "react-icons/md";
 import PopupModal from "../organisms/modal/modal";
 import Friend1 from "@/../public/Images/one.jpg";
+import Modal from "../organisms/modal/modal";
 
 interface FriendsLists {
   title: string;
   url: any;
   alt: string;
 }
-const FriendsComponent: React.FC = () => {
-  const [isModalOpen, setIsModalOpen] = useState(false);
 
+interface Props {
+  onClose: () => void;
+  children: string;
+  title: string;
+}
+const FriendsComponent: React.FC<Props> = () => {
+  const [isModalOpen, setIsModalOpen] = useState(false);
   const openModal = () => setIsModalOpen(!isModalOpen);
   const closeModal = () => setIsModalOpen(isModalOpen);
+  const [showModal, setShowModal] = useState(false);
 
-  const FriendsArray: FriendsLists  [] = [
+  const FriendsArray: FriendsLists[] = [
     {
       url: Friend1,
       title: "Professional",
@@ -169,7 +176,10 @@ const FriendsComponent: React.FC = () => {
       <section className="w-full lg:w-full p-4">
         <div className="w-full flex flex-row justify-between items-center px-10 py-2">
           <span>
-            <Link href="/home" className="text-primary hover:text-purple-800 pl-2">
+            <Link
+              href="/home"
+              className="text-primary hover:text-purple-800 pl-2"
+            >
               Go Back
             </Link>
           </span>
@@ -205,15 +215,49 @@ const FriendsComponent: React.FC = () => {
                 <p className="capitalize pt-3">{friends.title}</p>
               </div>
             ))}
-              <button type="button" onClick={openModal} className="px-2 py-4 cursor-pointer flex flex-col justify-center items-center">
-                <div className="p-2 border rounded-full flex justify-center items-center w-20 h-20 lg:w-24 lg:h-24">
-                  <Md1KPlus className="w-full h-full rounded-full text-gray-500" />
-                </div>
-                <div className="capitalize pt-3 hover:cursor-pointer">
-                  Add friends
-                </div>
-              </button>
-              <PopupModal isOpen={isModalOpen} onClose={closeModal} />
+            <button
+              type="button"
+              onClick={() => setShowModal(true)}
+              className="px-2 py-4 cursor-pointer flex flex-col justify-center items-center"
+            >
+              <div className="p-2 border rounded-full flex justify-center items-center w-20 h-20 lg:w-24 lg:h-24">
+                <Md1KPlus className="w-full h-full rounded-full text-gray-500" />
+              </div>
+              <div className="capitalize pt-3 hover:cursor-pointer">
+                Add friends
+              </div>
+            </button>
+            <div>
+              {showModal && (
+                <Modal onClose={() => setShowModal(false)}>
+                  <div className="bg-white p-8 z-10 rounded-md text-center relative w-[300px]">
+                    <h2 className="text-xl font-semibold mb-4">Add Friend</h2>
+                    <form
+                      className="flex flex-col justify-start align-middle w-[100%]relative mb-4"
+                      id="popmodal"
+                    >
+                      <label
+                        htmlFor="name"
+                        className="p-1 absolute top-[-16px] bg-white left-4"
+                      >
+                        Enter Usename
+                      </label>
+                      <input
+                        type="text"
+                        className="border border-gray-light rounded-md p-2 focus:outline-primary"
+                        placeholder=""
+                      />
+                    </form>
+                    <Link
+                      className="mt-4 px-4 py-2 bg-primary text-white rounded hover:text-purple-300"
+                      href="/friends"
+                    >
+                      Search
+                    </Link>
+                  </div>
+                </Modal>
+              )}
+            </div>
           </label>
         </div>
       </section>
