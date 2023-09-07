@@ -1,5 +1,6 @@
 "use client";
-import React, { useState } from "react";
+import React from "react";
+import {useState} from 'react';
 import Header from "@/components/Header";
 import Image from "next/image";
 import Link from "next/link";
@@ -9,13 +10,19 @@ import AppleIcon from "@/../public/Images/apple-icon.svg";
 import GoogleIcon from "@/../public/Images/google-icon.svg";
 import FacebookIcon from "@/../public/Images/facebook-icon.svg";
 import Frame4 from "@/../public/Images/Frame 4.svg";
+import {useSession, signOut, signIn} from 'next-auth/react'
 
 export default function login() {
   const [showPassword, setShowPassword] = useState(false);
   const [isRegistered, setIsRegistered] = useState(false);
+
   return (
     <div>
       <Header />
+
+      <button onClick={() => signIn()} className=" bg-slate-500">
+        Signin
+      </button>
       <main className="bg-[#E6CCE6] w-full h-full pt-8 sm:pt-16 pb-28 flex justify-center items-center">
         <div className="h-full px-5 sm:px-32 lg:px-12 xl:px-32 flex justify-center w-full">
           <div className="min-h-fit bg-white rounded-3xl lg:rounded-r-none w-full sm:w-[664px] lg:w-[664px] flex flex-col md:py-16 p-8 lg:pl-14 justify-start items-start">

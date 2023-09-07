@@ -12,4 +12,12 @@ export const ModalContainer = styled.div`
     left: 0;
   `  
 
-  
+  export const CardGrid = styled.div`
+    width: 100%;
+    height: 100vh;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+  `

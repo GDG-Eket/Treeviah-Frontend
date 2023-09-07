@@ -1,17 +1,14 @@
 "use client";
-
 import FooterBar from "@/components/organisms/footer/Footer";
 import Navbar from "@/components/organisms/header/navbar";
 import Sidebar from "@/components/organisms/sidebar/sidebar";
-import SupportPage1 from "@/components/supportPage1";
+import SupportPage1 from "../../../components/supportPage1";
 import React from "react";
 import {
   MdHome,
   MdLibraryBooks,
   MdEqualizer,
-  MdExitToApp,
   MdAccountCircle,
-  MdLiveHelp,
 } from "react-icons/md";
 const Support: React.FC = () => {
   const sideMenuList = [
