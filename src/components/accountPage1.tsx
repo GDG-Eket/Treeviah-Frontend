@@ -1,7 +1,7 @@
 import React from "react";
 import Image from "next/image";
 import prof from "../../public/Images/prof.png";
-import {BsArrowLeft} from "react-icons/bs"
+import { BsArrowLeft } from "react-icons/bs";
 
 interface PhotoList {
   id: number;
@@ -50,13 +50,13 @@ const Photo: React.FC = () => {
     },
   ];
 
-
-
   return (
-    <div className="flex flex-col md:flex-row gap-5 md:gap-5 md:w-full md:h-screen md:px-4 mb-[15%] md:pb-[6.5%] ">
-      <div className="text-[18px] mt-[20px] block md:hidden">< BsArrowLeft/></div>
+    <div className="flex flex-col md:flex-row gap-5 md:gap-5 md:px-4 md:pt-[100px] overflow-y-auto">
+      <div className="text-[18px] mt-[100px] block md:hidden">
+        <BsArrowLeft />
+      </div>
       <div className="flex-1 md:w-[29%] md:border border-zinc-300 flex flex-col justify-center items-center px-3 md:pb-[50px]">
-        <div className="py-[20px] md:px-5 mr-12 md:mr-0 mt-6 md:mt:0 flex flex-row md:flex-col justify-center md:items-center">
+        <div className="py-[20px] md:px-5 md:mr-12 md:mt-6 md:mt:0 flex flex-row md:flex-col justify-center md:items-center">
           <div className="w-[100px] md:h-[150px] md:w-[150px]">
             <Image src={prof} alt="" width={400} height={300} className="" />
           </div>
@@ -65,18 +65,20 @@ const Photo: React.FC = () => {
             <span className="text-[12px] text-zinc-300 font-semibold md:py-3">
               @UIDani_trivisity
             </span>
-            <button className="block md:hidden bg-primary p-2 mt-[10px] text-white w-[120px] h-[30px] rounded-[4px] text-[13px]">Add friend</button>
-            </div>
-            <button className="hidden md:block bg-primary md:p-2 text-white md:w-[300px] w-[120px] h-[37px] pb-[3px] md:h-[40px] rounded-[4px] md:text-[14px] text-[13px] ">
-              personal information
+            <button className="block md:hidden bg-primary p-2 mt-[10px] text-white w-[120px] h-[30px] rounded-[4px] text-[13px]">
+              Add friend
             </button>
-         
-          <button className="hidden md:block bg-primary md:p-2 text-white md:w-[300px] w-[120px] h-[37px] pb-[3px] md:h-[40px] rounded-[4px] md:text-[14px] text-[13px] mt-4 ml-1 ">
+          </div>
+          <button className="hidden md:block bg-primary md:p-2 text-white w-[100%] h-[37px] pb-[3px] md:h-[40px] rounded-[4px] md:text-[14px] text-[13px] ">
+            personal information
+          </button>
+
+          <button className="hidden md:block bg-primary md:p-2 text-white w-[100%] h-[37px] pb-[3px] md:h-[40px] rounded-[4px] md:text-[14px] text-[13px] mt-4 ml-1 ">
             change password
           </button>
         </div>
       </div>
-      <div className="md:w-[65%] flex flex-col md:flex-2 gap-[3px] ">
+      <div className="md:w-[65%] flex flex-col md:flex-2 gap-[3px] p-4">
         <div className="border border-zinc-300 p-5 md:p-3 rounded-[5px]">
           <h2 className="font-bold text-[20px]">Bio</h2>
           <span className="text-[14px]">
@@ -118,11 +120,11 @@ const Photo: React.FC = () => {
             </div>
           </div>
         </div>
-        <div className="hidden md:flex justify-between mt-[10px]">
+        <div className="flex justify-between mt-[10px]">
           <span className="text-[16px] font-bold">My Friend</span>
           <span className="text-[15px] text-primary">see all (3)</span>
         </div>
-        <div className="hidden grid-cols-3 md:flex md:flex-row gap-2">
+        <div className="grid grid-cols-3 md:flex md:flex-row gap-2 py-4">
           {PhotoArray.map((Photo, index) => (
             <span
               key={Photo.id}

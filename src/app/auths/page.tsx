@@ -1,5 +1,6 @@
 "use client";
-import React, { useState } from "react";
+import React from "react";
+import {useState} from 'react';
 import Header from "@/components/Header";
 import Image from "next/image";
 import Link from "next/link";
@@ -9,7 +10,7 @@ import AppleIcon from "@/../public/Images/apple-icon.svg";
 import GoogleIcon from "@/../public/Images/google-icon.svg";
 import FacebookIcon from "@/../public/Images/facebook-icon.svg";
 import Frame4 from "@/../public/Images/Frame 4.svg";
-import { useSession, signIn, signOut } from "next-auth/react";
+import {useSession, signOut, signIn} from 'next-auth/react'
 
 export default function login() {
   const [showPassword, setShowPassword] = useState(false);

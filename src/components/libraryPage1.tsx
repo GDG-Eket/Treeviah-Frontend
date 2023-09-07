@@ -127,7 +127,7 @@ const Card: React.FC = () => {
   ];
 
   return (
-    <section className="w-[100%] mt-2 h-screen overflow-y-auto md:py-[20px] md:px-16 px-4">
+    <section className="md:px-16 px-4">
       <div className="flex justify-between">
         <h2 className="text-[24px] font-bold">Library</h2>
         <span className="flex">

@@ -15,8 +15,8 @@ const Dashboard: React.FC = () => {
   const profilePicture: any = session?.user?.image;
   return (
     <div>
-      <div className="w-[100%] md:w-auto h-auto overflow-y-auto pb-[2%] scrollbar-dashboard md:px-[3%]">
-        <div className="flex flex-row justify-between align-middle w-[100%] mb-4 px-[24px] md:px-[1.5%]">
+      <div className="scrollbar-dashboard md:px-[3%]">
+        <div className="flex flex-row justify-between align-middle w-[100%] mb-4 px-[24px] md:px-[1.5%] mt-[100px] md:mt-10">
           <div className="flex flex-col justify-start align-middle">
             <h2 className="capitalized font-medium text-[1.4em]">
               Welcome {session?.user?.name}
