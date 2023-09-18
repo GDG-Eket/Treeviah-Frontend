@@ -1,15 +1,11 @@
 import { NextAuthOptions } from "next-auth";
 import CredentialsProvider from "next-auth/providers/credentials";
-// import GitHubProvider from "next-auth/providers/github";
 
 export const authOptions: NextAuthOptions = {
   providers: [
     CredentialsProvider({
       name: "Credentials",
-      credentials: {
-        username: { label: "Username", type: "text", placeholder: "jsmith" },
-        password: { label: "Password", type: "password" },
-      },
+      credentials: {},
       async authorize(credentials, req) {
         // Your authentication logic goes here
         const res = await fetch("/your/endpoint", {
@@ -25,13 +21,8 @@ export const authOptions: NextAuthOptions = {
         return null;
       },
     }),
-
-    // GitHubProvider({
-    //   clientId: process.env.GITHUB_ID,
-    //   clientSecret: process.env.GITHUB_SECRET,
-    // }),
   ],
   pages: {
-    signIn: "/auths",
+    signIn: "/auth",
   },
 };
