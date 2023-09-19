@@ -3,11 +3,11 @@ import React, { useState, useEffect } from "react";
 import { usePathname } from "next/navigation";
 import { items } from "@/components/organisms/data";
 import Image from "next/image";
+import Link from "next/link";
 
 const ItemDetail: React.FC = () => {
   const router = usePathname();
   const id = router?.split("/")[2];
-
   const [item, setItem] = useState<any>();
 
   const fetchProduct = async (id: any) => {
@@ -21,7 +21,6 @@ const ItemDetail: React.FC = () => {
     fetchProduct(id);
   }, []);
 
-  // console.log(id);
 
   if (!item) {
     return <div>item not found</div>;
@@ -29,6 +28,7 @@ const ItemDetail: React.FC = () => {
 
   return (
     <div>
+        <Link href='/items'>Go back</Link>
       <h1>{item.title}</h1>
       <Image src={item.image} alt={item.title} width={700} height={300} />
       <p>{item.description}</p>
