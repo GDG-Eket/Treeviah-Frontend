@@ -1,10 +1,8 @@
-"use client";
-import LibraryPage1 from "@/components/libraryPage1";
+import FooterBar from "@/components/organisms/footer/Footer";
 import Navbar from "@/components/organisms/header/navbar";
 import Sidebar from "@/components/organisms/sidebar/sidebar";
-import { sideMenuList } from "@/pages/library3";
+import SupportPage2 from "@/components/supportPage2";
 import React from "react";
-import FooterBar from "@/components/organisms/footer/Footer";
 import {
   MdHome,
   MdLibraryBooks,
@@ -14,7 +12,30 @@ import {
   MdLiveHelp,
 } from "react-icons/md";
 
-const Library: React.FC = () => {
+const Support2: React.FC = () => {
+  const sideMenuList = [
+    {
+      title: "Home",
+      icon: <MdHome />,
+      path: "/",
+    },
+    {
+      title: "Library",
+      icon: <MdLibraryBooks />,
+      path: "/library",
+    },
+    {
+      title: "Analysis",
+      icon: <MdEqualizer />,
+      path: "/analysis",
+    },
+    {
+      title: "Account",
+      icon: <MdAccountCircle />,
+      path: "/account",
+    },
+  ];
+
   const footerList = [
     {
       id: 1,
@@ -34,31 +55,30 @@ const Library: React.FC = () => {
     {
       id: 1,
       icon: <MdAccountCircle />,
-      path: "/profile",
+      path: "/account",
     },
   ];
   return (
-    <section className="relative w-[100%] h-auto md:h-[100vh] ">
-      <div className="flex flex-row relative w-[100%]">
+    <section className="relative w-full h-[100%] overflow-hidden">
+      <div className="flex flex-row relative w-[100%] mb-[3%] md:mb-0">
         <div className="hidden md:block">
           <Sidebar list={sideMenuList} />
         </div>
         <div className="w-[100%] flex flex-col justify-between align-middle h-[100vh]">
-        <div className="flex flex-col w-[100%] fixed">
+          <div className="flex flex-col w-[100%]">
             <Navbar />
           </div>
-          <div className="w-[100%] md:w-auto h-screen overflow-y-auto mt-[80px]">
-            <LibraryPage1 />
+
+          <div className="p-3">
+            <SupportPage2 />
           </div>
         </div>
       </div>
-      <div className="h-[50px] relative">
-        <div className="md:hidden fixed bottom-0 left-0 w-[100%]">
+      <div className="absolute bottom-0 left-0 md:hidden w-[100%]">
         <FooterBar footer={footerList} />
-        </div>
       </div>
     </section>
   );
 };
 
-export default Library;
+export default Support2;

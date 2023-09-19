@@ -52,7 +52,7 @@ const Photo: React.FC = () => {
 
   return (
     <div className="flex flex-col md:flex-row gap-5 md:gap-5 md:px-4 md:pt-[100px] overflow-y-auto">
-      <div className="text-[18px] mt-[100px] block md:hidden">
+      <div className="text-[18px] mt-[100px] ml-[20px] text-primary block md:hidden">
         <BsArrowLeft />
       </div>
       <div className="flex-1 md:w-[29%] md:border border-zinc-300 flex flex-col justify-center items-center px-3 md:pb-[50px]">

@@ -1,5 +1,6 @@
 import React from "react";
 import Image from "next/image";
+import Link from "next/link";
 import Frame4 from "../../public/Images/Frame4.png";
 import LibraryPage3 from "../components/librabryPage3";
 import { BsPencil } from "react-icons/bs";
@@ -61,7 +62,7 @@ const Ellipse: React.FC = () => {
   const column1 = EllipseArray.slice(0, 3);
   const column2 = EllipseArray.slice(3, 6);
   return (
-    <div className="flex flex-col h-auto md:h-screen w-[100%] md:px-[20px] md:py-[10px] justify-start align-middle overflow-y-auto md:pb-[10%]">
+    <div className="flex flex-col h-auto md:h-screen w-[100%] md:px-[20px] md:py-[10px] justify-start align-middle overflow-y-auto pb-0 md:pb-[10%]">
       <a href="" className="text-primary text-[14px] font-semi-bold ml-[10px]">
         Go back
       </a>
@@ -148,8 +149,9 @@ const Ellipse: React.FC = () => {
         <div className="max-w-full lg:max-w-[68%] w-[100%]">
           <div className="w-[100%] flex justify-between  items-center px-10">
             <h3 className="">Question</h3>
-            <span className="text-primary">see all (10)</span>
+            <Link className="text-primary" href="./questionLibrary">see all (10)</Link>
           </div>
+          
           <LibraryPage3 />
         </div>
       </div>

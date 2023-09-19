@@ -3,6 +3,7 @@ import Image from 'next/image'
 import Prof from "../../public/Images/prof.png"
 import {CgToggleOff} from "react-icons/cg"
 import {BsPencil} from "react-icons/bs"
+import Link from 'next/link'
 
 const SupportPage1 = () => {
   return (
@@ -13,7 +14,7 @@ const SupportPage1 = () => {
     <span className='text-primary text-[16px] font-semibold mr-[20px] relative border-b-4 border-primary z-10 '>
       Settings
     </span>
-    <span className='text-[18px] relative'>Privacy Tools</span>
+    <Link className='text-[18px] relative' href="./privacy">Privacy Tools</Link>
   </div>
   <div className='absolute inset-0 border-b-2 border-zinc-300 transform translate-x-[30px]'></div>
   <div className='absolute inset-0 border-b-2 border-zinc-300 transform -translate-x-[30px]'></div>
