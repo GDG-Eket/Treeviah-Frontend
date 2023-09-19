@@ -110,7 +110,7 @@ export default function LandingPage() {
               </div>
               <button className="rounded-lg px-6 py-2.5 bg-white hover:bg-[#D5AAD5] hover:font-bold">
                 <Link
-                  href="/auths"
+                  href=""
                   className="text-primary text-sm leading-6 font-medium"
                 >
                   Get Started
