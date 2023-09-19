@@ -10,7 +10,7 @@ const Navbar: React.FC = () => {
   return (
     <div className="flex flex-col">
       <div>
-        <section className="navgrid px-4 lg:px-14 py-[10px] shadow-md flex-row bg-white z-100">
+        <section className="navgrid px-4 lg:px-14 py-[10px] shadow-md flex-row bg-white">
           <div
             className="flex flex-row justify-start align-center px-4 py-2 rounded w-[250px]
             lg:w-[300px] bg-purple-100"

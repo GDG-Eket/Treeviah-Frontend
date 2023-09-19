@@ -32,7 +32,7 @@ const Quizzes: React.FC = () => {
                                 <div className="md:w-[70%] p-3 flex flex-col justify-end align-end">
                                     <h2 className="py-2">Man and Cow</h2>
                                     <div className="flex flex-row justify-between align-middle p-2 rounded-lg bg-gray-100 w-[100%]">
-                                        <span className='flex flex-row justify-center align-middle'>
+                                        <div className='flex flex-row justify-center align-middle'>
                                             <Image
                                              src={Circle} 
                                              alt="question.jpg" 
@@ -40,7 +40,7 @@ const Quizzes: React.FC = () => {
                                              height={100} 
                                              className="w-[20px] h-[10px] flex justify-center align-middle mt-2" />
                                             <p>+2 offers</p>
-                                        </span>
+                                        </div>
                                         <span>
                                             5 Joined
                                         </span>

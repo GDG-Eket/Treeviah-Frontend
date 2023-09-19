@@ -68,7 +68,7 @@ const HomePage: React.FC = () => {
           <Sidebar list={sideMenuList} />
         </div>
         <div className="w-[100%] flex flex-col justify-between align-middle">
-          <div className="flex flex-col w-[100%] fixed">
+          <div className="flex flex-col w-[100%] fixed z-50">
             <Navbar />
           </div>
           <div className="w-[100%] md:w-auto h-auto md:h-screen overflow-y-auto">
