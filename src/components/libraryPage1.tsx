@@ -5,6 +5,7 @@ import LibraryPage1Tri from "./libraryPage1Tri";
 import { IoMdNotificationsOutline } from "react-icons/io";
 import Link from "next/link";
 
+
 interface CardList {
   id: number;
   url: string;
@@ -152,13 +153,13 @@ const Card: React.FC = () => {
         Most Played
       </h2>
     
-      <Link href="" className="gap-6 md:gap-[10px] mt-[20px] flex overflow-x-auto items-center justify-start">
+      <span className="gap-6 md:gap-[10px] mt-[20px] flex overflow-x-auto items-center justify-start">
         {CardArray.map((Card) => (
           <span
             key={Card.id}
             className="flex-shrink-0 w-[60%] md:w-[20%] border border-slate-300 rounded-[5px] p-[10px]"
           >
-            
+        
             <Image
               src={Card.url}
               alt={Card.alt}
@@ -190,8 +191,9 @@ const Card: React.FC = () => {
               </div>
             </div>
           </span>
+          
         ))}
-      </Link>
+      </span>
      
 
       <div className="max-w-[97%] w-full flex flex-col mt-6">
