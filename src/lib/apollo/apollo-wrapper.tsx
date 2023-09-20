@@ -13,7 +13,7 @@ import { setContext } from "@apollo/client/link/context";
 
 export const ApolloProviderWrapper = ({ children }: PropsWithChildren) => {
   const httpLink = new HttpLink({
-    uri: process.env.GRAPHQL_ENDPOINT,
+    uri: process.env.TREEVIAH_GRAPHQL_ENDPOINT,
   });
 
   const client = useMemo(() => {
@@ -37,5 +37,5 @@ export const ApolloProviderWrapper = ({ children }: PropsWithChildren) => {
     });
   }, []);
 
-  // return <ApolloProvider client={client}>{children}</ApolloProvider>;
+  return <ApolloProvider client={client}>{children}</ApolloProvider>;
 };

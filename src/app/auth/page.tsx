@@ -10,19 +10,50 @@ import AppleIcon from "@/../public/Images/apple-icon.svg";
 import GoogleIcon from "@/../public/Images/google-icon.svg";
 import FacebookIcon from "@/../public/Images/facebook-icon.svg";
 import Frame4 from "@/../public/Images/Frame 4.svg";
-import { useSession, signIn } from "next-auth/react";
+import { useSession, signIn, signOut } from "next-auth/react";
 
 export default function login() {
   const [showPassword, setShowPassword] = useState(false);
   const [isRegistered, setIsRegistered] = useState(false);
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
 
-  const handleLogin = () => {
-    signIn();
+  const handleLogin = async () => {
+    await signIn("credentials", {
+      email,
+      password,
+      redirect: false,
+    });
+  };
+
+  const handleRegister = async () => {
+    await signOut({ redirect: false });
+
+    const userData = {
+      email: email,
+      name: name,
+      password: password,
+    };
+
+    const registeredUser = await (
+      await fetch("api/register", {
+        method: "POST",
+        body: JSON.stringify({ userData: userData }),
+      })
+    ).json();
+
+    let signInResponse = await signIn("credentials", {
+      email,
+      password,
+      redirect: false,
+    });
   };
 
   return (
     <div>
       <Header />
+      <button onClick={() => handleLogin()}>Test signup</button>
       <main className="bg-[#E6CCE6] w-full h-full pt-8 sm:pt-16 pb-28 flex justify-center items-center">
         <div className="h-full px-5 sm:px-32 lg:px-12 xl:px-32 flex justify-center w-full">
           <div className="min-h-fit bg-white rounded-3xl lg:rounded-r-none w-full sm:w-[664px] lg:w-[664px] flex flex-col md:py-16 p-8 lg:pl-14 justify-start items-start">
@@ -31,43 +62,45 @@ export default function login() {
                 Sign {isRegistered ? "In" : "Up"}
               </h1>
               <div className="w-full space-y-8">
-                <form
-                  className="w-full mt-7 sm:mt-14 space-y-8"
-                  action="#"
-                  method="post"
-                >
-                  <div className="relative font-poppins">
-                    <label
-                      className="absolute top-[-8px] px-1 w-fit ms-3 bg-white text-[#6E6E6E] text-xs font-normal leading-[18px]-"
-                      htmlFor="name"
-                    >
-                      Name
-                    </label>
-                    <input
-                      type="text"
-                      id="name"
-                      placeholder="Placeholder"
-                      className="w-full px-4 py-2 block items-center h-14 text-[#60656F] rounded shadow-sm border-[#888B93]- border-[#929292] border-[1.5px] placeholder-[#60656F]- focus:outline-none hover:border-primary focus:border-primary focus:ring-1 focus:ring-primary disabled:bg-slate-50 disabled:text-slate-500 disabled:border-slate-200 disabled:shadow-none invalid:text-[#C21010] -invalid:border-[#C21010]  focus:invalid:border-[#C21010] focus:invalid:ring-[#C21010] valid:border-primary"
-                      required
-                    />
-                  </div>
-                  {isRegistered ? null : (
+                <div className="w-full mt-7 sm:mt-14 space-y-8">
+                  {!isRegistered && (
                     <div className="relative font-poppins">
                       <label
                         className="absolute top-[-8px] px-1 w-fit ms-3 bg-white text-[#6E6E6E] text-xs font-normal leading-[18px]-"
                         htmlFor="name"
                       >
-                        Email
+                        Name
                       </label>
                       <input
+                        value={name}
+                        onChange={(e) => setName(e.target.value)}
                         type="text"
                         id="name"
-                        placeholder="treeviah@gmail.com"
+                        placeholder="Placeholder"
                         className="w-full px-4 py-2 block items-center h-14 text-[#60656F] rounded shadow-sm border-[#888B93]- border-[#929292] border-[1.5px] placeholder-[#60656F]- focus:outline-none hover:border-primary focus:border-primary focus:ring-1 focus:ring-primary disabled:bg-slate-50 disabled:text-slate-500 disabled:border-slate-200 disabled:shadow-none invalid:text-[#C21010] -invalid:border-[#C21010]  focus:invalid:border-[#C21010] focus:invalid:ring-[#C21010] valid:border-primary"
                         required
                       />
                     </div>
                   )}
+
+                  <div className="relative font-poppins">
+                    <label
+                      className="absolute top-[-8px] px-1 w-fit ms-3 bg-white text-[#6E6E6E] text-xs font-normal leading-[18px]-"
+                      htmlFor="name"
+                    >
+                      Email
+                    </label>
+                    <input
+                      value={email}
+                      onChange={(e) => setEmail(e.target.value)}
+                      type="email"
+                      id="name"
+                      placeholder="treeviah@gmail.com"
+                      className="w-full px-4 py-2 block items-center h-14 text-[#60656F] rounded shadow-sm border-[#888B93]- border-[#929292] border-[1.5px] placeholder-[#60656F]- focus:outline-none hover:border-primary focus:border-primary focus:ring-1 focus:ring-primary disabled:bg-slate-50 disabled:text-slate-500 disabled:border-slate-200 disabled:shadow-none invalid:text-[#C21010] -invalid:border-[#C21010]  focus:invalid:border-[#C21010] focus:invalid:ring-[#C21010] valid:border-primary"
+                      required
+                    />
+                  </div>
+
                   <div className="w-full relative font-poppins">
                     <div className="inline-flex w-[100%] items-center rounded shadow-sm  border-[#888B93]- border-[#929292] border-2 focus:outline-none hover:border-primary focus:border-primary focus:ring-1 focus:ring-primary disabled:bg-slate-50 disabled:text-slate-500 disabled:border-slate-200 disabled:shadow-none invalid:text-[#C21010] -invalid:border-[#C21010]  focus:invalid:border-[#C21010] focus:invalid:ring-[#C21010] valid:border-primary">
                       <label
@@ -77,6 +110,8 @@ export default function login() {
                         Password
                       </label>
                       <input
+                        value={password}
+                        onChange={(e) => setPassword(e.target.value)}
                         type={showPassword ? "text" : "password"}
                         id="password"
                         placeholder="Password"
@@ -95,13 +130,22 @@ export default function login() {
                       </button>
                     </div>
                   </div>
-                  <button
-                    type="submit"
-                    className="bg-primary text-center w-full text-white px-6 py-2.5 rounded hover:bg-primary-light -hover:bg-[#6a0c6a]"
-                  >
-                    Sign {isRegistered ? "In" : "Up"}
-                  </button>
-                </form>
+                  {isRegistered ? (
+                    <button
+                      onClick={() => handleLogin()}
+                      className="bg-primary text-center w-full text-white px-6 py-2.5 rounded hover:bg-primary-light -hover:bg-[#6a0c6a]"
+                    >
+                      Sign In
+                    </button>
+                  ) : (
+                    <button
+                      onClick={() => handleRegister()}
+                      className="bg-primary text-center w-full text-white px-6 py-2.5 rounded hover:bg-primary-light -hover:bg-[#6a0c6a]"
+                    >
+                      Sign Up
+                    </button>
+                  )}
+                </div>
                 {/* divider */}
                 <div className="flex text-[#1D1D1D]  w-full space-x-4 items-center justify-center">
                   <div className="border h-0 w-48- w-4/12"></div>
@@ -157,11 +201,13 @@ export default function login() {
               </div>
             </div>
           </div>
-          <Image
-            className="hidden h-full lg:flex lg:max-w-[480px] bg-primary rounded-r-3xl"
-            src={Frame4}
-            alt="hero-img"
-          />
+          <div className="hidden h-full lg:flex lg:max-w-[480px] bg-primary rounded-r-3xl">
+            <Image
+              className="h-full w-full rounded-r-3xl object-cover"
+              src={Frame4}
+              alt="hero-img"
+            />
+          </div>
         </div>
       </main>
     </div>
