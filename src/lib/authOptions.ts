@@ -42,22 +42,24 @@ export const authOptions: NextAuthOptions = {
           link: from([authMiddleware, httpLink]),
           cache: new InMemoryCache(),
         });
-        console.log("user is ", { email: email, password: password });
 
-        const {
-          data: { user },
-        } = await client.mutate({
+        const { data } = await client.mutate({
           mutation: gql`
-            mutation Login {
-              login(loginInput: { email: email, password: password }) {
+            mutation Login($email: String!, $password: String!) {
+              login(loginInput: { email: $email, password: $password }) {
                 accessToken
               }
             }
           `,
+          variables: {
+            email: email,
+            password: password,
+          },
         });
-        console.log("user is authenticated", user);
-        if (user) {
-          return user;
+
+        console.log("user is authenticated", data);
+        if (data) {
+          return data;
         }
 
         throw new Error(`Invalid Credentials`);
@@ -91,5 +93,6 @@ export const authOptions: NextAuthOptions = {
   },
   pages: {
     signIn: "/auth",
+    signOut: "/",
   },
 };

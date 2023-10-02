@@ -11,20 +11,35 @@ import GoogleIcon from "@/../public/Images/google-icon.svg";
 import FacebookIcon from "@/../public/Images/facebook-icon.svg";
 import Frame4 from "@/../public/Images/Frame 4.svg";
 import { useSession, signIn, signOut } from "next-auth/react";
+import { useRouter } from "next/navigation";
+import toast from "react-hot-toast";
 
 export default function login() {
+  const router = useRouter();
   const [showPassword, setShowPassword] = useState(false);
-  const [isRegistered, setIsRegistered] = useState(false);
+  const [isRegistered, setIsRegistered] = useState(true);
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
 
   const handleLogin = async () => {
-    await signIn("credentials", {
-      email,
-      password,
-      redirect: false,
-    });
+    try {
+      await signOut({ redirect: false });
+      const response: any = await signIn("credentials", {
+        email,
+        password,
+        redirect: false,
+      });
+      if (response.error) {
+        toast.error(response?.error);
+      } else {
+        console.log(response);
+        router.push("/home");
+        console.log("Success");
+      }
+    } catch (error) {
+      console.error("Invalid Login Credentials", error);
+    }
   };
 
   const handleRegister = async () => {
@@ -53,7 +68,6 @@ export default function login() {
   return (
     <div>
       <Header />
-      <button onClick={() => handleLogin()}>Test signup</button>
       <main className="bg-[#E6CCE6] w-full h-full pt-8 sm:pt-16 pb-28 flex justify-center items-center">
         <div className="h-full px-5 sm:px-32 lg:px-12 xl:px-32 flex justify-center w-full">
           <div className="min-h-fit bg-white rounded-3xl lg:rounded-r-none w-full sm:w-[664px] lg:w-[664px] flex flex-col md:py-16 p-8 lg:pl-14 justify-start items-start">
@@ -147,13 +161,13 @@ export default function login() {
                   )}
                 </div>
                 {/* divider */}
-                <div className="flex text-[#1D1D1D]  w-full space-x-4 items-center justify-center">
+                {/* <div className="flex text-[#1D1D1D]  w-full space-x-4 items-center justify-center">
                   <div className="border h-0 w-48- w-4/12"></div>
                   <div className="text-[#1D1D1D]-">Or</div>
                   <div className="border h-0 w-48- w-4/12"></div>
-                </div>
+                </div> */}
                 {/* other signin options */}
-                <div className="w-full inline-flex justify-center items-center gap-6">
+                {/* <div className="w-full inline-flex justify-center items-center gap-6">
                   <Link
                     href="#"
                     className="bg-white hover:scale-110 hover:bg-primary-light ease-in-out duration-150 flex justify-center items-center w-10  shadow rounded-full p-2"
@@ -184,7 +198,7 @@ export default function login() {
                       alt="facebook-icon"
                     />
                   </Link>
-                </div>
+                </div> */}
                 <p className=" w-full justify-center text-center">
                   <span className="text-[#1D1D1D]">
                     {isRegistered
