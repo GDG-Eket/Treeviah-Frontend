@@ -35,7 +35,7 @@ export default function login() {
         toast.error(response?.error);
       } else {
         console.log(response);
-
+        router.push("/home");
         console.log("Success");
       }
     } catch (error) {

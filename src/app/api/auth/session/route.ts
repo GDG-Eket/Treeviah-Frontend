@@ -4,8 +4,6 @@ import { getToken } from "next-auth/jwt";
 import getAcessToken from "@/lib/getAcessToken";
 import { authOptions } from "@/lib/authOptions";
 
-const secret = process?.env?.NEXTAUTH_SECRET;
-
 export async function GET(request: NextRequest) {
   const sessionToken = getAcessToken("next-auth.session-token");
 
@@ -16,7 +14,7 @@ export async function GET(request: NextRequest) {
     cookieName: "next-auth.session-token",
   });
   console.log("token", token, "session token is", sessionToken);
-  return NextResponse.json({
+  return NextResponse?.json({
     authenticated: !!session,
     session: session,
     token: token,
