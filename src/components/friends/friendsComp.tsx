@@ -22,7 +22,7 @@ interface Props {
   children: string;
   title: string;
 }
-const FriendsComponent: React.FC<Props> = () => {
+const FriendsComponent: React.FC = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const openModal = () => setIsModalOpen(!isModalOpen);
   const closeModal = () => setIsModalOpen(isModalOpen);
@@ -229,9 +229,8 @@ const FriendsComponent: React.FC<Props> = () => {
             </button>
             <div>
               {showModal && (
-                <Modal onClose={() => setShowModal(false)}>
+                <Modal title="Add Friend" onClose={() => setShowModal(false)}>
                   <div className="bg-white p-8 z-10 rounded-md text-center relative w-[300px]">
-                    <h2 className="text-xl font-semibold mb-4">Add Friend</h2>
                     <form
                       className="flex flex-col justify-start align-middle w-[100%]relative mb-4"
                       id="popmodal"

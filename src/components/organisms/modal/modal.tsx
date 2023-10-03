@@ -67,19 +67,18 @@
 
 // export default PopupModal;
 "use client";
-import React from "react";
-import '@/styles/dashboard.css'
+import React, { ReactNode } from "react";
+import "@/styles/dashboard.css";
 import Link from "next/link";
 
 interface Props {
   onClose: () => void;
-  children: string;
+  children: ReactNode;
   title: string;
 }
 
-const Modal:React.FC<Props> = ({ onClose, children, title }) => {
-
-  const handleCloseClick = (e: { preventDefault: () => void; }) => {
+const Modal: React.FC<Props> = ({ onClose, children, title }) => {
+  const handleCloseClick = (e: { preventDefault: () => void }) => {
     e.preventDefault();
     onClose();
   };
@@ -89,7 +88,11 @@ const Modal:React.FC<Props> = ({ onClose, children, title }) => {
       <div className="modal-wrapper">
         <div className="modal">
           <div className="modal-header">
-            <Link href="#" onClick={handleCloseClick} className="p-2 rounded-full bg-primary w-10 h-10 flex justify-center items-center text-white">
+            <Link
+              href="#"
+              onClick={handleCloseClick}
+              className="p-2 rounded-full bg-primary w-10 h-10 flex justify-center items-center text-white"
+            >
               x
             </Link>
           </div>

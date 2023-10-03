@@ -1,20 +1,21 @@
 "use client";
-import React from "react";
+import React, { useEffect } from "react";
 import { useState } from "react";
 import Header from "@/components/Header";
 import Image from "next/image";
-import Link from "next/link";
+// import Link from "next/link";
 import EyeSlash from "@/../public/Images/eye-slash.svg";
 import Eye from "@/../public/Images/eye.svg";
-import AppleIcon from "@/../public/Images/apple-icon.svg";
-import GoogleIcon from "@/../public/Images/google-icon.svg";
-import FacebookIcon from "@/../public/Images/facebook-icon.svg";
+// import AppleIcon from "@/../public/Images/apple-icon.svg";
+// import GoogleIcon from "@/../public/Images/google-icon.svg";
+// import FacebookIcon from "@/../public/Images/facebook-icon.svg";
 import Frame4 from "@/../public/Images/Frame 4.svg";
 import { useSession, signIn, signOut } from "next-auth/react";
 import { useRouter } from "next/navigation";
 import toast from "react-hot-toast";
 
 export default function login() {
+  const { data: session }: any = useSession();
   const router = useRouter();
   const [showPassword, setShowPassword] = useState(false);
   const [isRegistered, setIsRegistered] = useState(true);
@@ -34,7 +35,7 @@ export default function login() {
         toast.error(response?.error);
       } else {
         console.log(response);
-        router.push("/home");
+
         console.log("Success");
       }
     } catch (error) {
@@ -64,6 +65,12 @@ export default function login() {
       redirect: false,
     });
   };
+
+  useEffect(() => {
+    if (session?.sessionToken) {
+      router.push("/home");
+    }
+  }, [session]);
 
   return (
     <div>

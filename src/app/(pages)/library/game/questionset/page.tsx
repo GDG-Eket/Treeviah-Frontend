@@ -12,7 +12,7 @@ import {
   MdLiveHelp,
 } from "react-icons/md";
 
-export const sideMenuList = [
+const sideMenuList = [
   {
     title: "Home",
     icon: <MdHome />,

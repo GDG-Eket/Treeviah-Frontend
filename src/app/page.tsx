@@ -182,7 +182,7 @@ export default function LandingPage() {
             </div>
           </div>
           <button className="border  lg:mt-24 mb-10 border-primary rounded-lg px-6 py-2.5 bg-primary hover:bg-primary-light">
-            <a href="/sign-up" className="text-white">
+            <a href="/auth" className="text-white">
               Sign Up
             </a>
           </button>
@@ -242,7 +242,7 @@ export default function LandingPage() {
           <div className="flex flex-wrap gap-6 my-9 md:my-28 justify-center items-center">
             <button className="border border-primary rounded-lg px-6 py-2.5  xl:px-8 xl:py-5  bg-primary hover:bg-primary-light">
               <Link
-                href="/signup"
+                href="/home"
                 className="text-white text-2xl font-medium md:font-bold"
               >
                 Get Started
