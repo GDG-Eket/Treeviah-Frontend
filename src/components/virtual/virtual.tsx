@@ -18,7 +18,7 @@ const Virtual: React.FC = () => {
     <div className="overflow-x-hidden overflow-y-auto h-screen pb-4">
       <div className="w-[100%] flex flex-row justify-between align-middle mt-4 px-[3%]">
         <div>
-          <Link href="/" className="text-primary hover:text-purple-800 pl-2">
+          <Link href="/home" className="text-primary hover:text-purple-800 pl-2">
             Go Back
           </Link>
         </div>

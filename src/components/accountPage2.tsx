@@ -2,12 +2,10 @@ import React from "react";
 import Image from "next/image";
 import prof from "../../public/Images/prof.png";
 import { IconButton, InputAdornment, TextField } from "@mui/material";
-// import VisibilityIcon from '@mui/icons-material/Visibility';
-// import AccountCircleIcon from '@mui/icons-material/AccountCircle';
 
 const AccountPage2 = () => {
   return (
-    <section className="h-screen">
+    <section className="h-auto">
       <div className="flex flex-col justify-center items-center">
         <div className=" h-[150px] w-[150px] mb-12 md:mb-5 ml-[2%]">
           <Image src={prof} alt="" width={400} height={300} className="" />

@@ -40,22 +40,24 @@ const Account: React.FC = () => {
   ];
 
   return (
-    <section className="relative w-full h-[100%]">
-      <div className="flex flex-row relative w-[100%] md:mb-[10%]">
+    <section className="relative w-[100%] h-auto md:h-[100vh] overflow-hidden">
+      <div className="flex flex-row relative w-[100%] md:mb-[1%]">
         <div className="hidden md:block">
           <Sidebar list={sideMenuList} />
         </div>
-        <div className="w-[100%] flex flex-col justify-between align-middle md:h-[100vh]">
-          <div className="flex flex-col w-[100%]">
+        <div className="w-[100%] flex flex-col justify-between align-middle">
+          <div className="flex flex-col w-[100%] fixed">
             <Navbar />
           </div>
-          <div className="mb-[50px] md:pt-5 pl-5">
+          <div className="w-[100%] h-auto md:h-screen overflow-y-auto">
             <AccountPage1 />
           </div>
         </div>
       </div>
-      <div className="absolute bottom-0 left-0 md:hidden w-[100%]">
-        <FooterBar footer={footerList} />
+      <div className="h-[50px] relative">
+        <div className="md:hidden fixed bottom-0 left-0 w-[100%]">
+          <FooterBar footer={footerList} />
+        </div>
       </div>
     </section>
   );

@@ -1,8 +1,10 @@
+"use client";
+
 import React from "react";
-import Sidebar from "../components/organisms/sidebar/sidebar";
-import Navbar from "../components/organisms/header/navbar";
-import Dashboard from "../components/dashboard";
-import FooterBar from "../components/organisms/footer/Footer";
+import Sidebar from "@/components/organisms/sidebar/sidebar";
+import Navbar from "@/components/organisms/header/navbar";
+import Dashboard from "@/components/dashboard";
+import FooterBar from "@/components/organisms/footer/Footer";
 import {
   MdHome,
   MdLibraryBooks,
@@ -60,22 +62,24 @@ const HomePage: React.FC = () => {
   ];
 
   return (
-    <section className="relative w-full h-[100%] overflow-hidden">
-      <div className="flex flex-row relative w-[100%] mb-[30%] md:mb-0">
+    <section className="relative w-[100%] h-auto md:h-[100vh] overflow-hidden">
+      <div className="flex flex-row relative w-[100%]">
         <div className="hidden md:block">
           <Sidebar list={sideMenuList} />
         </div>
-        <div className="w-[100%] flex flex-col justify-between align-middle h-[100vh]">
-          <div className="flex flex-col w-[100%]">
+        <div className="w-[100%] flex flex-col justify-between align-middle">
+          <div className="flex flex-col w-[100%] fixed z-50">
             <Navbar />
           </div>
-          <div>
+          <div className="w-[100%] md:w-auto h-auto md:h-screen overflow-y-auto">
             <Dashboard />
           </div>
         </div>
       </div>
-      <div className="absolute bottom-0 left-0 md:hidden w-[100%]">
+      <div className="h-[50px] relative">
+        <div className="md:hidden fixed bottom-0 left-0 w-[100%]">
         <FooterBar footer={footerList} />
+        </div>
       </div>
     </section>
   );

@@ -47,11 +47,11 @@ const FooterBar: React.FC<SideMenuprops> = ({ footer }) => {
 
 
   return (
-    <div className="bottom-0 left-0 w-[100%]">
-      <div className="flex justify-center align-middle py-[10px] px-[5px] shadow-lg gap-4 list-none bg-white z-10">
+    <div className="w-[100%] bg-white">
+      <div className="grid grid-cols-4 justify-center items-center z-10 p-4">
         {FooterList.map((footer, i) => (
-          <Link key={i} href={footer.path}>
-            <span className="text-primary text-[20px]">{footer.icon}</span>
+          <Link key={i} href={footer.path} className="text-center self-center items-center justify-center flex">
+            <span className="text-primary text-[20px] items-center justify-center">{footer.icon}</span>
           </Link>
         ))}
       </div>

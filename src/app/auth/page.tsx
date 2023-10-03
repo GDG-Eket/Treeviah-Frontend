@@ -1,19 +1,77 @@
 "use client";
-
-import React, { useState } from "react";
+import React, { useEffect } from "react";
+import { useState } from "react";
 import Header from "@/components/Header";
 import Image from "next/image";
-import Link from "next/link";
+// import Link from "next/link";
 import EyeSlash from "@/../public/Images/eye-slash.svg";
 import Eye from "@/../public/Images/eye.svg";
-import AppleIcon from "@/../public/Images/apple-icon.svg";
-import GoogleIcon from "@/../public/Images/google-icon.svg";
-import FacebookIcon from "@/../public/Images/facebook-icon.svg";
+// import AppleIcon from "@/../public/Images/apple-icon.svg";
+// import GoogleIcon from "@/../public/Images/google-icon.svg";
+// import FacebookIcon from "@/../public/Images/facebook-icon.svg";
 import Frame4 from "@/../public/Images/Frame 4.svg";
+import { useSession, signIn, signOut } from "next-auth/react";
+import { useRouter } from "next/navigation";
+import toast from "react-hot-toast";
 
 export default function login() {
+  const { data: session }: any = useSession();
+  const router = useRouter();
   const [showPassword, setShowPassword] = useState(false);
-  const [isRegistered, setIsRegistered] = useState(false);
+  const [isRegistered, setIsRegistered] = useState(true);
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+
+  const handleLogin = async () => {
+    try {
+      await signOut({ redirect: false });
+      const response: any = await signIn("credentials", {
+        email,
+        password,
+        redirect: false,
+      });
+      if (response.error) {
+        toast.error(response?.error);
+      } else {
+        console.log(response);
+
+        console.log("Success");
+      }
+    } catch (error) {
+      console.error("Invalid Login Credentials", error);
+    }
+  };
+
+  const handleRegister = async () => {
+    await signOut({ redirect: false });
+
+    const userData = {
+      email: email,
+      name: name,
+      password: password,
+    };
+
+    const registeredUser = await (
+      await fetch("api/register", {
+        method: "POST",
+        body: JSON.stringify({ userData: userData }),
+      })
+    ).json();
+
+    let signInResponse = await signIn("credentials", {
+      email,
+      password,
+      redirect: false,
+    });
+  };
+
+  useEffect(() => {
+    if (session?.sessionToken) {
+      router.push("/home");
+    }
+  }, [session]);
+
   return (
     <div>
       <Header />
@@ -25,43 +83,45 @@ export default function login() {
                 Sign {isRegistered ? "In" : "Up"}
               </h1>
               <div className="w-full space-y-8">
-                <form
-                  className="w-full mt-7 sm:mt-14 space-y-8"
-                  action="#"
-                  method="post"
-                >
-                  <div className="relative font-poppins">
-                    <label
-                      className="absolute top-[-8px] px-1 w-fit ms-3 bg-white text-[#6E6E6E] text-xs font-normal leading-[18px]-"
-                      htmlFor="name"
-                    >
-                      Name
-                    </label>
-                    <input
-                      type="text"
-                      id="name"
-                      placeholder="Placeholder"
-                      className="w-full px-4 py-2 block items-center h-14 text-[#60656F] rounded shadow-sm border-[#888B93]- border-[#929292] border-[1.5px] placeholder-[#60656F]- focus:outline-none hover:border-primary focus:border-primary focus:ring-1 focus:ring-primary disabled:bg-slate-50 disabled:text-slate-500 disabled:border-slate-200 disabled:shadow-none invalid:text-[#C21010] -invalid:border-[#C21010]  focus:invalid:border-[#C21010] focus:invalid:ring-[#C21010] valid:border-primary"
-                      required
-                    />
-                  </div>
-                  {isRegistered ? null : (
+                <div className="w-full mt-7 sm:mt-14 space-y-8">
+                  {!isRegistered && (
                     <div className="relative font-poppins">
                       <label
                         className="absolute top-[-8px] px-1 w-fit ms-3 bg-white text-[#6E6E6E] text-xs font-normal leading-[18px]-"
                         htmlFor="name"
                       >
-                        Email
+                        Name
                       </label>
                       <input
+                        value={name}
+                        onChange={(e) => setName(e.target.value)}
                         type="text"
                         id="name"
-                        placeholder="treeviah@gmail.com"
+                        placeholder="Placeholder"
                         className="w-full px-4 py-2 block items-center h-14 text-[#60656F] rounded shadow-sm border-[#888B93]- border-[#929292] border-[1.5px] placeholder-[#60656F]- focus:outline-none hover:border-primary focus:border-primary focus:ring-1 focus:ring-primary disabled:bg-slate-50 disabled:text-slate-500 disabled:border-slate-200 disabled:shadow-none invalid:text-[#C21010] -invalid:border-[#C21010]  focus:invalid:border-[#C21010] focus:invalid:ring-[#C21010] valid:border-primary"
                         required
                       />
                     </div>
                   )}
+
+                  <div className="relative font-poppins">
+                    <label
+                      className="absolute top-[-8px] px-1 w-fit ms-3 bg-white text-[#6E6E6E] text-xs font-normal leading-[18px]-"
+                      htmlFor="name"
+                    >
+                      Email
+                    </label>
+                    <input
+                      value={email}
+                      onChange={(e) => setEmail(e.target.value)}
+                      type="email"
+                      id="name"
+                      placeholder="treeviah@gmail.com"
+                      className="w-full px-4 py-2 block items-center h-14 text-[#60656F] rounded shadow-sm border-[#888B93]- border-[#929292] border-[1.5px] placeholder-[#60656F]- focus:outline-none hover:border-primary focus:border-primary focus:ring-1 focus:ring-primary disabled:bg-slate-50 disabled:text-slate-500 disabled:border-slate-200 disabled:shadow-none invalid:text-[#C21010] -invalid:border-[#C21010]  focus:invalid:border-[#C21010] focus:invalid:ring-[#C21010] valid:border-primary"
+                      required
+                    />
+                  </div>
+
                   <div className="w-full relative font-poppins">
                     <div className="inline-flex w-[100%] items-center rounded shadow-sm  border-[#888B93]- border-[#929292] border-2 focus:outline-none hover:border-primary focus:border-primary focus:ring-1 focus:ring-primary disabled:bg-slate-50 disabled:text-slate-500 disabled:border-slate-200 disabled:shadow-none invalid:text-[#C21010] -invalid:border-[#C21010]  focus:invalid:border-[#C21010] focus:invalid:ring-[#C21010] valid:border-primary">
                       <label
@@ -71,6 +131,8 @@ export default function login() {
                         Password
                       </label>
                       <input
+                        value={password}
+                        onChange={(e) => setPassword(e.target.value)}
                         type={showPassword ? "text" : "password"}
                         id="password"
                         placeholder="Password"
@@ -89,22 +151,31 @@ export default function login() {
                       </button>
                     </div>
                   </div>
-                  <button
-                    type="submit"
-                    className="bg-primary text-center w-full text-white px-6 py-2.5 rounded hover:bg-primary-light -hover:bg-[#6a0c6a]"
-                  >
-                    Sign {isRegistered ? "In" : "Up"}
-                  </button>
-                </form>
+                  {isRegistered ? (
+                    <button
+                      onClick={() => handleLogin()}
+                      className="bg-primary text-center w-full text-white px-6 py-2.5 rounded hover:bg-primary-light -hover:bg-[#6a0c6a]"
+                    >
+                      Sign In
+                    </button>
+                  ) : (
+                    <button
+                      onClick={() => handleRegister()}
+                      className="bg-primary text-center w-full text-white px-6 py-2.5 rounded hover:bg-primary-light -hover:bg-[#6a0c6a]"
+                    >
+                      Sign Up
+                    </button>
+                  )}
+                </div>
                 {/* divider */}
-                <div className="flex text-[#1D1D1D]  w-full space-x-4 items-center justify-center">
+                {/* <div className="flex text-[#1D1D1D]  w-full space-x-4 items-center justify-center">
                   <div className="border h-0 w-48- w-4/12"></div>
                   <div className="text-[#1D1D1D]-">Or</div>
                   <div className="border h-0 w-48- w-4/12"></div>
-                </div>
+                </div> */}
                 {/* other signin options */}
-                <div className="w-full inline-flex justify-center items-center gap-6">
-                  <a
+                {/* <div className="w-full inline-flex justify-center items-center gap-6">
+                  <Link
                     href="#"
                     className="bg-white hover:scale-110 hover:bg-primary-light ease-in-out duration-150 flex justify-center items-center w-10  shadow rounded-full p-2"
                   >
@@ -113,8 +184,8 @@ export default function login() {
                       src={AppleIcon}
                       alt="apple-icon"
                     />
-                  </a>
-                  <a
+                  </Link>
+                  <Link
                     href="#"
                     className="bg-white hover:scale-110 hover:bg-primary-light ease-in-out duration-150 flex justify-center items-center w-10 shadow rounded-full p-2"
                   >
@@ -123,8 +194,8 @@ export default function login() {
                       src={GoogleIcon}
                       alt="google-icon"
                     />
-                  </a>
-                  <a
+                  </Link>
+                  <Link
                     href="#"
                     className="bg-white hover:scale-110 hover:bg-primary-light ease-in-out duration-150 flex justify-center items-center w-10 shadow rounded-full p-2"
                   >
@@ -133,13 +204,13 @@ export default function login() {
                       src={FacebookIcon}
                       alt="facebook-icon"
                     />
-                  </a>
-                </div>
+                  </Link>
+                </div> */}
                 <p className=" w-full justify-center text-center">
                   <span className="text-[#1D1D1D]">
                     {isRegistered
-                      ? `Don't have an account?`
-                      : "Already have an account?"}{" "}
+                      ? `Don't have an account? `
+                      : "Already have an account? "}
                   </span>
                   <button
                     onClick={() => setIsRegistered(!isRegistered)}
@@ -151,11 +222,13 @@ export default function login() {
               </div>
             </div>
           </div>
-          <Image
-            className="hidden h-full lg:flex lg:max-w-[480px] bg-primary rounded-r-3xl"
-            src={Frame4}
-            alt="hero-img"
-          />
+          <div className="hidden h-full lg:flex lg:max-w-[480px] bg-primary rounded-r-3xl">
+            <Image
+              className="h-full w-full rounded-r-3xl object-cover"
+              src={Frame4}
+              alt="hero-img"
+            />
+          </div>
         </div>
       </main>
     </div>

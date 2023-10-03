@@ -3,6 +3,8 @@ import Image from "next/image";
 import Plate1 from "../../public/Images/plate1.png";
 import LibraryPage1Tri from "./libraryPage1Tri";
 import { IoMdNotificationsOutline } from "react-icons/io";
+import Link from "next/link";
+
 
 interface CardList {
   id: number;
@@ -20,6 +22,41 @@ interface SmallList {
 
 const Card: React.FC = () => {
   const CardArray: CardList[] = [
+    {
+      id: 1,
+      url: "/../public/Images/card1.png",
+      title: "World Ocean Day",
+      text: "6 Questions",
+      alt: "awardImageOne.jpg",
+    },
+    {
+      id: 1,
+      url: "/../public/Images/card2.png",
+      title: "Felions",
+      text: "10 Questions",
+      alt: "awardImageOne.jpg",
+    },
+    {
+      id: 1,
+      url: "/../public/Images/card3.png",
+      title: "Pizza day",
+      text: "10 Questions",
+      alt: "awardImageOne.jpg",
+    },
+    {
+      id: 1,
+      url: "/../public/Images/card4.png",
+      title: "Afforestation",
+      text: "10 Questions",
+      alt: "awardImageOne.jpg",
+    },
+    {
+      id: 1,
+      url: "/../public/Images/card5.png",
+      title: "Virtual Reality (VR)",
+      text: "10 Questions",
+      alt: "awardImageOne.jpg",
+    },
     {
       id: 1,
       url: "/../public/Images/card1.png",
@@ -91,9 +128,9 @@ const Card: React.FC = () => {
   ];
 
   return (
-    <section className="max-w-[100%] w-full md:w-auto mt-2 overflow-y-auto h-screen md:px-[40px] md:py-[20px] justify-start align-middle md:pb-[10%] pb-[25px]">
+    <section className="md:px-16 px-4">
       <div className="flex justify-between">
-        <h2 className="text-[22px] font-bold">Library</h2>
+        <h2 className="text-[24px] font-bold">Library</h2>
         <span className="flex">
           <span className="text-[25px] mr-[20px] text-primary">
             <IoMdNotificationsOutline />
@@ -107,7 +144,7 @@ const Card: React.FC = () => {
           />
         </span>
       </div>
-      <span className="text-[11px] py-[5px]">
+      <span className="text-[14px] py-[5px]">
         Library "Welcome to your Quiz Library!, your library is a treasure trove
         of quizzes created by you.
       </span>
@@ -115,23 +152,24 @@ const Card: React.FC = () => {
       <h2 className="mt-3 font-bold text-[20px] text-primary-light">
         Most Played
       </h2>
-
-      <div className="max-w-[100%] gap-6 md:gap-[10px] mt-[20px] flex flex-wrap items-center justify-start">
+    
+      <span className="gap-6 md:gap-[10px] mt-[20px] flex overflow-x-auto items-center justify-start">
         {CardArray.map((Card) => (
           <span
             key={Card.id}
-            className="w-[100%] md:w-[12rem]  border border-slate-300 rounded-[5px] p-[10px]"
+            className="flex-shrink-0 w-[60%] md:w-[20%] border border-slate-300 rounded-[5px] p-[10px]"
           >
+        
             <Image
               src={Card.url}
               alt={Card.alt}
-              width={300}
-              height={200}
+              width={400}
+              height={300}
               className="w-[100%] h-[100%]"
             />
-
-            <label className="text-[13px]">{Card.title}</label>
-            <p className=" pt-[5px] text-[10px]">{Card.text}</p>
+           
+            <label className="text-[16px]">{Card.title}</label>
+            <p className=" pt-[5px] text-[12px]">{Card.text}</p>
 
             <div className="mt-[5px] flex">
               {smallArray.map(
@@ -153,8 +191,10 @@ const Card: React.FC = () => {
               </div>
             </div>
           </span>
+          
         ))}
-      </div>
+      </span>
+     
 
       <div className="max-w-[97%] w-full flex flex-col mt-6">
         <div className="flex justify-between mt-5 text-primarylight">

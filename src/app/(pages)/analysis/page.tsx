@@ -32,7 +32,7 @@ const Analysis: React.FC = () => {
     {
       title: "Account",
       icon: <MdAccountCircle />,
-      path: "/account",
+      path: "/profile",
     },
   ];
 
@@ -55,12 +55,12 @@ const Analysis: React.FC = () => {
     {
       id: 1,
       icon: <MdAccountCircle />,
-      path: "/account",
+      path: "/profile",
     },
   ];
   return (
     <div>
-      <section className="relative w-full h-[100%] overflow-hidden">
+      <section className="relative w-[100%] overflow-hidden">
         <div className="flex flex-row relative w-[100%] mb-[30%] md:mb-0">
           <div className="hidden md:block">
             <Sidebar list={sideMenuList} />
@@ -74,7 +74,7 @@ const Analysis: React.FC = () => {
             </div>
           </div>
         </div>
-        <div className="absolute bottom-0 left-0 md:hidden w-[100%]">
+        <div className="md:hidden fixed bottom-0 left-0 w-[100%]">
           <FooterBar footer={footerList} />
         </div>
       </section>

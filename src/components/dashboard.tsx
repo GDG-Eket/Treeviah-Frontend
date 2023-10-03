@@ -1,28 +1,49 @@
-import React from "react";
+import React, { useState } from "react";
 import Image from "next/image";
+import UserPhoto from "../../public/Images/userph.png";
 import ImageOne from "../../public/Images/one.jpg";
 import ImageTwo from "../../public/Images/two.jpg";
 import ImageThree from "../../public/Images/three.jpg";
 import Awards from "./awards/awards";
 import Friends from "./friends/friends";
-import Profile from "./profile";
 import Quizzes from "./quizzes";
 import Notification from "./notifications/notification";
 import "../styles/dashboard.css";
+// import { useSession } from "next-auth/react";
 
 const Dashboard: React.FC = () => {
+  // const { data: session } = useSession();
+  // const profilePicture: any = session?.user?.image;
+  // const [user, setUser] = useState(profilePicture);
   return (
     <div>
-      <div className="w-[100%] md:w-auto h-screen overflow-y-auto pb-[2%] scrollbar-dashboard">
-        <div className="flex flex-row justify-between align-middle w-[100%] mb-4 px-[24px] md:px-[1.5%]">
+      <div className="scrollbar-dashboard md:px-[3%] mt-[8%]">
+        <div className="flex flex-row justify-between align-middle w-[100%] mb-4 px-[24px] md:px-[1.5%] mt-[100px] md:mt-10">
           <div className="flex flex-col justify-start align-middle">
             <h2 className="capitalized font-medium text-[1.4em]">
-              Welcome Senior Developer
+              Welcome
+              {/* {session?.user?.name} */}
             </h2>
             <small className="text-secondary">@Snr_Developer</small>
           </div>
-          <div className="my-2">
-            <Profile />
+          <div className="my-2 w-[40px] h-[40px] rounded-full border-2 border-primary flex float-right">
+           {/* {
+            user ?
+           <Image
+              src={profilePicture}
+              alt="Profile picture"
+              width={300}
+              height={200}
+              className="w-full h-full rounded-full"
+            /> 
+            : 
+            <Image
+            src={UserPhoto}
+            alt="Profile picture"
+            width={300}
+            height={200}
+            className="w-full h-full rounded-full"
+          />} */}
           </div>
         </div>
         <div className="mb-10% p-4 dashGrid">

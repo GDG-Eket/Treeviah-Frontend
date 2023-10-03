@@ -42,10 +42,10 @@ const ProfileSetting: React.FC = () => {
   ];
 
   return (
-    <div className="overflow-x-hidden overflow-y-auto h-screen pb-4">
+    <div className="overflow-x-hidden overflow-y-auto h-auto md:h-screen pb-4">
       <div className="w-[100%] flex flex-row justify-between align-middle mt-4 px-[3%]">
         <div> 
-          <Link href="/" className="text-primary hover:text-purple-800 pl-2">
+          <Link href="/profile" className="text-primary hover:text-purple-800 pl-2">
             Go Back
           </Link>
         </div>

@@ -1,7 +1,8 @@
+"use client";
 import React from "react";
-import Sidebar from "../components/organisms/sidebar/sidebar";
-import Navbar from "../components/organisms/header/navbar";
-import FooterBar from "../components/organisms/footer/Footer";
+import Sidebar from "@/components/organisms/sidebar/sidebar";
+import Navbar from "@/components/organisms/header/navbar";
+import FooterBar from "@/components/organisms/footer/Footer";
 import {
   MdHome,
   MdLibraryBooks,
@@ -30,7 +31,7 @@ const FriendsPage: React.FC = () => {
     {
       title: "Account",
       icon: <MdAccountCircle />,
-      path: "/account",
+      path: "/profile",
     },
   ];
 
@@ -53,26 +54,26 @@ const FriendsPage: React.FC = () => {
     {
       id: 1,
       icon: <MdAccountCircle />,
-      path: "/account",
+      path: "/profile",
     },
   ];
   return (
     <div>
-      <section className="relative w-full h-[100%] overflow-hidden">
+      <section className="relative w-[100%] overflow-hidden">
         <div className="flex flex-row relative w-[100%] mb-[30%] md:mb-0">
           <div className="hidden md:block">
             <Sidebar list={sideMenuList} />
           </div>
-          <div className="w-[100%] h-[100vh] flex flex-col justify-between align-middle">
+          <div className="w-[100%] md:h-[100vh] flex flex-col justify-between align-middle">
             <div className="flex flex-col w-[100%]">
               <Navbar />
             </div>
-            <div className="w-100% h-screen overflow-y-auto mb-[3%]">
+            <div className="w-100% h-auto md:h-screen overflow-y-auto mb-[3%]">
               <FriendsComponent />
             </div>
           </div>
         </div>
-        <div className="absolute bottom-0 left-0 md:hidden w-[100%]">
+        <div className="md:hidden fixed bottom-0 left-0 w-[100%]">
           <FooterBar footer={footerList} />
         </div>
       </section>

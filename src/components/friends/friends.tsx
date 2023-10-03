@@ -65,12 +65,12 @@ const Friends: React.FC = () => {
                 <p className="capitalized pt-3">{friends.title}</p>
               </span>
             ))}
-            <span className="px-2 py-4 border rounded-md border-purple-300">
+            <Link href='/friends' className="px-2 py-4 border rounded-md border-purple-300 cursor-pointer">
               <span className="p-2 borders rounded-full flex justify-center align-middle self-center w-[90px] h-[90px]">
                 <Md1KPlus className="w-[100%] h-[100%] rounded-full text-gray" />
               </span>
               <p className="capitalized pt-3">Add friends</p>
-            </span>
+            </Link>
           </label>
         </span>
       </section>
