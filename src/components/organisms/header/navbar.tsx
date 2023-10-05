@@ -27,14 +27,23 @@ const Navbar: React.FC = () => {
           <div
             className={`lg:flex justify-end align-center gap-[20px] flex-row hidden buttonBox`}
           >
-            <button type="submit" className="px-4 py-2 rounded join-team w-[130px]">
-              Join Game
-            </button>
-            <button type="submit" className="px-4 py-2 rounded host-team w-[150px]">
-              Host
-            </button>
+            <Link href="/join-game">
+              <span className="px-4 py-2 rounded join-team w-[130px]">
+                Join Game
+              </span>
+            </Link>
+
+            <Link href="/host">
+              {" "}
+              <span className="px-4 py-2 rounded host-team w-[150px]">
+                Host
+              </span>
+            </Link>
           </div>
-          <Link href='/notificaions' className="text-[25px] text-primary block lg:hidden ml-[1%] notification w-[100%]">
+          <Link
+            href="/notificaions"
+            className="text-[25px] text-primary block lg:hidden ml-[1%] notification w-[100%]"
+          >
             <MdNotifications className="text-right float-right" />
           </Link>
         </section>
