@@ -9,10 +9,10 @@ const getAcessToken = (name: any) => {
 
   if (sessionTokenCookie) {
     const sessionTokenValue = sessionTokenCookie.value;
-    console.log("Session Token: issss", sessionTokenValue);
+    // console.log("Session Token: issss", sessionTokenValue);
     return sessionTokenValue;
   } else {
-    console.error("Session Token not found in cookies.");
+    // console.error("Session Token not found in cookies.");
   }
   // const value = `; ${cookieStore}`;
   // const parts: any = value.split(`; ${name}=`);

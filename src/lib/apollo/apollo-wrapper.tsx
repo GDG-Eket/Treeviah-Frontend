@@ -13,14 +13,18 @@ import { setContext } from "@apollo/client/link/context";
 
 export const ApolloProviderWrapper = ({ children }: PropsWithChildren) => {
   const httpLink = new HttpLink({
-    uri: process.env.TREEVIAH_GRAPHQL_ENDPOINT,
+    uri: process.env.NEXT_PUBLIC_TREEVIAH_GRAPHQL_ENDPOINT,
   });
 
   const client = useMemo(() => {
     const authMiddleware = setContext(async (operation, { headers }) => {
-      let response = await (await fetch("api/auth/session")).json();
+      let response = await (
+        await fetch("http://localhost:3000/api/auth/session")
+      ).json();
 
-      let token = response.sessionToken;
+      let token = response?.token?.accessToken;
+
+      console.log("Token dhjshjs", token);
 
       return {
         headers: {

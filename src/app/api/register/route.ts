@@ -13,7 +13,7 @@ export async function POST(req: Request) {
   const userData = await req.json();
 
   const httpLink = new HttpLink({
-    uri: process.env.TREEVIAH_GRAPHQL_ENDPOINT,
+    uri: process.env.NEXT_PUBLIC_TREEVIAH_GRAPHQL_ENDPOINT,
   });
 
   const authMiddleware = setContext(async (operation, { headers }) => {
@@ -29,10 +29,6 @@ export async function POST(req: Request) {
     link: from([authMiddleware, httpLink]),
     cache: new InMemoryCache(),
   });
-
-  //   userData.password = hashSync(userData.password, 10);
-
-  //   delete userData.password;
 
   const { data } = await client.mutate({
     mutation: gql`

@@ -13,11 +13,10 @@ export async function GET(request: NextRequest) {
     secret: process?.env?.NEXTAUTH_SECRET,
     cookieName: "next-auth.session-token",
   });
-  console.log("token", token, "session token is", sessionToken);
+  // console.log("token", token, "session token is", sessionToken);
   return NextResponse?.json({
     authenticated: !!session,
     session: session,
     token: token,
-    sessionToken: sessionToken,
   });
 }
