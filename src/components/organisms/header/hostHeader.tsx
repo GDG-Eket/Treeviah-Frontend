@@ -1,6 +1,9 @@
 import React, { useRef, useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
+import { useMutation } from "@apollo/client";
+import { CREATE_QUIZ } from "@/lib/apollo/mutations";
+import { useSession } from "next-auth/react";
 
 const editIcon = (
   <svg
@@ -49,6 +52,21 @@ const previewIcon = (
 export default function HostHeader() {
   const [quizTitle, setQuizTitle] = useState("Untitled");
   const titleRef = useRef<any>(null);
+  const [createQuiz, { data, loading, error }] = useMutation(CREATE_QUIZ);
+  console.log("Created Data is: ", data);
+  console.log("Loading status is: ", loading);
+  console.log("Error Status is: ", error);
+  const handleSubmit = async () => {
+    console.log("submited");
+
+    createQuiz({
+      variables: {
+        input: {
+          title: quizTitle,
+        },
+      },
+    });
+  };
   return (
     <div className="w-full h-28- px-8 py-4 sm:py-3 relative bg-white shadow  sm:flex-row justify-start sm:justify-between items-center flex">
       <Link
@@ -71,6 +89,7 @@ export default function HostHeader() {
         <input
           ref={titleRef}
           type="text"
+          onBlur={handleSubmit}
           value={quizTitle}
           onChange={(e) => setQuizTitle(e.target.value)}
           className="border-none w-28 px-2 mx-1"

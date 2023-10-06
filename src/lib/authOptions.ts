@@ -13,7 +13,7 @@ export const authOptions: NextAuthOptions = {
   session: {
     strategy: "jwt",
   },
-  secret: process.env.JWT_SECRET,
+  secret: process.env.NEXTAUTH_SECRET,
   providers: [
     CredentialsProvider({
       name: "credentials",
@@ -26,7 +26,7 @@ export const authOptions: NextAuthOptions = {
         };
 
         const httpLink = new HttpLink({
-          uri: process.env.TREEVIAH_GRAPHQL_ENDPOINT,
+          uri: process.env.NEXT_PUBLIC_TREEVIAH_GRAPHQL_ENDPOINT,
         });
 
         const authMiddleware = setContext(async (operation, { headers }) => {
@@ -48,6 +48,10 @@ export const authOptions: NextAuthOptions = {
             mutation Login($email: String!, $password: String!) {
               login(loginInput: { email: $email, password: $password }) {
                 accessToken
+                user {
+                  fullname
+                  email
+                }
               }
             }
           `,
@@ -67,30 +71,50 @@ export const authOptions: NextAuthOptions = {
     }),
   ],
   callbacks: {
-    async session({ session, token, user }) {
-      return {
-        ...session,
-        user: {
-          ...session.user,
-          id: token.id,
-          randomKey: token.randomKey,
-        },
-      };
+    async jwt(token: any) {
+      console.log("jwt tokennn: ", token?.user?.login);
+      // async jwt(token, user, account, profile, isNewUser) {
+      // Add the access token to the token object
+      // if (account?.accessToken) {
+      //   token.accessToken = account.accessToken;
+      // }
+
+      return token?.user?.login;
     },
 
-    async jwt({ token, user }) {
-      if (user) {
-        const u = user as unknown as any;
-        return {
-          ...token,
-          id: u.id,
-          randomKey: u.randomKey,
-        };
-      }
+    // async session(session, token) {
+    //   // Add the access token to the session
+    //   session.accessToken = token.accessToken;
 
-      return token;
-    },
+    //   return session;
+    // },
   },
+  // callbacks: {
+  //   async session({ session, token, user }) {
+  //     return {
+  //       ...session,
+  //       user: {
+  //         ...session.user,
+  //         id: token.id,
+  //         randomKey: token.randomKey,
+  //       },
+  //     };
+  //   },
+
+  //   async jwt({ token, user }) {
+  //     if (user) {
+  //       const u = user as unknown as any;
+  //       return {
+  //         ...token,
+  //         id: u.id,
+  //         randomKey: u.randomKey,
+  //       };
+  //     }
+
+  //     return token;
+  //   },
+  // },
+
   pages: {
     signIn: "/auth",
     signOut: "/",
