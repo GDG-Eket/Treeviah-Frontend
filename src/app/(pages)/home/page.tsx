@@ -1,5 +1,4 @@
 "use client";
-
 import React from "react";
 import Sidebar from "@/components/organisms/sidebar/sidebar";
 import Navbar from "@/components/organisms/header/navbar";

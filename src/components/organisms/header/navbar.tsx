@@ -27,9 +27,9 @@ const Navbar: React.FC = () => {
           <div
             className={`lg:flex justify-end align-center gap-[20px] flex-row hidden buttonBox`}
           >
-            <button type="submit" className="px-4 py-2 rounded join-team w-[130px]">
+            <Link href='/joinGame' className="px-4 py-2 rounded join-team w-[130px]">
               Join Game
-            </button>
+            </Link>
             <button type="submit" className="px-4 py-2 rounded host-team w-[150px]">
               Host
             </button>
