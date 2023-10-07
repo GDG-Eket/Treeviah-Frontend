@@ -72,7 +72,6 @@ export const authOptions: NextAuthOptions = {
   ],
   callbacks: {
     async jwt(token: any) {
-      console.log("jwt tokennn: ", token?.user?.login);
       // async jwt(token, user, account, profile, isNewUser) {
       // Add the access token to the token object
       // if (account?.accessToken) {
@@ -89,31 +88,6 @@ export const authOptions: NextAuthOptions = {
     //   return session;
     // },
   },
-  // callbacks: {
-  //   async session({ session, token, user }) {
-  //     return {
-  //       ...session,
-  //       user: {
-  //         ...session.user,
-  //         id: token.id,
-  //         randomKey: token.randomKey,
-  //       },
-  //     };
-  //   },
-
-  //   async jwt({ token, user }) {
-  //     if (user) {
-  //       const u = user as unknown as any;
-  //       return {
-  //         ...token,
-  //         id: u.id,
-  //         randomKey: u.randomKey,
-  //       };
-  //     }
-
-  //     return token;
-  //   },
-  // },
 
   pages: {
     signIn: "/auth",

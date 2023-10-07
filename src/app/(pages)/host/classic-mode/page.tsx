@@ -8,6 +8,7 @@ import gameTheme4 from "@/../public/Images/gameTheme4.svg";
 import gameTheme5 from "@/../public/Images/gameTheme5.svg";
 import gameTheme6 from "@/../public/Images/gameTheme6.svg";
 import Image from "next/image";
+import SelectGroup from "@/components/molecules/inputGroup/selectGroup";
 
 const arrow = (
   <svg
@@ -86,8 +87,41 @@ const themes = [
 ];
 const ClassicMode: React.FC = () => {
   const [selectedTheme, setSelectedTheme] = useState<any>(themes[0]);
+  const [questionType, setQuestionType] = useState("");
+  const [time, setTime] = useState("");
+  const [points, setPoints] = useState("");
+  const [answer, setAnswer] = useState("");
   const [question, setQuestion] = useState("What animal is this ?");
 
+  const chooseThemes = (
+    <div className=" col-span-1 p-5 rounded-lg bg-white">
+      <div className="flex justify-between items-center">
+        <h3 className=" font-bold">Themes</h3> <button>{arrow}</button>
+      </div>
+      <p className=" text-primary-light my-5">Customize your own theme</p>
+      <div className="mb-5 rounded-lg border border-dashed flex items-center justify-center w-full h-28 cursor-pointer">
+        {plusIcon}
+      </div>
+      <div className="flex justify-between items-center mb-5">
+        <h3 className=" font-bold">Free</h3> <button>{squareArrow}</button>
+      </div>
+      <div className="grid grid-flow-row grid-cols-2 gap-2 overflow-y-auto max-h-60 no-scrollbar">
+        {themes.map((item, index) => (
+          <Image
+            onClick={() => setSelectedTheme(item)}
+            key={index}
+            src={item}
+            alt=""
+            width={500}
+            height={500}
+            className={`${
+              item === selectedTheme ? "border-2 border-primary" : ""
+            } h-20 w-full object-cover rounded-lg cursor-pointer`}
+          />
+        ))}
+      </div>
+    </div>
+  );
   return (
     <>
       <HostHeader />
@@ -100,33 +134,49 @@ const ClassicMode: React.FC = () => {
           backgroundRepeat: "no-repeat",
         }}
       >
-        <div className="w-[85%] mx-auto px-8 py-10 grid grid-flow-row grid-cols-4 gap-3">
+        <div className="w-[90%] mx-auto px-8 py-10 grid grid-flow-row grid-cols-4 gap-3">
           <div className=" col-span-1 p-5 rounded-lg bg-white">
-            <div className="flex justify-between items-center">
-              <h3 className=" font-bold">Themes</h3> <button>{arrow}</button>
+            <div className="mb-6">
+              <SelectGroup
+                onChange={(e) => setQuestionType(e.target.value)}
+                value={questionType}
+                placeholder="Select"
+                label="Question Type"
+                options={[{ label: "Classic Quiz", value: "Classic Quiz" }]}
+              />
             </div>
-            <p className=" text-primary-light my-5">Customize your own theme</p>
-            <div className="mb-5 rounded-lg border border-dashed flex items-center justify-center w-full h-28 cursor-pointer">
-              {plusIcon}
+            <div className="mb-6">
+              <SelectGroup
+                onChange={(e) => setTime(e.target.value)}
+                value={time}
+                placeholder="Select"
+                label="Time"
+                options={[
+                  { label: "30 Secs", value: 30 },
+                  { label: "45 Secs", value: 45 },
+                ]}
+              />
             </div>
-            <div className="flex justify-between items-center mb-5">
-              <h3 className=" font-bold">Free</h3>{" "}
-              <button>{squareArrow}</button>
+            <div className="mb-6">
+              <SelectGroup
+                onChange={(e) => setPoints(e.target.value)}
+                value={points}
+                placeholder="Select"
+                label="Points"
+                options={[
+                  { label: "10 Points", value: "10" },
+                  { label: "15 Points", value: "15" },
+                ]}
+              />
             </div>
-            <div className="grid grid-flow-row grid-cols-2 gap-2 overflow-y-auto max-h-60 no-scrollbar">
-              {themes.map((item, index) => (
-                <Image
-                  onClick={() => setSelectedTheme(item)}
-                  key={index}
-                  src={item}
-                  alt=""
-                  width={500}
-                  height={500}
-                  className={`${
-                    item === selectedTheme ? "border-2 border-primary" : ""
-                  } h-20 w-full object-cover rounded-lg cursor-pointer`}
-                />
-              ))}
+            <div className="mb-6">
+              <SelectGroup
+                onChange={(e) => setAnswer(e.target.value)}
+                value={answer}
+                placeholder="Select"
+                label="Answer"
+                options={[{ label: "Option 1", value: "Option 1" }]}
+              />
             </div>
           </div>
           <div className=" col-span-3 rounded-lg">
