@@ -38,11 +38,9 @@ export async function POST(req: Request) {
     mutation: gql`
       mutation RegisterUser($input: UserRegisterInput!) {
         register(registerInput: $input) {
-          first_name
-          last_name
+          fullname
           email
           username
-          salt
           password
         }
       }

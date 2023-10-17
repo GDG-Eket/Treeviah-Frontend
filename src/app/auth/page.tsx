@@ -59,6 +59,8 @@ export default function login() {
       })
     ).json();
 
+    console.log(registeredUser)
+
     let signInResponse = await signIn("credentials", {
       email,
       password,
