@@ -30,10 +30,6 @@ export async function POST(req: Request) {
     cache: new InMemoryCache(),
   });
 
-  //   userData.password = hashSync(userData.password, 10);
-
-  //   delete userData.password;
-
   const { data } = await client.mutate({
     mutation: gql`
       mutation RegisterUser($input: UserRegisterInput!) {
