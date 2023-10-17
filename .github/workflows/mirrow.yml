@@ -19,5 +19,5 @@ jobs:
           git config user.name "cjustinobi"
           git remote add justin https://github.com/cjustinobi/treeviah-frontend.git
           git push justin main
-        # env:
-        #   PERSONAL_ACCESS_TOKEN: ${{ secrets.PERSONAL_ACCESS_TOKEN }}
+        env:
+          PERSONAL_ACCESS_TOKEN: ${{ secrets.PERSONAL_ACCESS_TOKEN }}
